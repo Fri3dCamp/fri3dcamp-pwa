@@ -1,0 +1,106 @@
+[
+  {
+    "label": "32 bit",
+    "partners": [
+      {
+        "img": "dekimo.png",
+        "alt": "Dekimo",
+        "url": "https://www.dekimo.com/",
+        "desc": {
+          "nl": "Dekimo is een leverancier van elektronische diensten. De groep bestaat uit een ontwerphuis voor elektronica, mechatronica en softwaretoepassingen, een consultancy tak, een layout dienst voor printplaat ontwerp, een gecertificeerd testlab, een prototype dienst en een sterk geautomatiseerde SMD-assemblagefabriek voor productieseries van 100 tot 100.000 PCBA's. Met 300 professionals kunnen we uw engineering partner voor de lange termijn zijn en u helpen uw bedrijfsdoelen efficiënter te bereiken.",
+          "en": "Dekimo is an electronic services supplier. The group consists of a design house for electronic engineering, mechatronics and software applications, a consultancy service, a layout service for printed circuit board design, a certified test lab, a prototype service and a highly automated SMD assembly plant for production series of 100 to 100.000 PCBA's. With 300 professionals, we can be your long-term engineering partner and help you to achieve your business goals more efficiently."
+        }
+      },
+      {
+        "img": "aqc.png",
+        "alt": "AQC",
+        "url": "https://www.aqcbv.com/",
+        "desc": {
+          "nl": "AQC is één van de meest technisch vaardige leveranciers van verbindingen in de vorm van PCB’s voor de High Tech industrie. Met het hoofdkwartier gezeteld in Nederland, focust AQC zich erop om marktleider te worden in deze producten waaraan de meest veeleisende internationale kwaliteitseisen gesteld worden."
+        }
+      },
+      {
+        "img": "ingegno.png",
+        "alt": "Ingegno",
+        "url": "https://ingegno.be/",
+        "desc": {
+          "nl": "Ingegno is een maakplek die kinderen en jongeren centraal zet, maar ook open staat voor makers, studenten, scholen."
+        }
+      }
+    ]
+  },
+  {
+    "label": "16 bit",
+    "partners": [
+      {
+        "img": "espressif.png",
+        "alt": "Espressif",
+        "url": "https://www.espressif.com/",
+        "desc": {
+          "en": "Espressif Systems is a world-leading Internet-of-Things company. The company designs a range of high-performance Wi-Fi+Bluetooth (BLE) chipsets and modules. It built the widely popular ESP8266 and ESP32 chips. It also has an innovative team of chip-design specialists, software/firmware developers and marketers. Espressif Systems is committed to providing the best IoT devices and software platforms in the industry."
+        }
+      },
+      {
+        "img": "cera.png",
+        "alt": "Cera",
+        "url": "https://www.cera.be/",
+        "desc": {
+          "nl": "Met zo’n 400.000 vennoten is Cera een van de grootste coöperaties van België. We brengen mensen, middelen en organisaties samen, bundelen krachten, nemen initiatieven en realiseren projecten met een duidelijk doel: samen investeren in welvaart en welzijn."
+        }
+      }
+    ]
+  },
+  {
+    "label": "8 bit",
+    "partners": [
+      {
+        "img": "rogers.png",
+        "alt": "Rogers Corporation",
+        "url": "https://www.rogerscorp.com/",
+        "desc": {
+          "en": "Rogers Corporation is passionate about helping the world's leading innovators solve their toughest material challenges and create a cleaner, safer, and more connected world. "
+        }
+      },
+      {
+        "img": "kluwer.png",
+        "alt": "Wolters Kluwer",
+        "url": "https://careers.wolterskluwer.com/",
+        "desc": {
+          "en:": "Wolters Kluwer develops ERP and accounting software for financial professionals and entrepreneurs who aim to increase their efficiëncy. From individual tools to complete suites, on premise and in the cloud. Do you want to be a part of our organisation? Find out more at https://careers.wolterskluwer.com/en",
+          "nl": "Wolters Kluwer ontwikkelt ERP- en boekhoudsoftware voor accountants en ondernemers die efficiënter willen werken. Van individuele tools tot complete suites, on-premise en in de cloud. Wil je hier mee je schouders onder zetten? Meer info op https://careers.wolterskluwer.com/nl-be"
+        }
+      },
+      {
+        "img": "fablableuven.jpg",
+        "alt": "FabLab Leuven",
+        "url": "https://fablab-leuven.be"
+      },
+      {
+        "img": "bagaar.png",
+        "alt": "Bagaar",
+        "url": "https://www.bagaar.be/"
+      },
+      {
+        "img": "bluebits.png",
+        "alt": "Blue Bits bv",
+        "url": "https://www.bluebits.be/",
+        "desc": {
+          "nl": "Bluebits is een bedrijf dat software graag eenvoudig maakt. Geen hersenbrekers, geen dure opleidingen, gewoon software die doet wat je ervan verwacht. "
+        }
+      },
+      {
+        "img": "aoyue.png",
+        "url": "https://www.aoyue3d.com",
+        "alt": "Aoyue"
+      },
+      {
+        "img": "dewerkkamer.png",
+        "alt": "De Werkkamer",
+        "url": "https://www.dewerkkamer.be/",
+        "desc": {
+          "nl": "De Werkkamer restaureert en herstelt meubelen, schilderijen en objecten. Daarnaast maakt De Werkkamer meubelen via 2- en 3 D CNC freestechnieken, complementair aan maar ook geïntegreerd in de restauratieactiviteiten. Opgericht in 1999 als restauratieatelier breidde De Werkkamer haar activiteiten uit met het uitvoeren van speciale projecten en de combinatie van restauratie en renovatieprojecten zowel in privé als in openbare context. "
+        }
+      }
+    ]
+  }
+]

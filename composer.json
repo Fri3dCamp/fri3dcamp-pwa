@@ -1,0 +1,63 @@
+{
+  "name": "fri3dcamp/pwa",
+  "license": "proprietary",
+  "description": "WordPress plugin containing a PWA for Fri3d Camp 2022.",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Koen Van den Wijngaert",
+      "email": "koen@neok.be"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Fri3dCamp\\Pwa\\": "lib/"
+    }
+  },
+  "platform": {
+    "php": "7.4"
+  },
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "minishlink/web-push": "^5.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "bamarni/composer-bin-plugin": "^1.4",
+    "brain/monkey": "^2.6",
+    "squizlabs/php_codesniffer": "^3.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "phpcompatibility/php-compatibility": "^9.3",
+    "sirbrillig/phpcs-variable-analysis": "^2.8",
+    "wp-coding-standards/wpcs": "dev-develop"
+  },
+  "config": {
+    "allow-plugins": {
+      "bamarni/composer-bin-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "extra": {
+    "phpcodesniffer-search-depth": 1
+  },
+  "scripts": {
+    "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
+    "lint": "phpcs --standard=phpcs.xml.dist",
+    "scoper": [
+      "composer bin php-scoper config minimum-stability dev",
+      "composer bin php-scoper config prefer-stable true",
+      "composer bin php-scoper require --dev humbug/php-scoper",
+      "php-scoper add-prefix --config .scoper.inc.php --output-dir vendor_prefixed/",
+      "rm -rf vendor-bin/",
+      "composer dumpautoload"
+    ],
+    "build": [
+      "composer require rdlowrey/auryn",
+      "composer scoper -n",
+      "composer remove rdlowrey/auryn",
+      "composer dumpautoload"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Ongecategoriseerd",
+    "slug": "geen-categorie"
+  },
+  "10": {
+    "id": 10,
+    "name": "Activiteit",
+    "slug": "activiteit"
+  },
+  "11": {
+    "id": 11,
+    "name": "1. Life",
+    "slug": "life"
+  },
+  "12": {
+    "id": 12,
+    "name": "2. The Universe",
+    "slug": "theuniverse"
+  },
+  "13": {
+    "id": 13,
+    "name": "Voorstelling",
+    "slug": "voorstelling"
+  },
+  "15": {
+    "id": 15,
+    "name": "3. Everything",
+    "slug": "everything"
+  },
+  "16": {
+    "id": 16,
+    "name": "42",
+    "slug": "42"
+  },
+  "17": {
+    "id": 17,
+    "name": "2018",
+    "slug": "2018"
+  },
+  "18": {
+    "id": 18,
+    "name": "2019",
+    "slug": "2019"
+  },
+  "19": {
+    "id": 19,
+    "name": "2020",
+    "slug": "2020"
+  },
+  "20": {
+    "id": 20,
+    "name": "2021",
+    "slug": "2021"
+  },
+  "21": {
+    "id": 21,
+    "name": "2022",
+    "slug": "2022"
+  },
+  "22": {
+    "id": 22,
+    "name": "2023",
+    "slug": "2023"
+  },
+  "24": {
+    "id": 24,
+    "name": "pauze",
+    "slug": "pauze"
+  }
+}

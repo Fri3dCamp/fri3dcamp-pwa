@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<ruleset name="Coding standards for Easyfairs WP Plugin">
+	<description>Sniffs for WP Plugins.</description>
+
+	<rule ref="PHPCompatibility"/>
+	<config name="testVersion" value="7.4-"/>
+
+	<!-- Excludes -->
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>vendor_prefixed/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
+	<exclude-pattern>\.idea/*</exclude-pattern>
+	<exclude-pattern>assets/*</exclude-pattern>
+	<exclude-pattern>src/*</exclude-pattern>
+	<exclude-pattern>build/*</exclude-pattern>
+	<exclude-pattern>public/*</exclude-pattern>
+	<exclude-pattern>bin/*</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
+	<!-- / Excludes -->
+
+	<!-- What files to process -->
+	<file>./lib</file>
+	<file>./fri3dcamp-pwa.php</file>
+
+	<arg value="ps"/>
+
+	<!-- Show colors in console -->
+	<arg name="colors"/>
+
+	<!-- Scan only PHP files -->
+	<arg name="extensions" value="php"/>
+
+	<!-- check n files simultaneously -->
+	<arg name="parallel" value="100"/>
+
+	<!-- Enable PSR4 file and class naming -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<!-- WordPress extra rules -->
+	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress.WP.I18n"/>
+	<config name="text_domain" value="fri3dcamp-pwa,default"/>
+	<!-- /WordPress extra rules -->
+
+
+	<!-- Allow short array syntax -->
+	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Use of eval(). -->
+	<rule ref="Squiz.PHP.Eval"/>
+	<rule ref="Squiz.PHP.Eval.Discouraged">
+		<type>error</type>
+		<message>eval() is a security risk.</message>
+	</rule>
+
+	<!-- PCRE /e regex modifier. -->
+	<rule ref="PHPCompatibility.ParameterValues.RemovedPCREModifiers"/>
+
+	<!-- Use of the backtick operator (execution of shell commands). -->
+	<rule ref="Generic.PHP.BacktickOperator"/>
+
+	<!--
+	##### Untestable code. ####
+	-->
+	<rule ref="Generic.Metrics.CyclomaticComplexity">
+		<properties>
+			<property name="complexity" value="3"/>
+			<property name="absoluteComplexity" value="5"/>
+		</properties>
+	</rule>
+
+	<rule ref="Generic.Metrics.NestingLevel">
+		<properties>
+			<property name="absoluteNestingLevel" value="3"/>
+		</properties>
+	</rule>
+
+	<!--
+    ##### Outdated code. ####
+    -->
+
+	<!-- Use of PHP 4 style code. -->
+	<rule ref="Generic.Functions.CallTimePassByReference"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+	<rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
+
+
+	<!-- Use of outdated functions. -->
+	<rule ref="Generic.PHP.ForbiddenFunctions">
+		<properties>
+			<property name="error" value="false"/>
+		</properties>
+	</rule>
+
+	<!-- Use of outdated functions. Overlaps with PHPCompatibility. -->
+	<rule ref="WordPress.PHP.RestrictedPHPFunctions"/>
+	<rule ref="WordPress.PHP.POSIXFunctions"/>
+	<rule ref="Generic.PHP.DeprecatedFunctions"/>
+
+	<!--
+    ##### Messy code. ####
+    -->
+	<rule ref="WordPress.PHP.DontExtract">
+		<type>warning</type>
+	</rule>
+	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition">
+		<exclude name="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition"/>
+	</rule>
+	<rule ref="Generic.Classes.DuplicateClassName"/>
+	<rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+	<rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
+	<rule ref="Generic.PHP.DiscourageGoto"/>
+	<rule ref="Squiz.Scope.StaticThisUsage"/>
+
+	<!--
+    ##### Incompatible code - WP. ####
+    -->
+
+	<rule ref="WordPress.WP.DeprecatedFunctions"/>
+	<rule ref="WordPress.WP.DeprecatedClasses"/>
+	<rule ref="WordPress.WP.DeprecatedParameters"/>
+	<rule ref="WordPress.WP.DeprecatedParameterValues"/>
+
+	<!--
+    ##### Conflicting code. ####
+    -->
+
+	<!-- Overwriting WP global variables. -->
+	<rule ref="WordPress.WP.GlobalVariablesOverride"/>
+
+	<!-- Scripts & style should be enqueued. -->
+	<rule ref="WordPress.WP.EnqueuedResources"/>
+
+	<!-- Verify that everything in the global namespace is prefixed. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals"/>
+
+	<!-- Don't change runtime configuration. -->
+	<rule ref="WordPress.PHP.IniSet"/>
+
+	<!-- Security -->
+	<rule ref="WordPress.Security.EscapeOutput"/>
+	<rule ref="WordPress.Security.NonceVerification"/>
+	<rule ref="WordPress.Security.PluginMenuSlug"/>
+
+	<rule ref="WordPress-Extra">
+		<!-- Exclude any rules here -->
+		<exclude name="Universal.Operators.DisallowShortTernary"/>
+	</rule>
+
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+</ruleset>

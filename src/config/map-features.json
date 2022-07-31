@@ -1,0 +1,901 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fietsenstalling",
+        "type": "shape",
+        "icon": "",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.458228349685669, 51.1733322947938],
+            [4.4581800699234, 51.17321878293218],
+            [4.458589106798172, 51.17313554072272],
+            [4.458633363246918, 51.17324484864361],
+            [4.458228349685669, 51.1733322947938]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nucleus",
+        "icon": "nucleus.png",
+        "type": "location"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460679888725281, 51.173417218300116]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elektron",
+        "icon": "elektron.png",
+        "type": "location"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461715221405029, 51.17384435594044]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Proton",
+        "icon": "kinderlezingen.png",
+        "type": "location"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461076855659484, 51.17324232615608]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sound",
+        "type": "location",
+        "icon": "sound.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459215402603149, 51.17224004684486]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar",
+        "type": "facility",
+        "icon": "bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459998607635498, 51.17263860683103]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Infopunt",
+        "type": "facility",
+        "icon": "info"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460105895996094, 51.1725023905144]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jetonautomaat",
+        "type": "facility",
+        "icon": "euro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460180997848511, 51.17252929747303]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quark",
+        "type": "location",
+        "icon": "quark.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461127817630768, 51.173662738844605]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Universiteit van Vlaanderen",
+        "type": "location",
+        "icon": "",
+        "Activity": 1937
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460988342761993, 51.173598836362984]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waterraketjes",
+        "type": "location",
+        "Activity": 1983
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461261928081512, 51.173901531544786]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Colruyt",
+        "type": "location",
+        "icon": "",
+        "Activity": 1060
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461468458175658, 51.17377540879386]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Planetariumdome",
+        "type": "location",
+        "icon": "",
+        "Activity": 251
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461712539196014, 51.17365096734149]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marie QRie",
+        "type": "location",
+        "icon": "",
+        "Activity": 1755
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461953938007355, 51.17367114705929]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Toilet",
+        "type": "facility",
+        "Activity": "",
+        "icon": "wc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4623348116874695, 51.173662738844605]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "De imkers",
+        "type": "location",
+        "icon": "",
+        "Activity": 1684
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.462321400642395, 51.17382417629845]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Escape Room",
+        "type": "location",
+        "icon": "",
+        "Activity": 1663
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.462517201900482, 51.173548386972826]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maak je eigen katapult/extraheer je eigen DNA",
+        "type": "location",
+        "icon": "",
+        "Activity": 1983
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.462206065654755, 51.17350130082556]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bruggen bouwen, energiefiets",
+        "type": "location",
+        "Activity": 2003
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.462345540523529, 51.17348784763178]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vliegtuigjes vouwen",
+        "type": "location",
+        "icon": "",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4624581933021545, 51.1735113907183]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DNA en Lego",
+        "type": "location",
+        "icon": "",
+        "Activity": 1579
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461916387081146, 51.17326586936794]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Koeienogen dissecteren",
+        "type": "location",
+        "Activity": 1593
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461793005466461, 51.17322719122781]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Imec",
+        "type": "location",
+        "icon": "",
+        "Activity": 2022
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4616615772247314, 51.1731834680738]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "FWO/Vraag voor de Wetenschap",
+        "type": "location",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4615596532821655, 51.173146471526486]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schaken",
+        "type": "location",
+        "icon": "",
+        "Activity": 1562
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461447000503539, 51.17310779328618]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oude groenten",
+        "type": "location",
+        "Activity": 1666
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461347758769989, 51.17305734335879]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "3D-printen",
+        "type": "location",
+        "Activity": 1642
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461197555065155, 51.173010256710064]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zandkorrel graveren",
+        "type": "location",
+        "icon": "",
+        "Activity": 509
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460856914520264, 51.172741189223636]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "EHBO",
+        "type": "facility",
+        "icon": "ehbo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460645020008086, 51.17271764574387]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tesla",
+        "type": "location",
+        "icon": "",
+        "Activity": 2103
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460864961147308, 51.17297326002378]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Melexis",
+        "type": "location",
+        "Activity": 1752
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460494816303253, 51.17266719538963]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lichtexperimenten",
+        "type": "location",
+        "Activity": 1748
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4603607058525085, 51.17253266084177]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Steammachine",
+        "type": "location",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459859132766724, 51.1724569849861]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rode kruis Grime",
+        "type": "location"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4596874713897705, 51.1724199878559]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Insecten",
+        "type": "location",
+        "Activity": 1543
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.45970356464386, 51.17255956778274]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Space bikes",
+        "type": "location",
+        "Activity": 1402
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4596928358078, 51.17266046867156]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boekenwinkel / signeren/ juwelen",
+        "type": "location",
+        "Activity": 2110
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459357559680939, 51.172672240427545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Robot Zone",
+        "type": "location",
+        "Activity": 1433
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459277093410492, 51.172815182938926]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yakult",
+        "type": "location",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459384381771088, 51.17279836619588]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Foodcourt",
+        "type": "facility",
+        "icon": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459070563316345, 51.17266383203071]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Workshoptent A",
+        "type": "location",
+        "icon": "",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4602882862091064, 51.17272100909885]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Workshoptent B",
+        "type": "location",
+        "icon": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460419714450835, 51.172774822745325]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "KBIN/Ik heb een vraag",
+        "type": "location",
+        "Activity": 1994
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460535049438477, 51.17282190963442]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Voorleesessies/verzorgingsruimte",
+        "type": "location",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.460535049438477, 51.173032118374394]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Strechtent",
+        "type": "shape",
+        "Activity": ""
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.461328983306885, 51.173546705325556],
+            [4.461599886417389, 51.173546705325556],
+            [4.461599886417389, 51.17364255912314],
+            [4.461328983306885, 51.17364255912314],
+            [4.461328983306885, 51.173546705325556]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Virtuele zandbak",
+        "type": "location",
+        "Activity": 1798
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461565017700195, 51.17363415090326]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Immuno-T",
+        "type": "location",
+        "Activity": 1549
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.46157306432724, 51.17359547307203]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Caeleste",
+        "type": "location",
+        "Activity": 2093
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.46157306432724, 51.173560158502156]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scivil/oog voor diabetesch",
+        "type": "location",
+        "Activity": 2028
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461473822593689, 51.17355679520838]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "VR evenwicht",
+        "type": "location",
+        "Activity": 1585
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461414813995361, 51.173560158502156]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Minecraft",
+        "type": "location",
+        "Activity": 1989
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461350440979004, 51.173563521795685]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mensenmassameter",
+        "type": "location",
+        "Activity": 1575
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.461342394351959, 51.17363415090326]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Proefdieren",
+        "type": "location",
+        "Activity": 1597
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.46144163608551, 51.173635832547355]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Toilet",
+        "type": "facility",
+        "icon": "wc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.4595158100128165, 51.17237962731636]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "inkom",
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.458920359611511, 51.17316328814257],
+            [4.458665549755096, 51.17298166836418],
+            [4.459352195262909, 51.17262347170462],
+            [4.459598958492279, 51.17281181959082],
+            [4.458920359611511, 51.17316328814257]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "eten",
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.45863738656044, 51.172935422473024],
+            [4.458438903093338, 51.17279248033436],
+            [4.459106773138046, 51.172454462455434],
+            [4.459313303232193, 51.172589838072554],
+            [4.45863738656044, 51.172935422473024]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.460344612598419, 51.1734626228829],
+            [4.460556507110596, 51.17326418771034],
+            [4.460977613925934, 51.17344076142269],
+            [4.460776448249817, 51.173624061037366],
+            [4.460344612598419, 51.1734626228829]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.460978955030441, 51.173695530873175],
+            [4.4610996544361115, 51.17359799554028],
+            [4.461279362440109, 51.173684600199586],
+            [4.461150616407394, 51.173778772071685],
+            [4.460978955030441, 51.173695530873175]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.46161329746247, 51.17388639683286],
+            [4.461599215865142, 51.173860751893066],
+            [4.461603909730918, 51.17382964161902],
+            [4.461616650223739, 51.173809882380034],
+            [4.4616568833589625, 51.17378844149411],
+            [4.4617031514644685, 51.17378423739764],
+            [4.461748749017723, 51.17378844149411],
+            [4.461786970496184, 51.17379979255261],
+            [4.461813792586334, 51.173823335479845],
+            [4.4618191570043635, 51.17385108248584],
+            [4.461809098720558, 51.17388135192782],
+            [4.461774230003364, 51.173910360124424],
+            [4.461701810359962, 51.1739137233924],
+            [4.461646154522902, 51.17390657644765],
+            [4.46161329746247, 51.17388639683286]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.461013823747635, 51.17324421802176],
+            [4.461035616695881, 51.17321037463501],
+            [4.461075849831104, 51.173204699033576],
+            [4.461119100451469, 51.17321857272477],
+            [4.4611382111907005, 51.173245058850924],
+            [4.461118429899215, 51.17327406744783],
+            [4.461070820689201, 51.173283106354724],
+            [4.461024887859821, 51.17327196537621],
+            [4.461013823747635, 51.17324421802176]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.459082633256911, 51.17222407073985],
+            [4.459255635738373, 51.17216773390433],
+            [4.459326043725014, 51.172264010992016],
+            [4.459155052900314, 51.17231235967201],
+            [4.459082633256911, 51.17222407073985]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.460097849369049, 51.1724788469127],
+            [4.4601863622665405, 51.17239980759054],
+            [4.46056455373764, 51.17254443263035],
+            [4.460706710815429, 51.17249398208659],
+            [4.460894465446472, 51.172505753885076],
+            [4.461613297462463, 51.17283704469572],
+            [4.461618661880493, 51.17291944660892],
+            [4.46156769990921, 51.1729867133677],
+            [4.46194589138031, 51.17315151651194],
+            [4.461900293827057, 51.173217101272876],
+            [4.460097849369049, 51.1724788469127]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.462423324584961, 51.173484063920355],
+            [4.462648630142212, 51.17347985979613],
+            [4.462650641798985, 51.17357655455578],
+            [4.462434053421033, 51.17358496278619],
+            [4.462423324584961, 51.173484063920355]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "shape"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [4.458405375480651, 51.173395356818375],
+            [4.458609223365784, 51.1733163190672],
+            [4.458585418760776, 51.17329424733056],
+            [4.458732604980469, 51.173291094224474],
+            [4.458660185337067, 51.173358360441085],
+            [4.458633363246918, 51.17333481727643],
+            [4.458426833152771, 51.17341974077811],
+            [4.458405375480651, 51.173395356818375]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kassa",
+        "type": "facility",
+        "icon": "euro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.459542632102966, 51.172875723163116]
+      }
+    }
+  ]
+}
