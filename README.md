@@ -21,6 +21,29 @@ The development environment should now be available!
   * _Username:_ `admin`
   * _Password:_ `password`
 
+### Push notifications
+The GMP PHP extension needs to be installed for the notifications, but it doesn't seem possible to do so by configuration yet using `wp-env`.
+
+It can be enabled like so (after first running `npm run wp-env start` of course):
+
+```bash
+#!/usr/bin/env bash
+
+# Get name of the wordpress container (not the test container)
+CONTAINER_NAME=$(docker ps -f name=-wordpress-1 -q | tail -n1 | xargs docker inspect | jq -r '.[0].Name')
+
+# Grab it manually from `docker ps -f name=-wordpress-1` if not working.
+
+# Install prereqs & configure gmp extension
+docker exec $CONTAINER_NAME apt-get update -y \
+	&& docker exec $CONTAINER_NAME apt-get install libgmp-dev \
+	&& docker exec $CONTAINER_NAME docker-php-ext-configure gmp \
+	&& docker restart $CONTAINER_NAME
+
+# Verify that the extension is installed:
+docker exec $CONTAINER_NAME php -i | grep gmp
+```
+
 ## Front-end
 This project was originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
