@@ -21,6 +21,12 @@ The development environment should now be available!
   * _Username:_ `admin`
   * _Password:_ `password`
 
+### The PWA
+It's currently located at [localhost:8888/wp-content/plugins/fri3dcamp-pwa/build/](http://localhost:8888/wp-content/plugins/fri3dcamp-pwa/build/), after building it with `npm run build`.
+
+### Mapbox
+For the floorplan to work, you need a mapbox token (see `.env`). Ask [@vdwijngaert](https://github.com/vdwijngaert).
+
 ### Push notifications
 The GMP PHP extension needs to be installed for the notifications, but it doesn't seem possible to do so by configuration yet using `wp-env`.
 
