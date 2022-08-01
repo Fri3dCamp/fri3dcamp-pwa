@@ -36,6 +36,7 @@
   },
   "scripts": {
     "wp-env": "wp-env",
+    "prepare-wp-env": "./bin/install-gmp-extension.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
