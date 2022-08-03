@@ -8,9 +8,12 @@ import { getCurrentDate } from "../../util/activity";
 import { connectRouter } from "connected-react-router";
 import { getMapFeatures } from "../../util/floorplan";
 import loadEntity from "./entitityloader";
+import loadSchedule from "./schedule-loader";
 
 const initialState = {
+	schedule: {},
 	entities: {
+		schedule: {},
 		activities: {},
 		updates: {},
 		days: getEventDates(),
@@ -47,6 +50,10 @@ const initialState = {
 	},
 	updatesRead: [],
 	favoriteActivities: [],
+};
+
+const schedule = ( state = initialState.schedule, action) => {
+	return state;
 };
 
 // Updates an entity cache in response to any action with response.entities.
@@ -116,6 +123,13 @@ const floorPlan = (state = initialState.floorPlan, action) => {
 };
 
 const entityloader = combineReducers({
+	schedules: loadSchedule({
+		types: [
+			ActionTypes.SCHEDULE_REQUEST,
+			ActionTypes.SCHEDULE_SUCCESS,
+			ActionTypes.SCHEDULE_FAILURE,
+		],
+	}),
 	updates: loadEntity({
 		types: [
 			ActionTypes.UPDATES_REQUEST,
@@ -207,6 +221,7 @@ const errorMessage = (state = null, action) => {
 export default (history) =>
 	combineReducers({
 		router: connectRouter(history),
+		schedule,
 		entities,
 		entityloader,
 		activityFilter,

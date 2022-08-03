@@ -95,6 +95,65 @@ export const day = new schema.Entity(
 	}
 );
 
+export const conferencePerson = new schema.Entity(
+	"persons",
+	{},
+	{
+		idAttribute: (person) => person.id,
+	}
+);
+
+export const conferenceSession = new schema.Entity(
+	"sessions",
+	{
+		persons: [conferencePerson],
+	},
+	{
+		idAttribute: (room) => room.id,
+	}
+);
+
+export const conferenceRoom = new schema.Entity(
+	"rooms",
+	{
+		sessions: [conferenceSession],
+	},
+	{
+		idAttribute: 'name',
+	}
+);
+
+export const conferenceDay = new schema.Entity(
+	"days",
+	{
+		rooms: [conferenceRoom],
+	},
+	{
+		idAttribute: 'index',
+		processStrategy: (obj, parent, key) => ({
+			...obj,
+			rooms: Object.entries(obj.rooms).map(([name, sessions]) => ({
+				name,
+				sessions: sessions.map((session) => ({...session, room: name})),
+			})),
+		})
+	}
+);
+
+export const conference = new schema.Entity(
+	"conference",
+	{
+		days: [conferenceDay],
+	},
+	{
+		idAttribute: (conference) => conference.acronym.toLowerCase(),
+		processStrategy: (obj, parent, key) => {
+			console.log(obj, parent, key);
+			return obj;
+		}
+	}
+);
+
 export const location = new schema.Entity(
 	"locations",
 	{},
@@ -160,5 +219,26 @@ export const activity = new schema.Entity(
 
 			return act;
 		},
+	}
+);
+
+export const schedule = new schema.Entity(
+	"schedule",
+	{
+		conference,
+	},
+	{
+		mergeStrategy: (entityA, entityB) => {
+			console.log('merge', entityA, entityB);
+			return {
+				...entityA,
+				...entityB,
+			};
+		},
+		idAttribute: 'id',
+		processStrategy: (obj, parent, key) => {
+			console.log('process', obj, parent, key);
+			return { id: 'schedule', ...obj.schedule }
+		}
 	}
 );

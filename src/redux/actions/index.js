@@ -23,7 +23,8 @@ const backgroundSync = () => (dispatch) => {
 	setTimeout(() => dispatch(backgroundSync()), 15 * 60 * 1000);
 	//setTimeout(() => dispatch(backgroundSync()), 5*1000);
 
-	dispatch(loadActivities());
+	dispatch(loadSchedule());
+	// dispatch(loadActivities());
 	dispatch(loadUpdates());
 	dispatch(ensureSubscription());
 };
@@ -91,7 +92,8 @@ export const doInitialize = () => (dispatch) => {
 
 export const forceUpdate = () => (dispatch) => {
 	dispatch(forceRefresh());
-	dispatch(loadActivities());
+	dispatch(loadSchedule());
+	// dispatch(loadActivities());
 	dispatch(loadUpdates());
 };
 
@@ -195,6 +197,26 @@ export const toggleFavorite = (activityId) => (dispatch, getState) => {
 	const isLike = favoriteActivities.indexOf(activityId) === -1;
 
 	return dispatch(setActivityFavorite(activity, isLike));
+};
+
+// SCHEDULE
+export const SCHEDULE_REQUEST = "SCHEDULE_REQUEST";
+export const SCHEDULE_SUCCESS = "SCHEDULE_SUCCESS";
+export const SCHEDULE_FAILURE = "SCHEDULE_FAILURE";
+
+const fetchSchedule = (endpoint, force) => ({
+	[CALL_API]: {
+		types: [SCHEDULE_REQUEST, SCHEDULE_SUCCESS, SCHEDULE_FAILURE],
+		endpoint: endpoint,
+		force: !!force,
+		schema: Schemas.SCHEDULE,
+	},
+});
+
+export const loadSchedule = (endpoint, force) => (dispatch) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/fri3dcamp2022/schedule/export/schedule.json";
+
+	return dispatch(fetchSchedule(endpoint || defaultEndpoint, !!force));
 };
 
 // UPDATES
