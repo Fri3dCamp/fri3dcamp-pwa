@@ -20,7 +20,7 @@ const getNextPageUrl = (response) => {
 
 const callApi = async (endpoint, schema) => {
 	const fullUrl =
-		endpoint.indexOf(API_ROOT) === -1
+		endpoint.indexOf('http') !== 0
 			? API_ROOT + "/" + endpoint
 			: endpoint;
 
@@ -40,6 +40,7 @@ const callApi = async (endpoint, schema) => {
 export const Schemas = {
 	ACTIVITY: Schema.activity,
 	ACTIVITY_ARRAY: [Schema.activity],
+	SCHEDULE: Schema.schedule,
 	UPDATE: Schema.update,
 	UPDATE_ARRAY: [Schema.update],
 };

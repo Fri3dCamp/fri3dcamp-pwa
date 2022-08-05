@@ -38,7 +38,7 @@
     "wp-env": "wp-env",
     "prepare-wp-env": "./bin/install-gmp-extension.sh",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && sed -i '/^self\\.addEventListener.*/i importScripts(\"/app/progressiveWebApp.js\");' ./build/service-worker.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "composer": "wp-env run composer",

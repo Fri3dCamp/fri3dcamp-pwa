@@ -86,6 +86,9 @@ class BottomBar extends React.Component {
 	}
 
 	actions(actions) {
+		const publicUrl = process.env.PUBLIC_URL;
+		const publicPath = (new URL(publicUrl)).pathname;
+
 		return actions.map((action) => {
 			let icon = <action.icon />;
 
@@ -99,24 +102,25 @@ class BottomBar extends React.Component {
 					label={action.label}
 					icon={icon}
 					component={Link}
-					to={action.path}
+					to={ publicPath + action.path}
 				/>
 			);
 		});
 	}
 
 	getNavigationValue(location, match) {
+		const publicUrl = process.env.PUBLIC_URL;
+		const publicPath = (new URL(publicUrl)).pathname;
+
 		let activeNavigation = this.state.navigationActions.find((action) => {
-			console.log(document.baseURI + action.path, location.pathname);
-			return (document.baseURI + action.path) === location.pathname;
+			return (publicPath + action.path) === location.pathname;
 		});
 
 		if (!activeNavigation) {
-			console.log(this.state.navigationActions, location.pathname);
 			activeNavigation = Array.from(this.state.navigationActions)
 				.reverse()
 				.find((action) => {
-					return location.pathname.startsWith(document.baseURI + action.path);
+					return location.pathname.startsWith(publicPath + action.path);
 				});
 		}
 

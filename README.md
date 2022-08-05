@@ -21,8 +21,10 @@ The development environment should now be available!
   * _Username:_ `admin`
   * _Password:_ `password`
 
+**Note:** The default settings for permalinks should be set to `/%postname%/` manually, otherwise the REST API endpoint might not work, needs to be automated for the dev env.
+
 ### The PWA
-It's currently located at [localhost:8888/wp-content/plugins/fri3dcamp-pwa/build/](http://localhost:8888/wp-content/plugins/fri3dcamp-pwa/build/), after building it with `npm run build`.
+It's currently located at [localhost:8888/app/](http://localhost:8888/app/), after building it with `npm run build`.
 
 ### Mapbox
 For the floorplan to work, you need a mapbox token (see `.env`). Ask [@vdwijngaert](https://github.com/vdwijngaert).
@@ -31,6 +33,13 @@ For the floorplan to work, you need a mapbox token (see `.env`). Ask [@vdwijngae
 The GMP PHP extension needs to be installed for the notifications, but it doesn't seem possible to do so by configuration yet using `wp-env`.
 
 It can be enabled with `npm run prepare-wp-env`. In case of issues, try and execute the steps in [`bin/install-gmp-extension.sh`](./bin/install-gmp-extension.sh) manually.
+
+The service worker script that handles push notifications and displays the actual notifications is injected when running npm build.
+
+Push notification and subscribers can be managed from the WP Backend "tools > PWA" menu.
+
+### Updates
+Updates can be managed in the WP backend, by adding new posts of type "Update".
 
 ## Front-end
 This project was originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

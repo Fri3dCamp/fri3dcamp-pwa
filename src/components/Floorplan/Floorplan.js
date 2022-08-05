@@ -225,7 +225,7 @@ class Floorplan extends React.Component {
 				<Button
 					size="small"
 					component={Link}
-					to={`${process.env.PUBLIC_URL}/activity/${activity.id}`}
+					to={`activity/${activity.id}`}
 					variant="contained"
 					color="primary"
 				>

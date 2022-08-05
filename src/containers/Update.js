@@ -46,7 +46,7 @@ class Update extends React.Component {
 		let img = null;
 
 		if (!update) {
-			return <Redirect to={`${process.env.PUBLIC_URL}/update`} />;
+			return <Redirect to={`update`} />;
 		}
 
 		if (update && update.images) {

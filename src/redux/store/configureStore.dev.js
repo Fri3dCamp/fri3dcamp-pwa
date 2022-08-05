@@ -14,8 +14,6 @@ export const history = createBrowserHistory(
 	}
 );
 
-console.log('History', history);
-
 const states = [
 	"entities",
 	"notifications",
