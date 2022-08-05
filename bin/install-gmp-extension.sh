@@ -8,8 +8,13 @@ CONTAINER_NAME=$(docker ps -f name=-wordpress -q | tail -n1 | xargs docker inspe
 # Install prereqs & gmp extension
 docker exec "$CONTAINER_NAME" apt-get update -y \
 	&& docker exec "$CONTAINER_NAME" apt-get -y install libgmp-dev \
-	&& docker exec "$CONTAINER_NAME" docker-php-ext-install gmp \
-	&& docker restart "$CONTAINER_NAME"
+	&& docker exec "$CONTAINER_NAME" docker-php-ext-install gmp
+
+# Enable headers module.
+docker exec "$CONTAINER_NAME" a2enmod headers
+
+# Restart container.
+docker restart "$CONTAINER_NAME"
 
 # Verify that the extension is installed:
 docker exec "$CONTAINER_NAME" php -i | grep gmp

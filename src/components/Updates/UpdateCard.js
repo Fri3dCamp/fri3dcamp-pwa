@@ -22,7 +22,7 @@ const UpdateCard = ({ update, classes }) => (
 	<Card className={`${update.isRead ? "" : classes.unRead}`}>
 		<CardActionArea
 			component={Link}
-			to={`${process.env.PUBLIC_URL}/update/${update.id}`}
+			to={`update/${update.id}`}
 		>
 			<CardHeader
 				title={<UpdateTitle update={update} />}

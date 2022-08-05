@@ -107,7 +107,7 @@ class ProgramCard extends React.Component {
 				) : (
 					<CardActionArea
 						component={Link}
-						to={`${process.env.PUBLIC_URL}/program/${program.id}`}
+						to={`program/${program.id}`}
 					>
 						{programCardContent}
 					</CardActionArea>

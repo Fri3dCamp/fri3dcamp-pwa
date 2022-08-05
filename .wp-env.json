@@ -8,5 +8,9 @@
     "tests": {
       "phpVersion": "7.4"
     }
+  },
+  "mappings": {
+    ".htaccess": "./docker/.htaccess",
+    "app": "./build"
   }
 }

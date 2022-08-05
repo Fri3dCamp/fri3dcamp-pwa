@@ -148,7 +148,6 @@ export const conference = new schema.Entity(
 	{
 		idAttribute: (conference) => conference.acronym.toLowerCase(),
 		processStrategy: (obj, parent, key) => {
-			console.log(obj, parent, key);
 			return obj;
 		}
 	}
@@ -223,13 +222,12 @@ export const activity = new schema.Entity(
 );
 
 export const schedule = new schema.Entity(
-	"schedule",
+	"schedules",
 	{
 		conference,
 	},
 	{
 		mergeStrategy: (entityA, entityB) => {
-			console.log('merge', entityA, entityB);
 			return {
 				...entityA,
 				...entityB,
@@ -237,8 +235,7 @@ export const schedule = new schema.Entity(
 		},
 		idAttribute: 'id',
 		processStrategy: (obj, parent, key) => {
-			console.log('process', obj, parent, key);
-			return { id: 'schedule', ...obj.schedule }
+			return { id: 'main', ...obj }
 		}
 	}
 );

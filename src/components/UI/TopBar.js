@@ -89,7 +89,7 @@ class TopBar extends React.Component {
 							<ArrowBackIcon />
 						</IconButton>
 					)}
-					<Link to="/">
+					<Link to={`activity`}>
 						<img
 							src={logo}
 							className={classes.logo}
@@ -124,20 +124,20 @@ const TopBarMenu = ({ classes }) => {
 
 			<Menu {...bindMenu(popupState)}>
 				<Link
-					to="/locations"
+					to={`locations`}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Locaties</MenuItem>
 				</Link>
 				<Divider />
 				<Link
-					to="/settings"
+					to={`settings`}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Instellingen</MenuItem>
 				</Link>
 				<Link
-					to="/partners"
+					to={`partners`}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Partners</MenuItem>

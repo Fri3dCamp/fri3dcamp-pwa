@@ -15,7 +15,7 @@ const Error = () => (
 					variant="contained"
 					color="primary"
 					component={Link}
-					to={`${process.env.PUBLIC_URL}/`}
+					to={`/activity`}
 				>
 					Naar beginpagina
 				</Button>

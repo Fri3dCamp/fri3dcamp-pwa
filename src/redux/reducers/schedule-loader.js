@@ -44,7 +44,7 @@ const loadSchedule = ({ types }) => {
 					isFetching: true,
 				};
 			case successType:
-				console.log(action.response);
+				console.log('success action response', action.response);
 				return {
 					...state,
 					isFetching: false,
