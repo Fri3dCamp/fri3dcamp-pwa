@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { Link, withRouter } from "react-router-dom";
-import logo from "../../img/fri3dcamp_white.png";
+import logo from "../../img/logo.png";
 
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Menu from "@material-ui/core/Menu";
@@ -93,7 +93,7 @@ class TopBar extends React.Component {
 						<img
 							src={logo}
 							className={classes.logo}
-							alt="Fri3d Camp Logo"
+							alt="Fri3d Camp"
 						/>
 					</Link>
 					<div className={classes.grow} />

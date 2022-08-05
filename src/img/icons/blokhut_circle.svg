@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" style="fill: #fff"/>
+  <g>
+    <polygon points="90.52 89.83 109.48 89.83 136.04 89.83 165.8 89.83 146.05 52.94 116.28 52.94 109.48 52.94 90.52 52.94 79.71 52.94 53.95 52.94 34.2 89.83 79.71 89.83 90.52 89.83"/>
+    <rect x="46.27" y="94.12" width="107.46" height="14.79"/>
+    <rect x="46.27" y="132.28" width="41.96" height="14.79"/>
+    <rect x="111.77" y="132.28" width="41.96" height="14.79"/>
+    <rect x="46.27" y="113.2" width="41.96" height="14.79"/>
+    <rect x="111.77" y="113.2" width="41.96" height="14.79"/>
+  </g>
+</svg>

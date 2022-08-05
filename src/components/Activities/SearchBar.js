@@ -10,10 +10,11 @@ const styles = (theme) => ({
 	search: {
 		position: "relative",
 		borderRadius: theme.shape.borderRadius,
-		backgroundColor: fade(theme.palette.common.white, 0.15),
+		backgroundColor: "black",
 		"&:hover": {
-			backgroundColor: fade(theme.palette.common.white, 0.25),
+			backgroundColor: "black",
 		},
+        color:"white",
 		marginLeft: theme.spacing.unit,
 		width: "auto",
 	},
@@ -25,6 +26,7 @@ const styles = (theme) => ({
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center",
+        color: "white",
 	},
 	inputRoot: {
 		color: "inherit",
