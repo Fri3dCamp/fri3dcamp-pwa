@@ -9,6 +9,7 @@ import CardBlock from "../UI/CardBlock";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import LoadingIndicator from "../UI/LoadingIndicator";
@@ -69,35 +70,16 @@ const UpdateSidebar = ({
 				)}
 				<Grid item>
 					<Header header="Volg ons" variant="h4" />
+                    <Typography variant="p">Hello world</Typography>
 					<Button
 						component="a"
 						style={{ margin: "5px" }}
 						target="_blank"
 						variant="contained"
 						rel="noreferrer noopener"
-						href="https://www.facebook.com/soundscifest/"
+						href="http://join.discord.fri3d.be/"
 					>
-						Facebook
-					</Button>
-					<Button
-						component="a"
-						style={{ margin: "5px" }}
-						target="_blank"
-						variant="contained"
-						rel="noreferrer noopener"
-						href="https://twitter.com/soundscifest"
-					>
-						Twitter
-					</Button>
-					<Button
-						component="a"
-						style={{ margin: "5px" }}
-						target="_blank"
-						variant="contained"
-						rel="noreferrer noopener"
-						href="https://www.instagram.com/soundscifest/"
-					>
-						Instagram
+						Discord
 					</Button>
 				</Grid>
 				{isAuthenticated && (
