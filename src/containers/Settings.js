@@ -84,36 +84,6 @@ const Settings = ({
 					</FormControl>
 				</CardBlock>
 			</Grid>
-			<Grid item xs={12}>
-				<CardBlock>
-					<FormControl component="fieldset">
-						<FormLabel component="legend">Help ons</FormLabel>
-						<FormGroup>
-							<FormControlLabel
-								control={
-									<Switch
-										color="secondary"
-										checked={trackingConsent}
-										onChange={(e) =>
-											changeConsent(e.target.checked)
-										}
-										value="consent"
-									/>
-								}
-								label="Deel anonieme gegevens"
-							/>
-						</FormGroup>
-						<FormHelperText>
-							We willen jullie graag beter begrijpen, zodat we de
-							volgende editie nóg beter kunnen maken. Jij kan
-							daarbij helpen door anonieme gegevens over het
-							gebruik van deze app naar ons terug te sturen. Zo
-							zien we bijvoorbeeld achteraf welke activiteiten het
-							populairst waren.
-						</FormHelperText>
-					</FormControl>
-				</CardBlock>
-			</Grid>
 		</Grid>
 	</Page>
 );
