@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    build: ./
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: $DB_USER
+      WORDPRESS_DB_PASSWORD: $DB_PASSWORD
+      WORDPRESS_DB_NAME: $DB_NAME
+    volumes:
+      - ./wordpress:/var/www/html
+    networks:
+      - default
+      - gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.$APP_NAME.entrypoints=http"
+      - "traefik.http.routers.$APP_NAME.rule=Host(`$DOMAIN_NAME`)"
+      - "traefik.http.routers.$APP_NAME.middlewares=https-redirect@file"
+      - "traefik.http.routers.$APP_NAME-secure.entrypoints=https"
+      - "traefik.http.routers.$APP_NAME-secure.rule=Host(`$DOMAIN_NAME`)"
+      - "traefik.http.routers.$APP_NAME-secure.tls=true"
+      # In case of let's encrypt
+      - "traefik.http.routers.$APP_NAME-secure.tls.certresolver=http"
+      - "traefik.docker.network=gateway"
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./database:/var/lib/mysql
+
+networks:
+  gateway:
+    external: true

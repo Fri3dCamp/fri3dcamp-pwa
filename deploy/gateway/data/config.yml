@@ -1,0 +1,32 @@
+http:
+  middlewares:
+    # redirect http to https
+    https-redirect:
+      redirectScheme:
+        scheme: https
+
+    # basic default security headers
+    default-headers:
+      headers:
+        frameDeny: true
+        sslRedirect: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+
+    # IP Whitelist
+    default-whitelist:
+      ipWhiteList:
+        sourceRange:
+        - "10.0.0.0/24"
+        - "192.168.0.0/16"
+        - "172.0.0.0/8"
+
+    # chain containing headers & whitelist
+    secured:
+      chain:
+        middlewares:
+        - default-whitelist
+        - default-headers

@@ -1,0 +1,38 @@
+api:
+  dashboard: true
+
+entryPoints:
+  http:
+    address: ":80"
+  https:
+    address: ":443"
+  metrics:
+    address: ":8082"
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+  file:
+    filename: /config.yml
+
+certificatesResolvers:
+  http:
+    acme:
+      email: fri3d-le@neok.be
+      storage: acme.json
+      httpChallenge:
+        entryPoint: http
+
+log:
+  filePath: "/opt/traefik/logs/traefik.log"
+
+accessLog: 
+  filePath: "/opt/traefik/logs/access.log"
+
+metrics:
+  prometheus: 
+    entryPoint: metrics
+    addEntryPointsLabels: true
+    addRoutersLabels: true
+    addServicesLabels: true

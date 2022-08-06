@@ -1,0 +1,39 @@
+version: "3.3"
+
+services:
+  traefik:
+    image: traefik:v2.5
+    container_name: traefik
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/traefik.yml:/traefik.yml:ro
+      - ./data/acme.json:/acme.json
+      - ./data/config.yml:/config.yml:ro
+      - ./logs:/opt/traefik/logs:rw
+      - /opt/traefik/ssl:/certs:ro
+    networks:
+      - gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.entrypoints=http"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=${DASHBOARD_CREDS}"
+      - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
+      - "traefik.http.routers.traefik-secure.entrypoints=https"
+      - "traefik.http.routers.traefik-secure.rule=Host(`traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
+      - "traefik.http.routers.traefik-secure.tls=true"
+      - "traefik.http.routers.traefik-secure.tls.certresolver=http"
+      - "traefik.http.routers.traefik-secure.service=api@internal"
+
+networks:
+  gateway:
+    external: true
