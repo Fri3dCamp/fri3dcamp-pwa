@@ -55,12 +55,6 @@ class BottomBar extends React.Component {
 					icon: PeopleOutlineIcon,
 					path: "/volunteering",
 				},
-				// {
-				//   key: 3,
-				//   label: 'Favorieten',
-				//   icon: FavoriteIcon,
-				//   path: '/favorites',
-				// },
 			],
 		};
 	}

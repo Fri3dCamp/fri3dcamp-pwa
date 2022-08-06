@@ -69,8 +69,9 @@ const UpdateSidebar = ({
 					</Grid>
 				)}
 				<Grid item>
-					<Header header="Volg ons" variant="h4" />
-                    <Typography variant="p">Hello world</Typography>
+                    <Typography variant="body1">Check de laatste updates, en hou contact met andere Fri3d Camp deelnemers op Discord.</Typography>
+                </Grid>
+				<Grid item>
 					<Button
 						component="a"
 						style={{ margin: "5px" }}
