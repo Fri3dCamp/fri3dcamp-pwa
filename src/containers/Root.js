@@ -47,8 +47,6 @@ class Root extends React.Component {
 
 	render() {
 		const { store, classes } = this.props;
-		const publicUrl = process.env.PUBLIC_URL;
-		const publicPath = process.env.NODE_ENVIRONMENT === "production" ? '/app' : '';
 
 		return (
 			<Provider store={store}>

@@ -7,6 +7,7 @@ import CardBlock from "../../UI/CardBlock";
 import { connect } from "react-redux";
 import { getDayById, getLocationByName } from "../../../redux/selectors";
 import UpcomingActivities from "../UpcomingActivities";
+import {prefixRoute} from "../../../routing";
 
 const getEvent = (activity) => {
 	const startDatetime = moment(activity.period.start).subtract(2, "hours");
@@ -52,7 +53,7 @@ const Sidebar = ({ activity, location, day }) => {
 			{activity.location !== "terrein" && (
 				<Grid item xs={12} sm={6} md={12}>
 					<CardBlock
-						headerLink={`${process.env.PUBLIC_URL}/location/${activity.location}`}
+						headerLink={prefixRoute(`/location/${activity.location}`)}
 						header={{
 							title: location.name,
 							subheader: location.subTitle,
