@@ -16,6 +16,7 @@ import {
 	LazyLoadComponent,
 	trackWindowScroll,
 } from "react-lazy-load-image-component";
+import {prefixRoute} from "../../routing";
 
 const styles = (theme) => ({
 	card: {},
@@ -107,7 +108,7 @@ class ProgramCard extends React.Component {
 				) : (
 					<CardActionArea
 						component={Link}
-						to={`program/${program.id}`}
+						to={prefixRoute(`/program/${program.id}`)}
 					>
 						{programCardContent}
 					</CardActionArea>

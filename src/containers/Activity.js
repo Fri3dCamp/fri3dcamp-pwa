@@ -59,13 +59,10 @@ class Activity extends React.Component {
 			return <LoadingIndicator />;
 		}
 
-		let img = null;
+		let imageUrl = undefined;
 
-		if (activity && activity.images) {
-			img =
-				activity.images.large ||
-				activity.images.full ||
-				activity.images.mediumLarge;
+		if (activity && activity.logo && activity.logo !== "") {
+			imageUrl = `https://pretalx.fri3d.be/${activity.logo}`;
 		}
 
 		return (
@@ -73,7 +70,7 @@ class Activity extends React.Component {
 				<ShareOptions activity={activity} />
 				<Grid item xs={12} md={8}>
 					<CardBlock
-						media={img && img.sourceUrl}
+						media={imageUrl}
 						mediaProps={{ style: { paddingTop: "56.25%" } }}
 						header={{
 							title: activity.title,

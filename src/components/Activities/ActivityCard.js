@@ -20,6 +20,7 @@ import { connect } from "react-redux";
 import { getLocationByName, getPastActivities } from "../../redux/selectors";
 import LikeButton from "../UI/LikeButton";
 import { toggleFavorite } from "../../redux/actions";
+import {prefixRoute} from "../../routing";
 
 const styles = (theme) => ({
 	card: {},
@@ -104,15 +105,12 @@ class ActivityCard extends React.Component {
 	render() {
 		const { classes, activity, scrollPosition, isPast, ...others } =
 			this.props;
-		let img = null;
 
-		if (activity && activity.images) {
-			img =
-				activity.images.mediumLarge ||
-				activity.images.large ||
-				activity.images.medium;
+		let imageUrl = undefined;
+
+		if (activity && activity.logo && activity.logo !== "") {
+			imageUrl = `https://pretalx.fri3d.be/${activity.logo}`;
 		}
-		const imageUrl = img.sourceUrl || false;
 
 		const activityCardContent = (
 			<ActivityCardContent
@@ -137,7 +135,7 @@ class ActivityCard extends React.Component {
 				) : (
 					<CardActionArea
 						component={Link}
-						to={`activity/${activity.id}`}
+						to={prefixRoute(`/activity/${activity.id}`)}
 					>
 						{activityCardContent}
 					</CardActionArea>

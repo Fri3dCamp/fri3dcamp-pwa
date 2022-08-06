@@ -11,6 +11,7 @@ import React from "react";
 import UpdateTitle from "./UpdateTitle";
 import moment from "moment";
 import "moment/locale/nl";
+import {prefixRoute} from "../../routing";
 
 const styles = (theme) => ({
 	unRead: {
@@ -22,7 +23,7 @@ const UpdateCard = ({ update, classes }) => (
 	<Card className={`${update.isRead ? "" : classes.unRead}`}>
 		<CardActionArea
 			component={Link}
-			to={`update/${update.id}`}
+			to={prefixRoute(`/update/${update.id}`)}
 		>
 			<CardHeader
 				title={<UpdateTitle update={update} />}

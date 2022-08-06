@@ -18,6 +18,7 @@ import {
 	bindTrigger,
 	usePopupState,
 } from "material-ui-popup-state/hooks";
+import {prefixRoute} from "../../routing";
 
 const styles = (theme) => ({
 	appBar: {
@@ -89,7 +90,7 @@ class TopBar extends React.Component {
 							<ArrowBackIcon />
 						</IconButton>
 					)}
-					<Link to={`activity`}>
+					<Link to={prefixRoute("/activity")}>
 						<img
 							src={logo}
 							className={classes.logo}
@@ -124,20 +125,20 @@ const TopBarMenu = ({ classes }) => {
 
 			<Menu {...bindMenu(popupState)}>
 				<Link
-					to={`locations`}
+					to={prefixRoute(`/locations`)}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Locaties</MenuItem>
 				</Link>
 				<Divider />
 				<Link
-					to={`settings`}
+					to={prefixRoute(`/settings`)}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Instellingen</MenuItem>
 				</Link>
 				<Link
-					to={`partners`}
+					to={prefixRoute(`/partners`)}
 					style={{ textDecoration: "none", outline: "none" }}
 				>
 					<MenuItem onClick={popupState.close}>Partners</MenuItem>

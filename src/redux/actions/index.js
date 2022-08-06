@@ -68,7 +68,7 @@ const tickTimer = () => (dispatch) => {
 	setTimeout(() => dispatch(tickTimer()), 5 * 60 * 1000);
 
 	let currentDate = new Date();
-	const numberOfDaysToAdd = -300;
+	const numberOfDaysToAdd = 0;
 	currentDate.setDate(currentDate.getDate() + numberOfDaysToAdd);
 
 	dispatch(setCurrentDate(currentDate));

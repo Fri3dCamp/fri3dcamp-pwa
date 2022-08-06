@@ -23,6 +23,7 @@ import { ConnectedRouter } from "connected-react-router";
 import { history } from "../redux/store/configureStore";
 import ErrorBoundary from "./ErrorBoundary";
 import Notifier from "../components/Notifier";
+import {prefixRoute} from "../routing";
 
 const styles = (theme) => ({
 	main: {
@@ -47,7 +48,7 @@ class Root extends React.Component {
 	render() {
 		const { store, classes } = this.props;
 		const publicUrl = process.env.PUBLIC_URL;
-		const publicPath = (new URL(publicUrl)).pathname;
+		const publicPath = process.env.NODE_ENVIRONMENT === "production" ? '/app' : '';
 
 		return (
 			<Provider store={store}>
@@ -63,58 +64,55 @@ class Root extends React.Component {
 								<Switch>
 									<Route
 										exact
-										path={`${publicPath}/locations`}
+										path={prefixRoute(`/locations`)}
 										component={Locations}
 									/>
 									<Route
 										exact
-										path={`${publicPath}/location/:name`}
+										path={prefixRoute(`/location/:name`)}
 										component={Location}
 									/>
 									<Route
 										exact
-										path={`${publicPath}/update`}
+										path={prefixRoute(`/update`)}
 										component={Updates}
 									/>
 									<Route
-										path={`${publicPath}/update/:id`}
+										path={prefixRoute(`/update/:id`)}
 										component={Update}
 									/>
 									<Route
 										exact
-										path={`${publicPath}/activity`}
+										path={prefixRoute(`/activity`)}
 										component={Activities}
 									/>
 									<Route
-										path={`${publicPath}/activity/:id`}
+										path={prefixRoute(`/activity/:id`)}
 										component={Activity}
 									/>
 									<Route
-										path={`${publicPath}/favorites`}
+										path={prefixRoute(`/favorites`)}
 										component={Favorites}
 									/>
 									<Route
-										path={`${publicPath}/partners`}
+										path={prefixRoute(`/partners`)}
 										component={Partners}
 									/>
 									<Route
-										path={`${publicPath}/settings`}
+										path={prefixRoute(`/settings`)}
 										component={Settings}
 									/>
 									<Route
-										path={`${publicPath}/map`}
+										path={prefixRoute(`/map`)}
 										component={MapContainer}
 									/>
 									<Route
-										path={`${publicPath}/`}
-										component={({ location }) => (
-											<Redirect
-												to={{
-													...location,
-													pathname: publicPath + "/activity",
-												}}
-											/>
-										)}
+										path={prefixRoute(`/`)}
+										component={({ location }) => {
+											console.log(location);
+											return (<Redirect
+												to={prefixRoute('/activity')}
+											/>)}}
 									/>
 								</Switch>
 							</ErrorBoundary>
