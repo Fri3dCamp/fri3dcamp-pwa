@@ -143,6 +143,12 @@ const TopBarMenu = ({ classes }) => {
 				>
 					<MenuItem onClick={popupState.close}>Partners</MenuItem>
 				</Link>
+				<a
+					href="https://tickets.fri3d.be/shifts" target="_blank"
+					style={{ textDecoration: "none", outline: "none" }}
+				>
+					<MenuItem onClick={popupState.close}>Shifts</MenuItem>
+				</a>
 				<Divider />
 				<MenuItem
 					onClick={() => {
