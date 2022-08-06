@@ -107,6 +107,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
+`npm run build:staging && npm run build-php && npm run release-plugin`  -> zipke kunde uploaden als new plugin in de wp admin, en dan update da .
+
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
