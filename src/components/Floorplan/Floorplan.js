@@ -26,6 +26,10 @@ import InfoIcon from "@material-ui/icons/Info";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import LocalBarIcon from "@material-ui/icons/LocalBar";
 import WcIcon from "@material-ui/icons/Wc";
+import WhatshotIcon from "@material-ui/icons/Whatshot";
+import AirportShuttleIcon from "@material-ui/icons/AirportShuttle";
+import DirectionsCarIcon from "@material-ui/icons/DirectionsCar";
+import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 
 const geolocateStyle = {
 	position: "absolute",
@@ -38,7 +42,16 @@ const IconMap = {
 	restaurant: <RestaurantIcon />,
 	euro: <EuroSymbolIcon />,
 	info: <InfoIcon />,
-	ehbo: <AddCircleOutlineIcon />,
+	'ehbo': <LocalHospitalIcon />,
+	'ehbo post': <LocalHospitalIcon />,
+	'infodesk' : <InfoIcon />,
+	'sanitair grauwe els' : <WcIcon />,
+	'sanitair tamme kastanje' : <WcIcon />,
+	'food' : <RestaurantIcon />,
+	'day bar' : <LocalBarIcon />,
+	'parking' : <DirectionsCarIcon />,
+	'kampvuur' : <WhatshotIcon />,
+	'campervans/caravans' : <AirportShuttleIcon />,
 	bar: <LocalBarIcon />,
 	wc: <WcIcon />,
 };
@@ -95,8 +108,8 @@ class Floorplan extends React.Component {
 	state = {
 		popupInfo: null,
 		viewport: {
-			latitude: 51.1731755,
-			longitude: 4.4600242,
+			latitude : 50.79949,
+			longitude : 4.66307,
 			zoom: 16,
 		},
 		settings: {
@@ -108,9 +121,9 @@ class Floorplan extends React.Component {
 			keyboard: true,
 			doubleClickZoom: true,
 			minZoom: 15,
-			maxZoom: 20,
+			maxZoom: 30,
 			maxBounds: this.maxBounds,
-			mapStyle: "mapbox://styles/vdwijngaert/cjvas00b602sr1gqfyxv2zvk0",
+			mapStyle: 'mapbox://styles/mapbox/outdoors-v11',
 			mapboxApiAccessToken: process.env.REACT_APP_MAPBOX_TOKEN,
 		},
 	};
@@ -289,6 +302,7 @@ class Floorplan extends React.Component {
 		}
 
 		if (feature.icon && IconMap.hasOwnProperty(feature.icon)) {
+			console.log(`gotcha ${feature.icon}`);
 			let theIcon = IconMap[feature.icon];
 			icon = <Avatar className={classes.avatar}>{theIcon}</Avatar>;
 		}

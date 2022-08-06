@@ -11,7 +11,7 @@ export const getMapFeatures = () =>
 					name: rawFeature.properties.name,
 					key: rawFeature.properties.name.toLowerCase() + index,
 					type: rawFeature.properties.type,
-					icon: rawFeature.properties.icon || "default",
+					icon: rawFeature.properties.name.toLowerCase() || "default",
 					activityId: rawFeature.properties.Activity,
 					coordinates: {
 						longitude: rawFeature.geometry.coordinates[0],
