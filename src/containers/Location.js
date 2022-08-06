@@ -9,6 +9,7 @@ import LoadingIndicator from "../components/UI/LoadingIndicator";
 import { getActivitiesByLocation, getActivityLoader } from "../redux/selectors";
 import SidebarPage from "../components/UI/SidebarPage";
 import UpcomingActivities from "../components/Activities/UpcomingActivities";
+import {prefixRoute} from "../routing";
 
 const styles = (theme) => ({
 	root: {
@@ -57,9 +58,7 @@ class Location extends React.Component {
 
 const LocationSidebar = ({ location }) => (
 	<CardBlock
-		headerLink={`${
-			process.env.PUBLIC_URL
-		}/location/${location.name.toLowerCase()}`}
+		headerLink={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 		header={{
 			title: location.name,
 			subheader: location.subTitle,

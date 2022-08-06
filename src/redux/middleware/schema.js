@@ -150,7 +150,7 @@ export const activityFromSession = new schema.Entity(
 				excerpt: abstract,
 				day,
 				continuous: room === "Doorlopend programma",
-				location: room,
+				location: room.toLowerCase(),
 				childFriendly: false,
 				night: false,
 				subtitle: "",
@@ -169,7 +169,7 @@ export const conferenceRoom = new schema.Entity(
 		activities: [activityFromSession],
 	},
 	{
-		idAttribute: 'name',
+		idAttribute: (room) => room.name.toLowerCase(),
 	}
 );
 

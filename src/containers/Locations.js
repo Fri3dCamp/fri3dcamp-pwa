@@ -6,6 +6,7 @@ import Page from "../components/UI/Page";
 import CardBlock from "../components/UI/CardBlock";
 import { getLocationList } from "../redux/selectors";
 import UpcomingActivities from "../components/Activities/UpcomingActivities";
+import {prefixRoute} from "../routing";
 
 const Locations = ({ locations }) => (
 	<Page pageTitle={"Programma per locatie"}>
@@ -13,9 +14,7 @@ const Locations = ({ locations }) => (
 			{locations.map((location) => (
 				<Grid key={location.name} item xs={12} sm={6} md={4}>
 					<CardBlock
-						headerLink={`${
-							process.env.PUBLIC_URL
-						}/location/${location.name.toLowerCase()}`}
+						headerLink={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 						header={{
 							title: location.name,
 							subheader: location.subTitle,

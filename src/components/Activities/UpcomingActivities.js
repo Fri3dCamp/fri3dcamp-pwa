@@ -4,6 +4,7 @@ import Period from "./Single/Period";
 import React from "react";
 import Header from "../UI/Header";
 import DetailList from "../UI/DetailList";
+import {prefixRoute} from "../../routing";
 
 const UpcomingActivities = ({ upcomingListItems = [], title = "Upcoming" }) => {
 	if (!upcomingListItems.length) {
@@ -39,7 +40,7 @@ const mapStateToProps = (state, { location, amount = 3 }) => {
 		for (upcomingActivity of upcomingActivities) {
 			upcomingListItems.push({
 				key: upcomingActivity.id,
-				link: `${process.env.PUBLIC_URL}/activity/${upcomingActivity.id}`,
+				link: prefixRoute(`/activity/${upcomingActivity.id}`),
 				truncate: true,
 				text: {
 					primary: upcomingActivity.title,

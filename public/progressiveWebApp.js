@@ -70,7 +70,7 @@ self.addEventListener("notificationclick", function (e) {
 
 workbox.routing.registerRoute(
 	new RegExp(
-		"^(https://www.soundofscience.test|https://sos.siteoptimo.be|https://soundofscience.be)/(wp-json|wp-admin/admin-ajax.php)"
+		"^(https://staging\.app\.fri3d\.be|https://prod\.app\.fri3d\.be|http://localhost:8888)/(wp-json|wp-admin/admin-ajax\.php)"
 	),
 	new workbox.strategies.StaleWhileRevalidate({
 		plugins: [
@@ -82,4 +82,16 @@ workbox.routing.registerRoute(
 	})
 );
 
-workbox.googleAnalytics.initialize();
+workbox.routing.registerRoute(
+	new RegExp("^https://api\.mapbox\.com/"),
+	new workbox.strategies.CacheFirst({
+		cacheableResponse: [ 0, 200 ],
+	}),
+);
+
+workbox.routing.registerRoute(
+	new RegExp("^https://pretalx\.fri3d\.be/media"),
+	new workbox.strategies.CacheFirst({
+		cacheableResponse: [ 0, 200 ],
+	}),
+);
