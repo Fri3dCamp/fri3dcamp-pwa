@@ -22,7 +22,7 @@ final class PushNotifications {
 	private const KEY_ACTION       = 'get_key';
 	public const SUB_POST_TYPE     = 'push_subs';
 
-	public const DEFAULT_ICON = 'https://app.fri3d.be/img/soundofscience.png';
+	public const DEFAULT_ICON = 'http://localhost:8888/app/img/fri3dcamp_white.png';
 
 	/**
 	 * Push encryption keys.
@@ -51,10 +51,8 @@ final class PushNotifications {
 			'allowed_http_origins',
 			function ( $origins ) {
 				$origins[] = 'https://app.fri3d.be';
-				$origins[] = 'https://app.soundofscience.test';
-				$origins[] = 'https://sos.siteoptimo.be';
-				$origins[] = 'https://app.sos.siteoptimo.be';
 				$origins[] = 'http://localhost:8888';
+				$origins[] = 'http://localhost:3000';
 
 				return $origins;
 			}
@@ -94,7 +92,7 @@ final class PushNotifications {
 			'title'   => $post->post_title,
 			'body'    => wp_strip_all_tags( $post->post_excerpt ),
 			'options' => array(
-				'url'        => 'https://app.fri3d.be/update/' . $post->ID,
+				'url'        => 'update/' . $post->ID,
 				'icon'       => self::DEFAULT_ICON,
 				'show_image' => false,
 				'image'      => null,

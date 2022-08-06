@@ -46,6 +46,8 @@ class Root extends React.Component {
 
 	render() {
 		const { store, classes } = this.props;
+		const publicUrl = process.env.PUBLIC_URL;
+		const publicPath = (new URL(publicUrl)).pathname;
 
 		return (
 			<Provider store={store}>
@@ -61,55 +63,55 @@ class Root extends React.Component {
 								<Switch>
 									<Route
 										exact
-										path={`/locations`}
+										path={`${publicPath}/locations`}
 										component={Locations}
 									/>
 									<Route
 										exact
-										path={`/location/:name`}
+										path={`${publicPath}/location/:name`}
 										component={Location}
 									/>
 									<Route
 										exact
-										path={`/update`}
+										path={`${publicPath}/update`}
 										component={Updates}
 									/>
 									<Route
-										path={`/update/:id`}
+										path={`${publicPath}/update/:id`}
 										component={Update}
 									/>
 									<Route
 										exact
-										path={`/activity`}
+										path={`${publicPath}/activity`}
 										component={Activities}
 									/>
 									<Route
-										path={`/activity/:id`}
+										path={`${publicPath}/activity/:id`}
 										component={Activity}
 									/>
 									<Route
-										path={`/favorites`}
+										path={`${publicPath}/favorites`}
 										component={Favorites}
 									/>
 									<Route
-										path={`/partners`}
+										path={`${publicPath}/partners`}
 										component={Partners}
 									/>
 									<Route
-										path={`/settings`}
+										path={`${publicPath}/settings`}
 										component={Settings}
 									/>
 									<Route
-										path={`/map`}
+										path={`${publicPath}/map`}
 										component={MapContainer}
 									/>
 									<Route
-										path={`/`}
+										path={`${publicPath}/`}
 										component={({ location }) => (
 											<Redirect
 												to={{
 													...location,
-													pathname: "/activity",
+													pathname: publicPath + "/activity",
 												}}
 											/>
 										)}

@@ -52,7 +52,7 @@ class Favorites extends Component {
 								variant="contained"
 								color="primary"
 								component={Link}
-								to={`${process.env.PUBLIC_URL}/activity`}
+								to={`activity`}
 							>
 								Bekijk het programma
 							</Button>

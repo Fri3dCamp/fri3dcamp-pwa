@@ -137,7 +137,7 @@ class ActivityCard extends React.Component {
 				) : (
 					<CardActionArea
 						component={Link}
-						to={`${process.env.PUBLIC_URL}/activity/${activity.id}`}
+						to={`activity/${activity.id}`}
 					>
 						{activityCardContent}
 					</CardActionArea>
