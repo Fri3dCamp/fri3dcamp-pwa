@@ -14,6 +14,7 @@ import Sidebar from "../components/Activities/Single/Sidebar";
 import LikeButton from "../components/UI/LikeButton";
 import { getActivityLoader } from "../redux/selectors";
 import ShareOptions from "../components/Activities/Single/ShareOptions";
+import defaultImage from "../img/default_image.png";
 
 const styles = (theme) => ({});
 
@@ -63,7 +64,9 @@ class Activity extends React.Component {
 
 		if (activity && activity.logo && activity.logo !== "") {
 			imageUrl = `https://pretalx.fri3d.be/${activity.logo}`;
-		}
+		} else {
+            imageUrl = defaultImage;
+        }
 
 		return (
 			<Grid container spacing={24} style={{ position: "relative" }}>
@@ -71,7 +74,7 @@ class Activity extends React.Component {
 				<Grid item xs={12} md={8}>
 					<CardBlock
 						media={imageUrl}
-						mediaProps={{ style: { paddingTop: "56.25%" } }}
+						mediaProps={{ style: { paddingTop: "56.25%", backgroundSize: "cover" } }}
 						header={{
 							title: activity.title,
 							titleTypographyProps: { variant: "h2" },

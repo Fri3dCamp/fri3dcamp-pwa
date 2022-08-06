@@ -20,7 +20,7 @@ const AddToCalendarModal = AddToCalendarHOC(Button, MyModal);
 export const AddToCalendar = ({ event }) => (
 	<AddToCalendarModal
 		buttonText="Toevoegen aan kalender"
-		buttonProps={{ variant: "outlined", color: "primary" }}
+		buttonProps={{ variant: "outlined", color: "secondary" }}
 		event={event}
 		items={[SHARE_SITES.GOOGLE, SHARE_SITES.OUTLOOK, SHARE_SITES.ICAL]}
 		linkProps={{

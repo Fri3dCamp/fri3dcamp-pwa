@@ -21,6 +21,7 @@ import { getLocationByName, getPastActivities } from "../../redux/selectors";
 import LikeButton from "../UI/LikeButton";
 import { toggleFavorite } from "../../redux/actions";
 import {prefixRoute} from "../../routing";
+import defaultImage from "../../img/default_image.png";
 
 const styles = (theme) => ({
 	card: {},
@@ -110,7 +111,9 @@ class ActivityCard extends React.Component {
 
 		if (activity && activity.logo && activity.logo !== "") {
 			imageUrl = `https://pretalx.fri3d.be/${activity.logo}`;
-		}
+		} else {
+            imageUrl = defaultImage;
+        }
 
 		const activityCardContent = (
 			<ActivityCardContent

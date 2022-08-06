@@ -155,7 +155,7 @@ export const activityFromSession = new schema.Entity(
 				night: false,
 				subtitle: "",
 				persons,
-				logo: logo && logo !== "" ? logo : "media/fri3dcamp2022/img/pretalx_header_dark_WOyQFXF.png",
+				logo: logo && logo !== "" ? logo : "",
 				period: { start: startTime.toDate(), end: endTime.toDate() },
 				images: false,
 			};

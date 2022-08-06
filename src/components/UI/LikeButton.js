@@ -6,10 +6,13 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 const styles = (theme) => ({
 	icon: {
-		color: "white",
+		color: "black",
 		position: "absolute",
-		background:
-			"radial-gradient(circle, rgba(0,0,0,0.075) 0%, rgba(0,0,0,0) 65%)",
+        background: theme.palette.primary.main,
+		marginTop: theme.spacing.unit,
+		marginRight: theme.spacing.unit,
+		// background:
+			// "radial-gradient(circle, rgba(0,0,0,0.075) 0%, rgba(0,0,0,0) 65%)",
 		top: 0,
 		right: 0,
 	},
