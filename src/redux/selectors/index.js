@@ -11,11 +11,12 @@ const getDays = (state) => state.entities.days;
 const getFavoriteActivityIds = (state) => state.favoriteActivities;
 
 export const getActivityLoader = (state) =>
-	state.entityloader.activities || {
+	state.entityloader.schedules || {
 		initialFetch: true,
 		isFetching: true,
 		ids: [],
 	};
+
 export const getUpdateLoader = (state) =>
 	state.entityloader.updates || {
 		initialFetch: true,
@@ -38,9 +39,13 @@ export const getDayList = createSelector([getDays], (days) =>
 export const getSortedActivities = createSelector(
 	[getActivities, getActivityLoader],
 	(activities, activityList) => {
-		if (!activityList || !activityList.ids) {
-			activityList = { ids: [] };
-		}
+//		if (!activityList || !activityList.ids) {
+//			activityList = { ids: [] };
+//		}
+
+		activityList.ids = Object.keys(activities || {});
+
+
 		return activityList.ids
 			.map((id) => activities[id])
 			.sort((firstActivity, secondActivity) => {
@@ -115,6 +120,7 @@ export const getFilteredActivities = createSelector(
 			});
 		}
 
+		console.log(filter, conditions, activities);
 		return activities.filter(function (activity) {
 			const propConditionsMet = Object.keys(this.props).every(
 				(property) => activity[property] === this.props[property]
@@ -131,13 +137,16 @@ export const getFilteredActivities = createSelector(
 
 export const getActivitiesByDays = createSelector(
 	[getFilteredActivities, getDayList],
-	(activities, days) =>
-		days.map((day) => ({
+	(activities, days) => {
+		console.log('ACTIVITIES BY DAYS', days, activities);
+
+		return days.map((day) => ({
 			...day,
 			activities: activities.filter(
 				(activity) => activity.day === day.key
 			),
-		}))
+		}));
+	}
 );
 export const getFavoriteActivities = createSelector(
 	[getSortedActivities, getFavoriteActivityIds],

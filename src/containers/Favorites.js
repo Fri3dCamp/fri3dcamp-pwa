@@ -10,6 +10,7 @@ import SadFaceIcon from "@material-ui/icons/SentimentDissatisfiedOutlined";
 import { Button, CardActions, IconButton, withStyles } from "@material-ui/core";
 
 import { Link } from "react-router-dom";
+import {prefixRoute} from "../routing";
 
 const styles = (theme) => ({
 	icon: {
@@ -52,7 +53,7 @@ class Favorites extends Component {
 								variant="contained"
 								color="primary"
 								component={Link}
-								to={`activity`}
+								to={prefixRoute(`/activity`)}
 							>
 								Bekijk het programma
 							</Button>

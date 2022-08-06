@@ -40,16 +40,7 @@ class Activities extends Component {
 				) : (
 					<>
 						<ActivityFilter />
-						{/*<UpdateNag style={{marginBottom: '32px'}}/>*/}
-						<CardBlock
-							header={{
-								title: "Fri3d Camp zit erop...",
-								subheader: "And it was awesome.",
-							}}
-						>
-							Bedankt om deel uit te maken van een fantastische
-							tweede editie van Fri3d Camp. You rock!
-						</CardBlock>
+						<UpdateNag style={{marginBottom: '32px'}}/>
 						<div style={{ marginBottom: "32px" }} />
 						{activitiesByDays.map((activitiesByDay) => {
 							if (activitiesByDay.activities.length <= 0) {

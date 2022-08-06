@@ -8,11 +8,7 @@ import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
 import { load, save } from "redux-localstorage-simple";
 
-export const history = createBrowserHistory(
-	{
-		basename: process.env.PUBLIC_PATH,
-	}
-);
+export const history = createBrowserHistory();
 
 const states = [
 	"entities",
@@ -24,14 +20,14 @@ const states = [
 const configureStore = (preloadedState) => {
 	return createStore(
 		rootReducer(history),
-		load({ states, disableWarnings: true }),
+		// load({ states, disableWarnings: true }),
 		composeWithDevTools(
 			applyMiddleware(
 				routerMiddleware(history),
 				thunk,
 				api,
 				createLogger(),
-				save({ states })
+				// save({ states })
 			)
 		)
 	);

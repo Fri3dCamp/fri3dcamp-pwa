@@ -3,6 +3,7 @@ import Page from "../components/UI/Page";
 import { Button, CardActions, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import CardBlock from "../components/UI/CardBlock";
+import {prefixRoute} from "../routing";
 
 const Error = () => (
 	<Page backLink={true} pageTitle={"Oeps..."}>
@@ -15,7 +16,7 @@ const Error = () => (
 					variant="contained"
 					color="primary"
 					component={Link}
-					to={`/activity`}
+					to={prefixRoute(`/activity`)}
 				>
 					Naar beginpagina
 				</Button>

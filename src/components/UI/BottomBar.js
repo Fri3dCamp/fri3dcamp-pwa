@@ -12,7 +12,8 @@ import NotificationsIcon from "@material-ui/icons/NotificationsOutlined";
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { getUnreadUpdateCount } from "../../redux/actions";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
+import {prefixRoute} from "../../routing";
 
 const styles = (theme) => ({
 	bottomNavigation: {
@@ -55,6 +56,12 @@ class BottomBar extends React.Component {
 					icon: PeopleOutlineIcon,
 					path: "/volunteering",
 				},
+				{
+					key: 4,
+					label: "Favorieten",
+					icon: FavoriteIcon,
+					path: "/favorites",
+				},
 			],
 		};
 	}
@@ -80,9 +87,6 @@ class BottomBar extends React.Component {
 	}
 
 	actions(actions) {
-		const publicUrl = process.env.PUBLIC_URL;
-		const publicPath = (new URL(publicUrl)).pathname;
-
 		return actions.map((action) => {
 			let icon = <action.icon />;
 
@@ -96,25 +100,22 @@ class BottomBar extends React.Component {
 					label={action.label}
 					icon={icon}
 					component={Link}
-					to={ publicPath + action.path}
+					to={prefixRoute(action.path)}
 				/>
 			);
 		});
 	}
 
 	getNavigationValue(location, match) {
-		const publicUrl = process.env.PUBLIC_URL;
-		const publicPath = (new URL(publicUrl)).pathname;
-
 		let activeNavigation = this.state.navigationActions.find((action) => {
-			return (publicPath + action.path) === location.pathname;
+			return (prefixRoute(action.path)) === location.pathname;
 		});
 
 		if (!activeNavigation) {
 			activeNavigation = Array.from(this.state.navigationActions)
 				.reverse()
 				.find((action) => {
-					return location.pathname.startsWith(publicPath + action.path);
+					return location.pathname.startsWith(prefixRoute(action.path));
 				});
 		}
 

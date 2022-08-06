@@ -10,6 +10,7 @@ import Page from "../components/UI/Page";
 import { Redirect, withRouter } from "react-router-dom";
 import CardBlock from "../components/UI/CardBlock";
 import { getUpdateLoader } from "../redux/selectors";
+import {prefixRoute} from "../routing";
 
 const styles = (theme) => ({});
 
@@ -46,7 +47,7 @@ class Update extends React.Component {
 		let img = null;
 
 		if (!update) {
-			return <Redirect to={`update`} />;
+			return <Redirect to={prefixRoute(`/update`)} />;
 		}
 
 		if (update && update.images) {
