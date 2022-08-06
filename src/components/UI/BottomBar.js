@@ -9,6 +9,7 @@ import {
 import EventIcon from "@material-ui/icons/EventOutlined";
 import MapIcon from "@material-ui/icons/MapOutlined";
 import NotificationsIcon from "@material-ui/icons/NotificationsOutlined";
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { getUnreadUpdateCount } from "../../redux/actions";
 import {connect} from "react-redux";
@@ -38,7 +39,7 @@ class BottomBar extends React.Component {
 				},
 				{
 					key: 1,
-					label: "Plattegrond",
+					label: "Grondplan",
 					icon: MapIcon,
 					path: "/map",
 				},
@@ -51,6 +52,12 @@ class BottomBar extends React.Component {
 				},
 				{
 					key: 3,
+					label: "Volunteering",
+					icon: PeopleOutlineIcon,
+					path: "/volunteering",
+				},
+				{
+					key: 4,
 					label: "Favorieten",
 					icon: FavoriteIcon,
 					path: "/favorites",

@@ -5,7 +5,6 @@ import rootReducer from "../reducers";
 import { load, save } from "redux-localstorage-simple";
 import { routerMiddleware } from "connected-react-router";
 import { createBrowserHistory } from "history";
-import { googleAnalytics } from "../middleware/analytics";
 
 const states = [
 	"entities",
@@ -23,7 +22,6 @@ const configureStore = (preloadedState) =>
 		load({ states, disableWarnings: true }),
 		applyMiddleware(
 			routerMiddleware(history),
-			googleAnalytics,
 			thunk,
 			api,
 			save({ states })

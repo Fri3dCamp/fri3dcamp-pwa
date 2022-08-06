@@ -18,6 +18,7 @@ const styles = (theme) => ({
 	cardMedia: {
 		height: 0,
 		paddingTop: "33.33%",
+        backgroundSize: "contain",
 	},
 });
 

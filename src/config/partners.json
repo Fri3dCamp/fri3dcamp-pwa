@@ -1,8 +1,6 @@
-[
-  {
+[{
     "label": "32 bit",
-    "partners": [
-      {
+    "partners": [{
         "img": "dekimo.png",
         "alt": "Dekimo",
         "url": "https://www.dekimo.com/",
@@ -31,8 +29,7 @@
   },
   {
     "label": "16 bit",
-    "partners": [
-      {
+    "partners": [{
         "img": "espressif.png",
         "alt": "Espressif",
         "url": "https://www.espressif.com/",
@@ -47,13 +44,20 @@
         "desc": {
           "nl": "Met zo’n 400.000 vennoten is Cera een van de grootste coöperaties van België. We brengen mensen, middelen en organisaties samen, bundelen krachten, nemen initiatieven en realiseren projecten met een duidelijk doel: samen investeren in welvaart en welzijn."
         }
+      },
+      {
+        "img": "hermes.svg",
+        "alt": "Hermes Telecom",
+        "url": "https://hermestelecom.be/",
+        "desc": {
+          "nl": "Hermes Telecom levert in selecte gebieden van de provincie Antwerpen, Limburg en Vlaams-Brabant regionale internettoegang gericht op de power user en internationale telefoniegebruiker."
+        }
       }
     ]
   },
   {
     "label": "8 bit",
-    "partners": [
-      {
+    "partners": [{
         "img": "rogers.png",
         "alt": "Rogers Corporation",
         "url": "https://www.rogerscorp.com/",

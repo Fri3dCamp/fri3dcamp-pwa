@@ -6,7 +6,6 @@ import api from "../middleware/api";
 import rootReducer from "../reducers";
 import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
-import { googleAnalytics } from "../middleware/analytics";
 import { load, save } from "redux-localstorage-simple";
 
 export const history = createBrowserHistory();
@@ -25,7 +24,6 @@ const configureStore = (preloadedState) => {
 		composeWithDevTools(
 			applyMiddleware(
 				routerMiddleware(history),
-				googleAnalytics,
 				thunk,
 				api,
 				createLogger(),
