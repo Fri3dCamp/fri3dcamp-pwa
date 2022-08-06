@@ -259,7 +259,8 @@ class Floorplan extends React.Component {
 			minZoom: 15,
 			maxZoom: 30,
 			maxBounds: this.maxBounds,
-			mapStyle: 'mapbox://styles/mapbox/outdoors-v11',
+			// mapStyle: 'mapbox://styles/mapbox/outdoors-v11',
+            mapStyle: 'mapbox://styles/vdwijngaert/cl6hwwcjs006a16pkfbk6qh3h',
 			mapboxApiAccessToken: process.env.REACT_APP_MAPBOX_TOKEN,
 		},
 	};
