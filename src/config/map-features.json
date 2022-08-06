@@ -5,86 +5,6 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Purple"
-        },
-        "description": "Afwas plaats met warmwater vanuit de wc blok",
-        "_umap_options": {
-          "color": "Purple"
-        },
-        "name": "Afwas plaats"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664308,
-              50.800122
-            ],
-            [
-              4.664437,
-              50.800131
-            ],
-            [
-              4.664445,
-              50.800087
-            ],
-            [
-              4.664311,
-              50.800079
-            ],
-            [
-              4.664308,
-              50.800122
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "description": "Het magazijn van het kamp",
-        "_umap_options": {
-          "color": "Purple"
-        },
-        "name": "Backstage logistics"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664559,
-              50.800344
-            ],
-            [
-              4.664684,
-              50.800362
-            ],
-            [
-              4.664703,
-              50.800318
-            ],
-            [
-              4.664571,
-              50.800298
-            ],
-            [
-              4.664559,
-              50.800344
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
         "name": "Blokhut",
@@ -250,30 +170,10 @@
         }
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              4.663884,
-              50.800415
-            ],
-            [
-              4.664463,
-              50.800468
-            ],
-            [
-              4.664506,
-              50.800294
-            ],
-            [
-              4.663933,
-              50.800245
-            ],
-            [
-              4.663884,
-              50.800415
-            ]
-          ]
+            4.66423,
+            50.80035
         ]
       }
     },
@@ -300,49 +200,9 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Purple"
-        },
-        "name": "EHBO",
-        "description": "",
-        "_umap_options": {
-          "color": "Purple"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664635,
-              50.800472
-            ],
-            [
-              4.66471,
-              50.800478
-            ],
-            [
-              4.664723,
-              50.800423
-            ],
-            [
-              4.664647,
-              50.800417
-            ],
-            [
-              4.664635,
-              50.800472
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
           "iconUrl": "/uploads/pictogram/hospital-24-white.png"
         },
-        "name": "EHBO post",
+        "name": "EHBO",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/hospital-24-white.png"
         }
@@ -361,7 +221,7 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
         },
-        "name": "Food",
+        "name": "Catering",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
         }
@@ -371,46 +231,6 @@
         "coordinates": [
           4.664799,
           50.80056
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "name": "Food",
-        "description": "In en rond deze tent wordt de avondmaaltijd klaargemaakt en geserveerd.",
-        "_umap_options": {
-          "color": "Purple"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664733,
-              50.800605
-            ],
-            [
-              4.6648,
-              50.800619
-            ],
-            [
-              4.664845,
-              50.800543
-            ],
-            [
-              4.664778,
-              50.800529
-            ],
-            [
-              4.664733,
-              50.800605
-            ]
-          ]
         ]
       }
     },
@@ -466,78 +286,32 @@
         }
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              4.663763,
-              50.8004
-            ],
-            [
-              4.663873,
-              50.800409
-            ],
-            [
-              4.663919,
-              50.800249
-            ],
-            [
-              4.663806,
-              50.800239
-            ],
-            [
-              4.663763,
-              50.8004
-            ]
-          ]
+            4.663763,
+            50.8004
         ]
       }
     },
+    
     {
       "type": "Feature",
       "properties": {
-        "_umap_options": {
-          "color": "Green"
+        "_storage_options": {
+          "color": "Purple"
         },
-        "name": "Herfstmalle"
+        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Ijskasten"
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+        "type": "Point",
+        "coordinates": 
           [
-            [
-              4.662762,
-              50.798745
-            ],
-            [
-              4.662441,
-              50.79888
-            ],
-            [
-              4.662177,
-              50.798853
-            ],
-            [
-              4.662002,
-              50.79876
-            ],
-            [
-              4.662025,
-              50.798524
-            ],
-            [
-              4.662323,
-              50.798431
-            ],
-            [
-              4.662656,
-              50.798548
-            ],
-            [
-              4.662762,
-              50.798745
-            ]
-          ]
+            4.661862,
+            50.800045
         ]
       }
     },
@@ -554,70 +328,10 @@
         "name": "Ijskasten"
       },
       "geometry": {
-        "type": "Polygon",
+        "type": "Point",
         "coordinates": [
-          [
-            [
-              4.661862,
-              50.800045
-            ],
-            [
-              4.661909,
-              50.800043
-            ],
-            [
-              4.661909,
-              50.799997
-            ],
-            [
-              4.661857,
-              50.799997
-            ],
-            [
-              4.661862,
-              50.800045
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
-        "_umap_options": {
-          "color": "Purple"
-        },
-        "name": "Ijskasten"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.663059,
-              50.798955
-            ],
-            [
-              4.663133,
-              50.798955
-            ],
-            [
-              4.663133,
-              50.798903
-            ],
-            [
-              4.66306,
-              50.798903
-            ],
-            [
-              4.663059,
-              50.798955
-            ]
-          ]
+            4.663059,
+            50.798955
         ]
       }
     },
@@ -638,46 +352,6 @@
         "coordinates": [
           4.664591,
           50.800427
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "name": "Infodesk & NOC",
-        "description": "2 kantoorcontainers, helft infodesk, helft NOC",
-        "_umap_options": {
-          "color": "Purple"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664527,
-              50.800461
-            ],
-            [
-              4.664626,
-              50.800471
-            ],
-            [
-              4.66464,
-              50.800409
-            ],
-            [
-              4.664542,
-              50.800399
-            ],
-            [
-              4.664527,
-              50.800461
-            ]
-          ]
         ]
       }
     },
@@ -726,7 +400,7 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
-        "name": "Kids village",
+        "name": "Knutselbaar",
         "description": "",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
@@ -737,128 +411,6 @@
         "coordinates": [
           4.664394,
           50.800846
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "name": "Knutselbaar",
-        "description": "Rond deze tent concentreren we de activiteiten die expliciet op kinderen gericht zijn.  ",
-        "_umap_options": {
-          "color": "Purple"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664316,
-              50.800793
-            ],
-            [
-              4.664291,
-              50.800882
-            ],
-            [
-              4.66455,
-              50.800909
-            ],
-            [
-              4.664572,
-              50.800822
-            ],
-            [
-              4.664316,
-              50.800793
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Gold",
-          "fill": false
-        },
-        "name": "Lint",
-        "description": "We brengen rond heel het kamp een geel \"CYBER\" lint aan. Als kinderen dit lint tegen komen, dan moeten ze het volgen tot waar ze zich weer kunnen orienteren.  (niet omdraaien want als je dan om een of andere reden van buitenuit het lint tegenkomt ga je weer verder weg van het terrein.)",
-        "_umap_options": {
-          "color": "Gold",
-          "fill": false
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.666765,
-              50.802165
-            ],
-            [
-              4.667296,
-              50.798615
-            ],
-            [
-              4.666706,
-              50.798754
-            ],
-            [
-              4.666427,
-              50.798459
-            ],
-            [
-              4.666148,
-              50.798418
-            ],
-            [
-              4.665756,
-              50.79809
-            ],
-            [
-              4.665349,
-              50.798008
-            ],
-            [
-              4.662892,
-              50.798164
-            ],
-            [
-              4.66037,
-              50.798279
-            ],
-            [
-              4.661014,
-              50.799988
-            ],
-            [
-              4.660982,
-              50.801107
-            ],
-            [
-              4.663911,
-              50.801263
-            ],
-            [
-              4.664887,
-              50.801405
-            ],
-            [
-              4.666164,
-              50.801948
-            ],
-            [
-              4.666765,
-              50.802165
-            ]
-          ]
         ]
       }
     },
@@ -887,7 +439,7 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
-        "name": "Overdekte buitenworkshop",
+        "name": "Shelter",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         }
@@ -962,46 +514,6 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Purple"
-        },
-        "name": "Podium",
-        "description": "Bescheiden outdoor podium waar opening en closing kunnen plaatsvinden en waar tijdens het avondeten misschien iemand een muziekje kan maken.",
-        "_umap_options": {
-          "color": "Purple"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.664606,
-              50.800789
-            ],
-            [
-              4.664673,
-              50.800803
-            ],
-            [
-              4.664718,
-              50.800727
-            ],
-            [
-              4.664651,
-              50.800713
-            ],
-            [
-              4.664606,
-              50.800789
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
           "iconUrl": "/uploads/pictogram/toilets-24-white.png"
         },
         "name": "Sanitair Grauwe els",
@@ -1039,54 +551,6 @@
     {
       "type": "Feature",
       "properties": {
-        "_umap_options": {
-          "color": "Green"
-        },
-        "name": "Totem"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              4.662974,
-              50.799544
-            ],
-            [
-              4.662777,
-              50.799594
-            ],
-            [
-              4.662581,
-              50.799494
-            ],
-            [
-              4.662569,
-              50.799404
-            ],
-            [
-              4.66264,
-              50.799335
-            ],
-            [
-              4.662786,
-              50.799355
-            ],
-            [
-              4.663007,
-              50.799444
-            ],
-            [
-              4.662974,
-              50.799544
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/commercial-24_1.png"
         },
@@ -1110,7 +574,7 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
-        "name": "Workshop central",
+        "name": "Hoofdgebouw",
         "description": "In de 6 zalen van het hoofdgebouw worden heel wat workshops gegeven. Op het binnenplein is er de mogelijkheid een fab lab truck in te richten (binnenplein ligt wel niet horizontaal).",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
