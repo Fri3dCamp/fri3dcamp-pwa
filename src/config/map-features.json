@@ -4,20 +4,39 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fietsenstalling",
-        "type": "shape",
-        "icon": "",
-        "Activity": ""
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "description": "Afwas plaats met warmwater vanuit de wc blok",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Afwas plaats"
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [4.458228349685669, 51.1733322947938],
-            [4.4581800699234, 51.17321878293218],
-            [4.458589106798172, 51.17313554072272],
-            [4.458633363246918, 51.17324484864361],
-            [4.458228349685669, 51.1733322947938]
+            [
+              4.664308,
+              50.800122
+            ],
+            [
+              4.664437,
+              50.800131
+            ],
+            [
+              4.664445,
+              50.800087
+            ],
+            [
+              4.664311,
+              50.800079
+            ],
+            [
+              4.664308,
+              50.800122
+            ]
           ]
         ]
       }
@@ -25,549 +44,313 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nucleus",
-        "icon": "nucleus.png",
-        "type": "location"
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "description": "Het magazijn van het kamp",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Backstage logistics"
       },
       "geometry": {
-        "type": "Point",
-        "coordinates": [4.460679888725281, 51.173417218300116]
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.664559,
+              50.800344
+            ],
+            [
+              4.664684,
+              50.800362
+            ],
+            [
+              4.664703,
+              50.800318
+            ],
+            [
+              4.664571,
+              50.800298
+            ],
+            [
+              4.664559,
+              50.800344
+            ]
+          ]
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Elektron",
-        "icon": "elektron.png",
-        "type": "location"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Blokhut workshops",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461715221405029, 51.17384435594044]
+        "coordinates": [
+          4.663527,
+          50.799364
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Proton",
-        "icon": "kinderlezingen.png",
-        "type": "location"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Buitenaltaar",
+        "description": "Een altaar met een klein openlucht auditorium. Hier kunnen Microsoft licenties geofferd worden.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461076855659484, 51.17324232615608]
+        "coordinates": [
+          4.665842,
+          50.798268
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Sound",
-        "type": "location",
-        "icon": "sound.png"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/bus-24_1.png"
+        },
+        "name": "Campervans/Caravans",
+        "description": "Caravans en campervans zijn opnieuw welkom op Fri3d Camp!",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/bus-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.459215402603149, 51.17224004684486]
+        "coordinates": [
+          4.662918,
+          50.800352
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Bar",
-        "type": "facility",
-        "icon": "bar"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/bus-24_1.png"
+        },
+        "name": "Campervans/Caravans (overflow)",
+        "description": "Caravans en campervans zijn opnieuw welkom op Fri3d Camp!",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/bus-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.459998607635498, 51.17263860683103]
+        "coordinates": [
+          4.665712,
+          50.798924
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Infopunt",
-        "type": "facility",
-        "icon": "info"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        },
+        "name": "Camping Herfstmale",
+        "description": "",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.460105895996094, 51.1725023905144]
+        "coordinates": [
+          4.662264,
+          50.798604
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Jetonautomaat",
-        "type": "facility",
-        "icon": "euro"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        },
+        "name": "Camping Tamme Kastanje",
+        "description": "Villages Hackerspaces",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.460180997848511, 51.17252929747303]
+        "coordinates": [
+          4.663607,
+          50.798512
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Quark",
-        "type": "location",
-        "icon": "quark.png"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        },
+        "name": "Camping Totem",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461127817630768, 51.173662738844605]
+        "coordinates": [
+          4.662775,
+          50.799464
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Universiteit van Vlaanderen",
-        "type": "location",
-        "icon": "",
-        "Activity": 1937
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/roadblock-24_1.png",
+          "color": "DarkCyan"
+        },
+        "name": "Chill-out zone",
+        "description": "We brengen de hangmatten weer mee..."
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.460988342761993, 51.173598836362984]
+        "coordinates": [
+          4.664348,
+          50.799746
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Waterraketjes",
-        "type": "location",
-        "Activity": 1983
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Circustent",
+        "description": "In deze tent vind je twee grote workshoplocaties, de soldeerhoek en natuurlijk DE BAR! ",
+        "_umap_options": {
+          "color": "Purple"
+        }
       },
       "geometry": {
-        "type": "Point",
-        "coordinates": [4.461261928081512, 51.173901531544786]
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.663884,
+              50.800415
+            ],
+            [
+              4.664463,
+              50.800468
+            ],
+            [
+              4.664506,
+              50.800294
+            ],
+            [
+              4.663933,
+              50.800245
+            ],
+            [
+              4.663884,
+              50.800415
+            ]
+          ]
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Colruyt",
-        "type": "location",
-        "icon": "",
-        "Activity": 1060
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        },
+        "name": "Crewparking",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461468458175658, 51.17377540879386]
+        "coordinates": [
+          4.661262,
+          50.799592
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Planetariumdome",
-        "type": "location",
-        "icon": "",
-        "Activity": 251
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/bar-24_1.png"
+        },
+        "name": "Day bar",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/bar-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461712539196014, 51.17365096734149]
+        "coordinates": [
+          4.66443,
+          50.800473
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Marie QRie",
-        "type": "location",
-        "icon": "",
-        "Activity": 1755
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461953938007355, 51.17367114705929]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Toilet",
-        "type": "facility",
-        "Activity": "",
-        "icon": "wc"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4623348116874695, 51.173662738844605]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "De imkers",
-        "type": "location",
-        "icon": "",
-        "Activity": 1684
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.462321400642395, 51.17382417629845]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Escape Room",
-        "type": "location",
-        "icon": "",
-        "Activity": 1663
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.462517201900482, 51.173548386972826]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Maak je eigen katapult/extraheer je eigen DNA",
-        "type": "location",
-        "icon": "",
-        "Activity": 1983
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.462206065654755, 51.17350130082556]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Bruggen bouwen, energiefiets",
-        "type": "location",
-        "Activity": 2003
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.462345540523529, 51.17348784763178]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Vliegtuigjes vouwen",
-        "type": "location",
-        "icon": "",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4624581933021545, 51.1735113907183]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "DNA en Lego",
-        "type": "location",
-        "icon": "",
-        "Activity": 1579
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461916387081146, 51.17326586936794]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Koeienogen dissecteren",
-        "type": "location",
-        "Activity": 1593
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461793005466461, 51.17322719122781]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Imec",
-        "type": "location",
-        "icon": "",
-        "Activity": 2022
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4616615772247314, 51.1731834680738]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "FWO/Vraag voor de Wetenschap",
-        "type": "location",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4615596532821655, 51.173146471526486]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Schaken",
-        "type": "location",
-        "icon": "",
-        "Activity": 1562
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461447000503539, 51.17310779328618]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Oude groenten",
-        "type": "location",
-        "Activity": 1666
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461347758769989, 51.17305734335879]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "3D-printen",
-        "type": "location",
-        "Activity": 1642
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461197555065155, 51.173010256710064]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Zandkorrel graveren",
-        "type": "location",
-        "icon": "",
-        "Activity": 509
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460856914520264, 51.172741189223636]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
         "name": "EHBO",
-        "type": "facility",
-        "icon": "ehbo"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460645020008086, 51.17271764574387]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Tesla",
-        "type": "location",
-        "icon": "",
-        "Activity": 2103
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460864961147308, 51.17297326002378]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Melexis",
-        "type": "location",
-        "Activity": 1752
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460494816303253, 51.17266719538963]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Lichtexperimenten",
-        "type": "location",
-        "Activity": 1748
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4603607058525085, 51.17253266084177]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Steammachine",
-        "type": "location",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.459859132766724, 51.1724569849861]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Rode kruis Grime",
-        "type": "location"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4596874713897705, 51.1724199878559]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Insecten",
-        "type": "location",
-        "Activity": 1543
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.45970356464386, 51.17255956778274]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Space bikes",
-        "type": "location",
-        "Activity": 1402
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4596928358078, 51.17266046867156]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Boekenwinkel / signeren/ juwelen",
-        "type": "location",
-        "Activity": 2110
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.459357559680939, 51.172672240427545]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Robot Zone",
-        "type": "location",
-        "Activity": 1433
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.459277093410492, 51.172815182938926]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Yakult",
-        "type": "location",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.459384381771088, 51.17279836619588]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Foodcourt",
-        "type": "facility",
-        "icon": "restaurant"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.459070563316345, 51.17266383203071]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Workshoptent A",
-        "type": "location",
-        "icon": "",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4602882862091064, 51.17272100909885]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Workshoptent B",
-        "type": "location",
-        "icon": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460419714450835, 51.172774822745325]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "KBIN/Ik heb een vraag",
-        "type": "location",
-        "Activity": 1994
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460535049438477, 51.17282190963442]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Voorleesessies/verzorgingsruimte",
-        "type": "location",
-        "Activity": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.460535049438477, 51.173032118374394]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Strechtent",
-        "type": "shape",
-        "Activity": ""
+        "description": "",
+        "_umap_options": {
+          "color": "Purple"
+        }
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [4.461328983306885, 51.173546705325556],
-            [4.461599886417389, 51.173546705325556],
-            [4.461599886417389, 51.17364255912314],
-            [4.461328983306885, 51.17364255912314],
-            [4.461328983306885, 51.173546705325556]
+            [
+              4.664635,
+              50.800472
+            ],
+            [
+              4.66471,
+              50.800478
+            ],
+            [
+              4.664723,
+              50.800423
+            ],
+            [
+              4.664647,
+              50.800417
+            ],
+            [
+              4.664635,
+              50.800472
+            ]
           ]
         ]
       }
@@ -575,126 +358,77 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Virtuele zandbak",
-        "type": "location",
-        "Activity": 1798
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png"
+        },
+        "name": "EHBO post",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/hospital-24-white.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.461565017700195, 51.17363415090326]
+        "coordinates": [
+          4.664687,
+          50.80044
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Immuno-T",
-        "type": "location",
-        "Activity": 1549
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        },
+        "name": "Food",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.46157306432724, 51.17359547307203]
+        "coordinates": [
+          4.664799,
+          50.80056
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Caeleste",
-        "type": "location",
-        "Activity": 2093
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.46157306432724, 51.173560158502156]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Scivil/oog voor diabetesch",
-        "type": "location",
-        "Activity": 2028
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461473822593689, 51.17355679520838]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "VR evenwicht",
-        "type": "location",
-        "Activity": 1585
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461414813995361, 51.173560158502156]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Minecraft",
-        "type": "location",
-        "Activity": 1989
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461350440979004, 51.173563521795685]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Mensenmassameter",
-        "type": "location",
-        "Activity": 1575
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.461342394351959, 51.17363415090326]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Proefdieren",
-        "type": "location",
-        "Activity": 1597
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.46144163608551, 51.173635832547355]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Toilet",
-        "type": "facility",
-        "icon": "wc"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [4.4595158100128165, 51.17237962731636]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "inkom",
-        "type": "shape"
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Food",
+        "description": "In en rond deze tent wordt de avondmaaltijd klaargemaakt en geserveerd.",
+        "_umap_options": {
+          "color": "Purple"
+        }
       },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
           [
-            [4.458920359611511, 51.17316328814257],
-            [4.458665549755096, 51.17298166836418],
-            [4.459352195262909, 51.17262347170462],
-            [4.459598958492279, 51.17281181959082],
-            [4.458920359611511, 51.17316328814257]
+            [
+              4.664733,
+              50.800605
+            ],
+            [
+              4.6648,
+              50.800619
+            ],
+            [
+              4.664845,
+              50.800543
+            ],
+            [
+              4.664778,
+              50.800529
+            ],
+            [
+              4.664733,
+              50.800605
+            ]
           ]
         ]
       }
@@ -702,200 +436,760 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "eten",
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.45863738656044, 51.172935422473024],
-            [4.458438903093338, 51.17279248033436],
-            [4.459106773138046, 51.172454462455434],
-            [4.459313303232193, 51.172589838072554],
-            [4.45863738656044, 51.172935422473024]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.460344612598419, 51.1734626228829],
-            [4.460556507110596, 51.17326418771034],
-            [4.460977613925934, 51.17344076142269],
-            [4.460776448249817, 51.173624061037366],
-            [4.460344612598419, 51.1734626228829]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.460978955030441, 51.173695530873175],
-            [4.4610996544361115, 51.17359799554028],
-            [4.461279362440109, 51.173684600199586],
-            [4.461150616407394, 51.173778772071685],
-            [4.460978955030441, 51.173695530873175]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.46161329746247, 51.17388639683286],
-            [4.461599215865142, 51.173860751893066],
-            [4.461603909730918, 51.17382964161902],
-            [4.461616650223739, 51.173809882380034],
-            [4.4616568833589625, 51.17378844149411],
-            [4.4617031514644685, 51.17378423739764],
-            [4.461748749017723, 51.17378844149411],
-            [4.461786970496184, 51.17379979255261],
-            [4.461813792586334, 51.173823335479845],
-            [4.4618191570043635, 51.17385108248584],
-            [4.461809098720558, 51.17388135192782],
-            [4.461774230003364, 51.173910360124424],
-            [4.461701810359962, 51.1739137233924],
-            [4.461646154522902, 51.17390657644765],
-            [4.46161329746247, 51.17388639683286]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.461013823747635, 51.17324421802176],
-            [4.461035616695881, 51.17321037463501],
-            [4.461075849831104, 51.173204699033576],
-            [4.461119100451469, 51.17321857272477],
-            [4.4611382111907005, 51.173245058850924],
-            [4.461118429899215, 51.17327406744783],
-            [4.461070820689201, 51.173283106354724],
-            [4.461024887859821, 51.17327196537621],
-            [4.461013823747635, 51.17324421802176]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.459082633256911, 51.17222407073985],
-            [4.459255635738373, 51.17216773390433],
-            [4.459326043725014, 51.172264010992016],
-            [4.459155052900314, 51.17231235967201],
-            [4.459082633256911, 51.17222407073985]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.460097849369049, 51.1724788469127],
-            [4.4601863622665405, 51.17239980759054],
-            [4.46056455373764, 51.17254443263035],
-            [4.460706710815429, 51.17249398208659],
-            [4.460894465446472, 51.172505753885076],
-            [4.461613297462463, 51.17283704469572],
-            [4.461618661880493, 51.17291944660892],
-            [4.46156769990921, 51.1729867133677],
-            [4.46194589138031, 51.17315151651194],
-            [4.461900293827057, 51.173217101272876],
-            [4.460097849369049, 51.1724788469127]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.462423324584961, 51.173484063920355],
-            [4.462648630142212, 51.17347985979613],
-            [4.462650641798985, 51.17357655455578],
-            [4.462434053421033, 51.17358496278619],
-            [4.462423324584961, 51.173484063920355]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "type": "shape"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [4.458405375480651, 51.173395356818375],
-            [4.458609223365784, 51.1733163190672],
-            [4.458585418760776, 51.17329424733056],
-            [4.458732604980469, 51.173291094224474],
-            [4.458660185337067, 51.173358360441085],
-            [4.458633363246918, 51.17333481727643],
-            [4.458426833152771, 51.17341974077811],
-            [4.458405375480651, 51.173395356818375]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Kassa",
-        "type": "facility",
-        "icon": "euro"
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/monument-24_1.png"
+        },
+        "name": "Fri3d monument",
+        "description": "?",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/monument-24_1.png"
+        }
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [4.459542632102966, 51.172875723163116]
+        "coordinates": [
+          4.663405,
+          50.800835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/religious-christian-24_1.png"
+        },
+        "name": "FSM church workshop",
+        "description": "Jezus mag even opzij zodat de pastafarianen hier het FSM kunnen komen vereren.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/religious-christian-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.665872,
+          50.798378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        },
+        "name": "Grote camping (Woudloper, Hiker en St-Joris)",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/campsite-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.661764,
+          50.800542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Hardware Hacking Area",
+        "description": "Dus bus van Tom",
+        "_umap_options": {
+          "color": "Purple"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.663763,
+              50.8004
+            ],
+            [
+              4.663873,
+              50.800409
+            ],
+            [
+              4.663919,
+              50.800249
+            ],
+            [
+              4.663806,
+              50.800239
+            ],
+            [
+              4.663763,
+              50.8004
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "Green"
+        },
+        "name": "Herfstmalle"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.662762,
+              50.798745
+            ],
+            [
+              4.662441,
+              50.79888
+            ],
+            [
+              4.662177,
+              50.798853
+            ],
+            [
+              4.662002,
+              50.79876
+            ],
+            [
+              4.662025,
+              50.798524
+            ],
+            [
+              4.662323,
+              50.798431
+            ],
+            [
+              4.662656,
+              50.798548
+            ],
+            [
+              4.662762,
+              50.798745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Ijskasten"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.661862,
+              50.800045
+            ],
+            [
+              4.661909,
+              50.800043
+            ],
+            [
+              4.661909,
+              50.799997
+            ],
+            [
+              4.661857,
+              50.799997
+            ],
+            [
+              4.661862,
+              50.800045
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Ijskasten"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.663059,
+              50.798955
+            ],
+            [
+              4.663133,
+              50.798955
+            ],
+            [
+              4.663133,
+              50.798903
+            ],
+            [
+              4.66306,
+              50.798903
+            ],
+            [
+              4.663059,
+              50.798955
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/bank-24_1.png"
+        },
+        "name": "Infodesk",
+        "description": "Het centrale brein van Fri3d Camp. Bij de infodesk kan je je ticket inwisselen voor je armband en goodie bag, je kan hier met al je vragen terecht, de EHBO post en NOC (Network Operations Center) zijn hier ook gevestigd. De infodesk blijft doorlopend open.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/bank-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664591,
+          50.800427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Infodesk & NOC",
+        "description": "2 kantoorcontainers, helft infodesk, helft NOC",
+        "_umap_options": {
+          "color": "Purple"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.664527,
+              50.800461
+            ],
+            [
+              4.664626,
+              50.800471
+            ],
+            [
+              4.66464,
+              50.800409
+            ],
+            [
+              4.664542,
+              50.800399
+            ],
+            [
+              4.664527,
+              50.800461
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/roadblock-24_1.png"
+        },
+        "name": "Inkom",
+        "description": "We controleren de ingang. Mensen zonder bandje worden geïnformeerd en naar de infodesk gestuurd. Voertuigen zijn enkel toegelaten voor leveringen voor Fri3d Camp. Donderdag kan tot 21:00 op het terrein gereden worden om je tent of village op te zetten. ",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/roadblock-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.660193,
+          50.79997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/fire-station-24_1.png"
+        },
+        "name": "Kampvuur",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/fire-station-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664234,
+          50.800575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Kids village",
+        "description": "",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664394,
+          50.800846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Knutselba(a)r",
+        "description": "Rond deze tent concentreren we de activiteiten die expliciet op kinderen gericht zijn.  ",
+        "_umap_options": {
+          "color": "Purple"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.664316,
+              50.800793
+            ],
+            [
+              4.664291,
+              50.800882
+            ],
+            [
+              4.66455,
+              50.800909
+            ],
+            [
+              4.664572,
+              50.800822
+            ],
+            [
+              4.664316,
+              50.800793
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Gold",
+          "fill": false
+        },
+        "name": "Lint",
+        "description": "We brengen rond heel het kamp een geel \"CYBER\" lint aan. Als kinderen dit lint tegen komen, dan moeten ze het volgen tot waar ze zich weer kunnen orienteren.  (niet omdraaien want als je dan om een of andere reden van buitenuit het lint tegenkomt ga je weer verder weg van het terrein.)",
+        "_umap_options": {
+          "color": "Gold",
+          "fill": false
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.666765,
+              50.802165
+            ],
+            [
+              4.667296,
+              50.798615
+            ],
+            [
+              4.666706,
+              50.798754
+            ],
+            [
+              4.666427,
+              50.798459
+            ],
+            [
+              4.666148,
+              50.798418
+            ],
+            [
+              4.665756,
+              50.79809
+            ],
+            [
+              4.665349,
+              50.798008
+            ],
+            [
+              4.662892,
+              50.798164
+            ],
+            [
+              4.66037,
+              50.798279
+            ],
+            [
+              4.661014,
+              50.799988
+            ],
+            [
+              4.660982,
+              50.801107
+            ],
+            [
+              4.663911,
+              50.801263
+            ],
+            [
+              4.664887,
+              50.801405
+            ],
+            [
+              4.666164,
+              50.801948
+            ],
+            [
+              4.666765,
+              50.802165
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Main stage",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.663977,
+          50.800345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Overdekte buitenworkshop",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664901,
+          50.799203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        },
+        "name": "Overflow parking",
+        "description": "",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.661357,
+          50.797656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        },
+        "name": "Parking",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.660075,
+          50.799564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        },
+        "name": "Parking",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/parking-24_1.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.659909,
+          50.800422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "name": "Podium",
+        "description": "Bescheiden outdoor podium waar opening en closing kunnen plaatsvinden en waar tijdens het avondeten misschien iemand een muziekje kan maken.",
+        "_umap_options": {
+          "color": "Purple"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.664606,
+              50.800789
+            ],
+            [
+              4.664673,
+              50.800803
+            ],
+            [
+              4.664718,
+              50.800727
+            ],
+            [
+              4.664651,
+              50.800713
+            ],
+            [
+              4.664606,
+              50.800789
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/toilets-24-white.png"
+        },
+        "name": "Sanitair Grauwe els",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/toilets-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664401,
+          50.800012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/toilets-24-white.png"
+        },
+        "name": "Sanitair Tamme kastanje",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/toilets-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.663481,
+          50.798896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/lodging-24-white.png"
+        },
+        "name": "Slaapkamers",
+        "description": "Mogelijk verhuur van 8 kamers (7 van 8 en 1 van 10 personen). Geen toegang tot \"Fri3d hotel\" behalve door hotelverblijvers.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/lodging-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.666303,
+          50.798802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "Green"
+        },
+        "name": "Totem"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.662974,
+              50.799544
+            ],
+            [
+              4.662777,
+              50.799594
+            ],
+            [
+              4.662581,
+              50.799494
+            ],
+            [
+              4.662569,
+              50.799404
+            ],
+            [
+              4.66264,
+              50.799335
+            ],
+            [
+              4.662786,
+              50.799355
+            ],
+            [
+              4.663007,
+              50.799444
+            ],
+            [
+              4.662974,
+              50.799544
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/commercial-24_1.png"
+        },
+        "description": "Plaats voor villages die een eigen content track meebrengen.",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/commercial-24_1.png"
+        },
+        "name": "Villages"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.664017,
+          50.799189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        },
+        "name": "Workshop central",
+        "description": "In de 6 zalen van het hoofdgebouw worden heel wat workshops gegeven. Op het binnenplein is er de mogelijkheid een fab lab truck in te richten (binnenplein ligt wel niet horizontaal).",
+        "_umap_options": {
+          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.666338,
+          50.798657
+        ]
       }
     }
-  ]
+  ],
+  "_umap_options": {
+    "displayOnLoad": true,
+    "browsable": true,
+    "remoteData": {},
+    "name": "Fri3d masterplan",
+    "id": 783366,
+    "color": "DarkCyan"
+  }
 }
