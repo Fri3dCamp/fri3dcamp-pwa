@@ -281,25 +281,6 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "iconUrl": "/uploads/pictogram/parking-24_1.png"
-        },
-        "name": "Crewparking",
-        "_umap_options": {
-          "iconUrl": "/uploads/pictogram/parking-24_1.png"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.661262,
-          50.799592
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
           "iconUrl": "/uploads/pictogram/bar-24_1.png"
         },
         "name": "Day bar",
@@ -430,26 +411,6 @@
               50.800605
             ]
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "iconUrl": "/uploads/pictogram/monument-24_1.png"
-        },
-        "name": "Fri3d monument",
-        "description": "?",
-        "_umap_options": {
-          "iconUrl": "/uploads/pictogram/monument-24_1.png"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.663405,
-          50.800835
         ]
       }
     },
@@ -785,7 +746,7 @@
         "_storage_options": {
           "color": "Purple"
         },
-        "name": "Knutselba(a)r",
+        "name": "Knutselbaar",
         "description": "Rond deze tent concentreren we de activiteiten die expliciet op kinderen gericht zijn.  ",
         "_umap_options": {
           "color": "Purple"
@@ -1072,26 +1033,6 @@
         "coordinates": [
           4.663481,
           50.798896
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "iconUrl": "/uploads/pictogram/lodging-24-white.png"
-        },
-        "name": "Slaapkamers",
-        "description": "Mogelijk verhuur van 8 kamers (7 van 8 en 1 van 10 personen). Geen toegang tot \"Fri3d hotel\" behalve door hotelverblijvers.",
-        "_umap_options": {
-          "iconUrl": "/uploads/pictogram/lodging-24-white.png"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.666303,
-          50.798802
         ]
       }
     },

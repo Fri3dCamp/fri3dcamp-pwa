@@ -43,6 +43,7 @@ import PodiumSvg from '../../img/icons/buitenpodium.svg';
 import VillagesSvg from '../../img/icons/villages.svg';
 import HoofdgebouwSvg from '../../img/icons/hoofdgebouw.svg';
 import ShelterSvg from '../../img/icons/shelter.svg';
+import GateSvg from '../../img/icons/gate.svg';
 
 
 
@@ -153,6 +154,11 @@ const ShelterIcon = () => (
         <img src={ShelterSvg} height={25} width={25}/>
     </Icon>
 );
+const GateIcon = () => (
+    <Icon>
+        <img src={GateSvg} height={25} width={25}/>
+    </Icon>
+);
 
 
 const IconMap = {
@@ -187,6 +193,7 @@ const IconMap = {
     'villages' : <VillagesIcon />,
     'workshop central' : <HoofdgebouwIcon />,
     'overdekte buitenworkshop' : <ShelterIcon />,
+    'inkom' : <GateIcon />,
 	bar: <BarIcon />,
 	wc: <SanitairIcon />,
 };

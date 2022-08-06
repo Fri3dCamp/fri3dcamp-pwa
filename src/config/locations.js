@@ -1,16 +1,11 @@
-import nucleusIcon from "../img/icons/nucleus.png";
-import elektronIcon from "../img/icons/elektron.png";
-import protonIcon from "../img/icons/proton.png";
-import quarkIcon from "../img/icons/quark.png";
-import soundIcon from "../img/icons/sound.png";
-import workshopIcon from "../img/icons/workshops.png";
+import InfodeskSvg from '../img/icons/infodesk.svg';
 
 const locations = [
 	{
 		name: "Nucleus",
 		subTitle: "Grote circustent",
 		aliases: [],
-		icon: nucleusIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -18,7 +13,7 @@ const locations = [
 		name: "Elektron",
 		subTitle: "Ronde circustent",
 		aliases: [],
-		icon: elektronIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -26,7 +21,7 @@ const locations = [
 		name: "Quark",
 		subTitle: "Vierkante circustent",
 		aliases: [],
-		icon: quarkIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -34,7 +29,7 @@ const locations = [
 		name: "Proton",
 		subTitle: "Lezingen op kindermaat",
 		aliases: ["Kinderlezingen", "Kinderlezingen"],
-		icon: protonIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -42,7 +37,7 @@ const locations = [
 		name: "Sound",
 		subTitle: "Muziekpodium",
 		aliases: ["sound", "foodcourt"],
-		icon: soundIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -50,7 +45,7 @@ const locations = [
 		name: "Workshops",
 		subTitle: "Aan de slag met een expert",
 		aliases: [],
-		icon: workshopIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
@@ -58,7 +53,7 @@ const locations = [
 		name: "Terrein",
 		subTitle: "Het terrein",
 		aliases: [],
-		icon: workshopIcon,
+		icon: InfodeskSvg,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut tortor rhoncus ante euismod dictum ac non arcu. In fermentum luctus tristique. Nam eget viverra enim.",
 	},
