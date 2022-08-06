@@ -26,6 +26,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import LocalBarIcon from "@material-ui/icons/LocalBar";
 import WcIcon from "@material-ui/icons/Wc";
+import {prefixRoute} from "../../routing";
 
 const geolocateStyle = {
 	position: "absolute",
@@ -188,9 +189,7 @@ class Floorplan extends React.Component {
 			<>
 				<CardActionArea
 					component={Link}
-					to={`${
-						process.env.PUBLIC_URL
-					}/location/${location.name.toLowerCase()}`}
+					to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 				>
 					<CardHeader
 						title={location.name}
@@ -225,7 +224,7 @@ class Floorplan extends React.Component {
 				<Button
 					size="small"
 					component={Link}
-					to={`activity/${activity.id}`}
+					to={prefixRoute(`activity/${activity.id}`)}
 					variant="contained"
 					color="primary"
 				>

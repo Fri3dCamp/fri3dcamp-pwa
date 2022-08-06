@@ -113,30 +113,94 @@ export const conferenceSession = new schema.Entity(
 	}
 );
 
-export const conferenceRoom = new schema.Entity(
-	"rooms",
+export const activityFromSession = new schema.Entity(
+	"activities",
 	{
-		sessions: [conferenceSession],
+		persons: [conferencePerson],
+	},
+	{
+		idAttribute: (room) => room.id,
+		processStrategy: (obj, parent, key) => {
+			const {
+				id,
+				title,
+				description,
+				abstract,
+				day,
+				date,
+				duration,
+				room,
+				persons,
+				links,
+				attachment,
+				answers,
+				logo,
+				...rest
+			} = obj;
+
+			const startTime = moment(date);
+			const sessionDuration = moment.duration(duration);
+			const endTime = startTime.clone().add(sessionDuration);
+
+			return {
+				...rest,
+				id,
+				title: unEscape(title),
+				content: description,
+				excerpt: abstract,
+				day,
+				continuous: room === "Doorlopend programma",
+				location: room,
+				childFriendly: false,
+				night: false,
+				subtitle: "",
+				persons,
+				logo: logo && logo !== "" ? logo : "media/fri3dcamp2022/img/pretalx_header_dark_WOyQFXF.png",
+				period: { start: startTime.toDate(), end: endTime.toDate() },
+				images: false,
+			};
+		}
+	}
+);
+
+export const conferenceRoom = new schema.Entity(
+	"locations",
+	{
+		activities: [activityFromSession],
 	},
 	{
 		idAttribute: 'name',
 	}
 );
 
+/**
+ * vrijdag: {
+ * 		key: "vrijdag",
+ * 		label: "Vrijdag",
+ * 		start: new Date("2022-08-12T11:00:00.000Z"),
+ * 		end: new Date("2022-08-13T01:30:00.000Z"),
+ * 	}
+ * @type {schema.Entity}
+ */
 export const conferenceDay = new schema.Entity(
 	"days",
 	{
 		rooms: [conferenceRoom],
 	},
 	{
-		idAttribute: 'index',
-		processStrategy: (obj, parent, key) => ({
-			...obj,
-			rooms: Object.entries(obj.rooms).map(([name, sessions]) => ({
-				name,
-				sessions: sessions.map((session) => ({...session, room: name})),
-			})),
-		})
+		idAttribute: (day) => day.date,
+		processStrategy: (obj, parent, key) => {
+			return {
+				key: obj.date,
+				label: moment(obj.dayStart).format('dddd'),
+				start: moment(obj.dayStart).toDate(),
+				end: moment(obj.dayEnd).toDate(),
+				rooms: Object.entries(obj.rooms).map(([name, sessions]) => ({
+					name,
+					activities: sessions.map((session) => ({...session, day: obj.date, room: name})),
+				})),
+			}
+		},
 	}
 );
 
@@ -224,7 +288,7 @@ export const activity = new schema.Entity(
 export const schedule = new schema.Entity(
 	"schedules",
 	{
-		conference,
+		conference: conference,
 	},
 	{
 		mergeStrategy: (entityA, entityB) => {
@@ -233,9 +297,9 @@ export const schedule = new schema.Entity(
 				...entityB,
 			};
 		},
-		idAttribute: 'id',
+		idAttribute: (schedule) => 'main',
 		processStrategy: (obj, parent, key) => {
-			return { id: 'main', ...obj }
+			return { id: 'main', ...obj.schedule }
 		}
 	}
 );

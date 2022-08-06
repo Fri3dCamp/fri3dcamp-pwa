@@ -16,12 +16,13 @@ const initialState = {
 		schedule: {},
 		activities: {},
 		updates: {},
-		days: getEventDates(),
-		categories,
-		locations: locations.reduce((obj, item) => {
+		days: {},
+		categories: {},
+		/*locations: locations.reduce((obj, item) => {
 			obj[item.name.toLowerCase()] = item;
 			return obj;
-		}, {}),
+		}, {}),*/
+		locations: {},
 	},
 	notifications: {
 		reply: null,

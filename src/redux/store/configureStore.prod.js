@@ -15,11 +15,7 @@ const states = [
 	"favoriteActivities",
 ];
 
-export const history = createBrowserHistory(
-	{
-		basename: process.env.PUBLIC_PATH,
-	}
-);
+export const history = createBrowserHistory();
 
 const configureStore = (preloadedState) =>
 	createStore(
