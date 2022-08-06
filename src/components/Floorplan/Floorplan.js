@@ -20,16 +20,31 @@ import {
 import { Link } from "react-router-dom";
 import UpcomingActivities from "../Activities/UpcomingActivities";
 import CardHeader from "@material-ui/core/CardHeader";
-import RestaurantIcon from "@material-ui/icons/Restaurant";
 import EuroSymbolIcon from "@material-ui/icons/EuroSymbol";
 import InfoIcon from "@material-ui/icons/Info";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
-import LocalBarIcon from "@material-ui/icons/LocalBar";
-import WcIcon from "@material-ui/icons/Wc";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
-import AirportShuttleIcon from "@material-ui/icons/AirportShuttle";
-import DirectionsCarIcon from "@material-ui/icons/DirectionsCar";
-import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
+import { Icon } from "@material-ui/core";
+import InfodeskSvg from '../../img/icons/infodesk.svg';
+import SanitairSvg from '../../img/icons/sanitair.svg';
+import BlokhutSvg from '../../img/icons/blokhut.svg';
+import CamperSvg from '../../img/icons/campers.svg';
+import EhboSvg from '../../img/icons/ehbo.svg';
+import CateringSvg from '../../img/icons/catering.svg';
+import BarSvg from '../../img/icons/bar.svg';
+import KampvuurSvg from '../../img/icons/kampvuur.svg';
+import ParkingSvg from '../../img/icons/parking.svg';
+import CampingSvg from '../../img/icons/camping.svg';
+import HardwareHackingSvg from '../../img/icons/hardware-hacking.svg';
+import ChilloutSvg from '../../img/icons/chillout.svg';
+import CircustentSvg from '../../img/icons/circustent.svg';
+import KapelSvg from '../../img/icons/kapel.svg';
+import KnutselbaarSvg from '../../img/icons/knutselbaar.svg';
+import KoelkastSvg from '../../img/icons/koelkast.svg';
+import PodiumSvg from '../../img/icons/buitenpodium.svg';
+import VillagesSvg from '../../img/icons/villages.svg';
+import HoofdgebouwSvg from '../../img/icons/hoofdgebouw.svg';
+import ShelterSvg from '../../img/icons/shelter.svg';
+
+
 
 const geolocateStyle = {
 	position: "absolute",
@@ -38,28 +53,148 @@ const geolocateStyle = {
 	margin: 10,
 };
 
+const InfodeskIcon = () => (
+    <Icon>
+        <img src={InfodeskSvg} height={25} width={25}/>
+    </Icon>
+);
+const SanitairIcon = () => (
+    <Icon>
+        <img src={SanitairSvg} height={25} width={25}/>
+    </Icon>
+);
+const BlokhutIcon = () => (
+    <Icon>
+        <img src={BlokhutSvg} height={25} width={25}/>
+    </Icon>
+);
+const CamperIcon = () => (
+    <Icon>
+        <img src={CamperSvg} height={25} width={25}/>
+    </Icon>
+);
+const EhboIcon = () => (
+    <Icon>
+        <img src={EhboSvg} height={25} width={25}/>
+    </Icon>
+);
+const CateringIcon = () => (
+    <Icon>
+        <img src={CateringSvg} height={25} width={25}/>
+    </Icon>
+);
+const BarIcon = () => (
+    <Icon>
+        <img src={BarSvg} height={25} width={25}/>
+    </Icon>
+);
+const KampvuurIcon = () => (
+    <Icon>
+        <img src={KampvuurSvg} height={25} width={25}/>
+    </Icon>
+);
+const ParkingIcon = () => (
+    <Icon>
+        <img src={ParkingSvg} height={25} width={25}/>
+    </Icon>
+);
+const CampingIcon = () => (
+    <Icon>
+        <img src={CampingSvg} height={25} width={25}/>
+    </Icon>
+);
+const HardwareHackingIcon = () => (
+    <Icon>
+        <img src={HardwareHackingSvg} height={25} width={25}/>
+    </Icon>
+);
+const ChilloutIcon = () => (
+    <Icon>
+        <img src={ChilloutSvg} height={25} width={25}/>
+    </Icon>
+);
+const CircustentIcon = () => (
+    <Icon>
+        <img src={CircustentSvg} height={25} width={25}/>
+    </Icon>
+);
+const KapelIcon = () => (
+    <Icon>
+        <img src={KapelSvg} height={25} width={25}/>
+    </Icon>
+);
+const KnutselbaarIcon = () => (
+    <Icon>
+        <img src={KnutselbaarSvg} height={25} width={25}/>
+    </Icon>
+);
+const KoelkastIcon = () => (
+    <Icon>
+        <img src={KoelkastSvg} height={25} width={25}/>
+    </Icon>
+);
+const PodiumIcon = () => (
+    <Icon>
+        <img src={PodiumSvg} height={25} width={25}/>
+    </Icon>
+);
+const VillagesIcon = () => (
+    <Icon>
+        <img src={VillagesSvg} height={25} width={25}/>
+    </Icon>
+);
+const HoofdgebouwIcon = () => (
+    <Icon>
+        <img src={HoofdgebouwSvg} height={25} width={25}/>
+    </Icon>
+);
+const ShelterIcon = () => (
+    <Icon>
+        <img src={ShelterSvg} height={25} width={25}/>
+    </Icon>
+);
+
+
 const IconMap = {
-	restaurant: <RestaurantIcon />,
+	restaurant: <CateringIcon />,
 	euro: <EuroSymbolIcon />,
 	info: <InfoIcon />,
-	'ehbo': <LocalHospitalIcon />,
-	'ehbo post': <LocalHospitalIcon />,
-	'infodesk' : <InfoIcon />,
-	'sanitair grauwe els' : <WcIcon />,
-	'sanitair tamme kastanje' : <WcIcon />,
-	'food' : <RestaurantIcon />,
-	'day bar' : <LocalBarIcon />,
-	'parking' : <DirectionsCarIcon />,
-	'kampvuur' : <WhatshotIcon />,
-	'campervans/caravans' : <AirportShuttleIcon />,
-	bar: <LocalBarIcon />,
-	wc: <WcIcon />,
+	'ehbo': <EhboIcon />,
+	'ehbo post': <EhboIcon />,
+	'infodesk' : <InfodeskIcon />,
+	'infodesk & noc' : <InfodeskIcon />,
+	'blokhut' : <BlokhutIcon />,
+	'sanitair grauwe els' : <SanitairIcon />,
+	'sanitair tamme kastanje' : <SanitairIcon />,
+	'food' : <CateringIcon />,
+	'day bar' : <BarIcon />,
+	'parking' : <ParkingIcon />,
+	'overflow parking' : <ParkingIcon />,
+	'kampvuur' : <KampvuurIcon />,
+	'campervans/caravans' : <CamperIcon />,
+	'campervans/caravans (overflow)' : <CamperIcon />,
+    'camping herfstmale' : <CampingIcon />,
+    'grote camping (woudloper, hiker en st-joris)' : <CampingIcon />,
+    'camping tamme kastanje' : <CampingIcon />,
+    'camping totem' : <CampingIcon />,
+    'hardware hacking area' : <HardwareHackingIcon />,
+    'chill-out zone' : <ChilloutIcon />,
+    'circustent' : <CircustentIcon />,
+    'kapel' : <KapelIcon />,
+    'kids village' : <KnutselbaarIcon />,
+    'ijskasten' : <KoelkastIcon />,
+    'main stage' : <PodiumIcon />,
+    'villages' : <VillagesIcon />,
+    'workshop central' : <HoofdgebouwIcon />,
+    'overdekte buitenworkshop' : <ShelterIcon />,
+	bar: <BarIcon />,
+	wc: <SanitairIcon />,
 };
 
 const styles = (theme) => ({
 	markerLink: {
 		maxWidth: "150px",
-		maxHeight: "50px",
+		maxHeight: "80px",
 		display: "flex",
 		alignContent: "center",
 		alignItems: "center",
@@ -78,12 +213,13 @@ const styles = (theme) => ({
 		overflow: "hidden",
 		textOverflow: "ellipsis",
 		whiteSpace: "nowrap",
-		color: "#fff",
+		color: "#000",
 	},
 	avatar: {
-		width: 30,
-		height: 30,
-		background: theme.palette.secondary.main,
+		width: 40,
+		height: 40,
+		//background: theme.palette.secondary.main,
+		background: "white",
 		boxShadow: "0 2px 1px rgba(0,0,0,0.35)",
 	},
 	markerContent: {
