@@ -10,7 +10,7 @@ import EventIcon from "@material-ui/icons/EventOutlined";
 import MapIcon from "@material-ui/icons/MapOutlined";
 import NotificationsIcon from "@material-ui/icons/NotificationsOutlined";
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { getUnreadUpdateCount } from "../../redux/actions";
 import {connect} from "react-redux";
 import {prefixRoute} from "../../routing";
@@ -50,16 +50,16 @@ class BottomBar extends React.Component {
 					icon: NotificationsIcon,
 					path: "/update",
 				},
+				// {
+				// 	key: 3,
+				// 	label: "Volunteering",
+				// 	icon: PeopleOutlineIcon,
+				// 	path: "https://tickets.fri3d.be/shifts",
+				// },
 				{
 					key: 3,
-					label: "Volunteering",
-					icon: PeopleOutlineIcon,
-					path: "/volunteering",
-				},
-				{
-					key: 4,
 					label: "Favorieten",
-					icon: FavoriteIcon,
+					icon: FavoriteBorderIcon,
 					path: "/favorites",
 				},
 			],
