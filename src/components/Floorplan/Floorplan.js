@@ -316,9 +316,14 @@ class Floorplan extends React.Component {
 				<this.renderActivityPopup activity={popupInfo.activity} />
 			);
 		} else if (popupInfo.locations) {
+            let sublocations = false
+            if (popupInfo.locations.length > 1){
+                sublocations = true
+            }
+
 			content = (
 				<>
-					{popupInfo.locations.map( location => <this.renderLocationPopup location={location} amount={Math.ceil(3 / popupInfo.locations.length)} />)}
+					{popupInfo.locations.map( (location,index) => <this.renderLocationPopup location={location} index={index} sublocations={sublocations} amount={Math.ceil(3 / popupInfo.locations.length)} />)}
 				</>
 
 			);
@@ -342,19 +347,67 @@ class Floorplan extends React.Component {
 		);
 	}
 
-	renderLocationPopup = ({ location, amount = 3 }) => {
-		return (
+	renderLocationPopup = ({ location, amount = 3, sublocations=false, index=0  }) => {
+        if (sublocations) {
+            if (0 === index) {
+                return (
+                    <>
+                        <CardActionArea
+                            component={Link}
+                            to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
+                        >
+                            <CardHeader
+                                title={location.feature}
+                                subheader={undefined}
+                                titleTypographyProps={{fontSize:'20px'}}
+                                avatar={<Avatar src={location.icon} />}
+                            />
+                            <Typography variant="subtitle1" style={{marginLeft:"16px", fontWeight:"bold"}}>
+                                {location.label || location.name}
+                            </Typography>
+                        </CardActionArea>
+                        <UpcomingActivities
+                            title=""
+                            amount={amount}
+                            location={location.name.toLowerCase()}
+                        />
+                    </>
+                );
+            } else {
+
+                return (
+                    <>
+                        <CardActionArea
+                            component={Link}
+                            to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
+                        >
+                            <Typography variant="subtitle1" style={{marginLeft:"16px", fontWeight:"bold"}}>
+                                {location.label || location.name}
+                            </Typography>
+                        </CardActionArea>
+                        <UpcomingActivities
+                            title=""
+                            amount={amount}
+                            location={location.name.toLowerCase()}
+                        />
+                    </>
+                );
+            }
+            
+        } else {
+            return (
 			<>
-				<CardActionArea
-					component={Link}
-					to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
-				>
-					<CardHeader
-						title={location.label || location.name}
-						subheader={location.feature || undefined}
-						avatar={<Avatar src={location.icon} />}
-					/>
-				</CardActionArea>
+                <CardActionArea
+                    component={Link}
+                    to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
+                >
+                    <CardHeader
+                        title={location.feature}
+                        titleTypographyProps={{fontSize:'20px'}}
+                        subheader={undefined}
+                        avatar={<Avatar src={location.icon} />}
+                    />
+                </CardActionArea>
 				<UpcomingActivities
 					title=""
 					amount={amount}
@@ -362,6 +415,8 @@ class Floorplan extends React.Component {
 				/>
 			</>
 		);
+        }
+		
 	};
 
 	renderActivityPopup = ({ activity }) => {
