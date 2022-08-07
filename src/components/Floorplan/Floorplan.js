@@ -503,7 +503,7 @@ class Floorplan extends React.Component {
 					clickHandler: this.handleMarkerClick,
 					features: features,
 				})}
-				<Filter key="filters" />
+				{/*<Filter key="filters" />*/}
 				<GeolocateControl
 					key="locationTracker"
 					style={geolocateStyle}

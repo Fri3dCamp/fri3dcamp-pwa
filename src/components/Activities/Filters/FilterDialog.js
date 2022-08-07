@@ -378,7 +378,7 @@ class FilterDialog extends Component {
 							isMulti
 						/>
 					</div>
-					<div className={classes.filterContainer}>
+					{/*<div className={classes.filterContainer}>
 						<Typography variant="h6">Categorieën</Typography>
 						<Typography
 							style={{ marginBottom: "16px" }}
@@ -387,7 +387,7 @@ class FilterDialog extends Component {
 							Duid de categorie aan waarop je wil filteren.
 						</Typography>
 						<div>{this.renderChipFilters()}</div>
-					</div>
+					</div>*/}
 					<div></div>
 				</DialogContent>
 				<DialogActions>
