@@ -7,13 +7,15 @@ import Switch from "@material-ui/core/Switch";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
-import { Grid } from "@material-ui/core";
+import {Button, Grid} from "@material-ui/core";
 import { connect } from "react-redux";
 import {
 	changeActivityFilter,
 	changeConsent,
 	replyToNotifications,
 } from "../redux/actions";
+import {Link} from "react-router-dom";
+import {prefixRoute} from "../routing";
 
 const Settings = ({
 	reply,
@@ -67,7 +69,7 @@ const Settings = ({
 										onChange={(e) =>
 											changeActivityFilter({
 												hidePastActivities:
-													e.target.checked,
+												e.target.checked,
 											})
 										}
 										value="hidePastActivities"
@@ -80,6 +82,31 @@ const Settings = ({
 							Als deze optie aan staat, worden activiteiten die
 							zijn afgelopen naar onderen verplaatst.
 						</FormHelperText>
+					</FormControl>
+				</CardBlock>
+			</Grid>
+			<Grid item xs={12}>
+				<CardBlock>
+					<FormControl component="fieldset">
+						<FormLabel component="legend">Troubleshooting</FormLabel>
+						<FormHelperText>
+							<p>Als je problemen ondervindt met de app, kun je proberen om de app te herladen via het kebab-menu rechtsboven.</p>
+							<p>Nog steeds problemen? Probeer eens om de local storage cache te verwijderen via onderstaande knop. Kom gerust even langs bij de infodesk, dan kijken we met je verder.</p>
+						</FormHelperText>
+						<FormGroup>
+							<Button
+								variant="outlined"
+								color="default"
+								onClick={() => {
+									if(window.localStorage) {
+										window.localStorage.clear();
+									}
+									window.location.reload(true);
+								}}
+							>
+								Clear local storage
+							</Button>
+						</FormGroup>
 					</FormControl>
 				</CardBlock>
 			</Grid>

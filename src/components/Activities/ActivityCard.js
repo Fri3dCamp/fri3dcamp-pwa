@@ -17,7 +17,7 @@ import {
 } from "react-lazy-load-image-component";
 import Period from "./Single/Period";
 import {connect} from "react-redux";
-import {getLocationByName, getPastActivities, getPersonById} from "../../redux/selectors";
+import {getDayById, getLocationByName, getPastActivities, getPersonById} from "../../redux/selectors";
 import LikeButton from "../UI/LikeButton";
 import { toggleFavorite } from "../../redux/actions";
 import {prefixRoute} from "../../routing";
@@ -72,6 +72,7 @@ class ActivityCard extends React.Component {
 	};
 
 	renderPeriod = (activity) => {
+		const { dayById } = this.props;
 		if (activity.continuous) {
 			return (
 				<>
@@ -84,7 +85,7 @@ class ActivityCard extends React.Component {
 		return (
 			<>
 				<AccessTimeIcon />
-				&nbsp;{<Period activity={activity} />}
+				&nbsp;{<Period activity={activity} day={dayById(activity.day)} />}
 			</>
 		);
 	};
@@ -197,6 +198,7 @@ const mapStateToProps = (state, { activity }) => {
 	const isFavorite = state.favoriteActivities.includes(activity.id);
 	const pastActivities = getPastActivities(state);
 	const persons = activity && activity.persons.map(person => getPersonById(state)(person)) || [];
+	const dayById = getDayById(state);
 
 	const isPast = pastActivities.indexOf(activity.id) !== -1;
 
@@ -205,6 +207,7 @@ const mapStateToProps = (state, { activity }) => {
 		isFavorite,
 		isPast,
 		persons,
+		dayById,
 	};
 };
 

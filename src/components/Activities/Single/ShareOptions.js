@@ -24,7 +24,7 @@ const shareIcons = [
 	{
 		icon: <Twitter />,
 		name: "Twitter",
-		link: "https://twitter.com/intent/tweet/?text={title}&url={url}&via=soundscifest",
+		link: "https://twitter.com/intent/tweet/?text={title}&url={url}&via=fri3dcamp",
 	},
 	{
 		icon: <Facebook />,
