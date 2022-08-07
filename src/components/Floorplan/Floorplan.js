@@ -288,7 +288,7 @@ class Floorplan extends React.Component {
 		const fName = feature.name.toLowerCase();
 
 		if (locationsByFeature.hasOwnProperty(fName)) {
-			popupInfo.location = locationsByFeature[fName];
+			popupInfo.locations = locationsByFeature[fName];
 		}
 
 		if (
@@ -315,9 +315,12 @@ class Floorplan extends React.Component {
 			content = (
 				<this.renderActivityPopup activity={popupInfo.activity} />
 			);
-		} else if (popupInfo.location) {
+		} else if (popupInfo.locations) {
 			content = (
-				<this.renderLocationPopup location={popupInfo.location} />
+				<>
+					{popupInfo.locations.map( location => <this.renderLocationPopup location={location} amount={Math.ceil(3 / popupInfo.locations.length)} />)}
+				</>
+
 			);
 		} else {
 			content = <this.renderRegularPopup {...popupInfo} />;
@@ -339,7 +342,7 @@ class Floorplan extends React.Component {
 		);
 	}
 
-	renderLocationPopup = ({ location }) => {
+	renderLocationPopup = ({ location, amount = 3 }) => {
 		return (
 			<>
 				<CardActionArea
@@ -347,13 +350,14 @@ class Floorplan extends React.Component {
 					to={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 				>
 					<CardHeader
-						title={location.name}
-						subheader={location.subTitle}
+						title={location.label || location.name}
+						subheader={location.feature || undefined}
 						avatar={<Avatar src={location.icon} />}
 					/>
 				</CardActionArea>
 				<UpcomingActivities
 					title=""
+					amount={amount}
 					location={location.name.toLowerCase()}
 				/>
 			</>

@@ -418,7 +418,7 @@ const mapStateToProps = (state) => {
 
 		return {
 			value: location.name.toLowerCase(),
-			label: location.name,
+			label: location.label || location.name,
 		};
 	});
 

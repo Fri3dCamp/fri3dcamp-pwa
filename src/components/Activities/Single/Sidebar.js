@@ -72,8 +72,8 @@ const Sidebar = ({activity, location, day, persons}) => {
 					<CardBlock
 						headerLink={prefixRoute(`/location/${activity.location}`)}
 						header={{
-							title: location.name,
-							subheader: location.subTitle,
+							title: location.label || location.name,
+							subheader: location.feature || undefined,
 							avatar: <Avatar src={location.icon}/>,
 						}}
 					>

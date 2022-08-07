@@ -34,7 +34,7 @@ const fabStyle = {
 
 const suggestions = locations.map((location) => ({
 	value: location.name,
-	label: location.name,
+	label: location.label || location.name,
 }));
 
 const chipFilters = [

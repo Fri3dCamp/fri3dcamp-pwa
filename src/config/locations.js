@@ -10,15 +10,15 @@ import HoofdgebouwSvg from '../img/icons/hoofdgebouw.svg';
 import ShelterSvg from '../img/icons/shelter.svg';
 
 const locations = {
-    "mainOne" : {
+    "mainone" : {
         "feature" : "circustent",
         "icon" : CircustentSvg
     },
-    "mainTwo" : {
+    "maintwo" : {
         "feature" : "circustent",
         "icon" : CircustentSvg
     },
-    "juniorHacking" : {
+    "juniorhacking" : {
         "feature" : "knutselbaar",
         "icon" : KnutselbaarSvg
     },
@@ -34,27 +34,27 @@ const locations = {
         "feature" : "buitenpodium",
         "icon" : PodiumSvg
     },
-    "doorlopendProgramma" : {
+    "doorlopendprogramma" : {
         "feature" : "infodesk",
         "icon" : InfodeskSvg
     },
-    "hardwareHackingArea" : {
+    "hardwarehackingarea" : {
         "feature" : "hardware hacking area",
         "icon" : HardwareHackingSvg
     },
-    "mediumMosfet" : {
+    "mediummosfet" : {
         "feature" : "hoofdgebouw",
         "icon" : HoofdgebouwSvg
     },
-    "lowVoltage" : {
+    "lowvoltage" : {
         "feature" : "hoofdgebouw",
         "icon" : HoofdgebouwSvg
     },
-    "tinyTesseract" : {
+    "tinytesseract" : {
         "feature" : "hoofdgebouw",
         "icon" : HoofdgebouwSvg
     },
-    "largeLED" : {
+    "largeled" : {
         "feature" : "hoofdgebouw",
         "icon" : HoofdgebouwSvg
     },

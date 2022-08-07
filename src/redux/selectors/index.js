@@ -1,12 +1,13 @@
-import { createSelector } from "reselect";
-//import locations from '../../config/locations';
+import {createSelector} from "reselect";
+import locationMap from '../../config/locations';
+import { decamelize } from "humps";
+import defaultIcon from '../../img/icons/default.svg';
 
 export const getActivities = (state) => state.entities.activities || [];
 const getActivityFilter = (state) => state.activityFilter.filter;
 //const getCategories = state => state.entities.categories;
 
 const getCurrentDate = (state) => state.general.currentDate;
-const getLocations = (state) => state.entities.locations;
 const getPersons = (state) => state.entities.persons;
 const getDays = (state) => state.entities.days;
 const getFavoriteActivityIds = (state) => state.favoriteActivities;
@@ -24,6 +25,20 @@ export const getUpdateLoader = (state) =>
 		isFetching: true,
 		ids: [],
 	};
+
+export const getLocations = (state) => {
+	return Object.fromEntries(
+		Object.entries(state.entities.locations).map(([key, location]) => {
+			const extraLocationInfo = locationMap[key] || {
+				feature: key,
+				icon: defaultIcon,
+				label: decamelize(key),
+			};
+
+			return [key, {...location, ...extraLocationInfo}];
+		}),
+	)
+};
 
 // Filters
 const getFloorPlanFeatures = (state) => state.floorPlan.features;
@@ -98,13 +113,13 @@ export const getFilteredActivities = createSelector(
 
 		if (filter.locations.length) {
 			conditions.general.push(
-				({ location }) => filter.locations.indexOf(location) !== 1
+				({location}) => filter.locations.indexOf(location) !== 1
 			);
 		}
 
 		if (filter.search !== "") {
 			conditions.general.push(
-				({ title, location, excerpt }) =>
+				({title, location, excerpt}) =>
 					title.toLowerCase().indexOf(filter.search) !== -1 ||
 					location.toLowerCase().indexOf(filter.search) !== -1 ||
 					excerpt.toLowerCase().indexOf(filter.search) !== -1
@@ -112,7 +127,7 @@ export const getFilteredActivities = createSelector(
 		}
 
 		if (filter.hidePastActivities) {
-			conditions.general.push(({ id, continuous, period }) => {
+			conditions.general.push(({id, continuous, period}) => {
 				if (continuous) {
 					return true;
 				}
@@ -180,7 +195,7 @@ export const getActivitiesByLocation = createSelector(
 			carry[key] = activities.filter(
 				(activity) =>
 					activity.location ===
-						(location.filter ? location.filter.value : key) &&
+					(location.filter ? location.filter.value : key) &&
 					!activity.isIntermission
 			);
 			return carry;
@@ -195,7 +210,7 @@ export const getUpcomingActivitiesByLocation = createSelector(
 		for (location of Object.keys(activitiesByLocation)) {
 			activitiesByLocation[location] = activitiesByLocation[
 				location
-			].filter((activity) => {
+				].filter((activity) => {
 				return (
 					!activity.continuous &&
 					pastActivities.indexOf(activity.id) === -1
@@ -257,18 +272,16 @@ export const getFilteredFeatures = createSelector(
 export const getLocationsByFeature = createSelector(
 	[getLocations, getFilteredFeatures],
 	(locations, features) => {
-		const locationsByFeature = features.reduce((carry, feature) => {
+		return features.reduce((carry, feature) => {
 			const fName = feature.name || "";
 			const query = fName.toLowerCase();
-			const location = locations[query];
+			const matchingLocations = Object.values(locations).filter(({feature = '', name }) => feature.toLowerCase() === query || name.toLowerCase() === query );
 
-			if (location) {
-				carry[query] = location;
+			if(matchingLocations.length) {
+				carry[query] = matchingLocations;
 			}
 
 			return carry;
 		}, {});
-
-		return locationsByFeature;
 	}
 );

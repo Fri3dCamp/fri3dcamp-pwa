@@ -6,7 +6,7 @@ import Page from "../components/UI/Page";
 import ActivityView from "../components/Activities/ActivityView";
 import CardBlock from "../components/UI/CardBlock";
 import LoadingIndicator from "../components/UI/LoadingIndicator";
-import { getActivitiesByLocation, getActivityLoader } from "../redux/selectors";
+import { getActivitiesByLocation, getActivityLoader, getLocations } from "../redux/selectors";
 import SidebarPage from "../components/UI/SidebarPage";
 import UpcomingActivities from "../components/Activities/UpcomingActivities";
 import {prefixRoute} from "../routing";
@@ -25,7 +25,7 @@ class Location extends React.Component {
 		const { myLocation } = this.props;
 
 		if (myLocation) {
-			document.title = `${myLocation.name} - Fri3d Camp`;
+			document.title = `${myLocation.label || myLocation.name} - Fri3d Camp`;
 		}
 	}
 
@@ -37,7 +37,7 @@ class Location extends React.Component {
 		}
 
 		return (
-			<Page backLink={true} pageTitle={`Locatie: ${myLocation.name}`}>
+			<Page backLink={true} pageTitle={`Locatie: ${myLocation.label || myLocation.name}`}>
 				<SidebarPage
 					sidebar={<LocationSidebar location={myLocation} />}
 				>
@@ -60,8 +60,8 @@ const LocationSidebar = ({ location }) => (
 	<CardBlock
 		headerLink={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 		header={{
-			title: location.name,
-			subheader: location.subTitle,
+			title: location.label || location.name,
+			subheader: location.feature || undefined,
 			avatar: <Avatar src={location.icon} />,
 		}}
 	>
@@ -72,12 +72,9 @@ const LocationSidebar = ({ location }) => (
 const mapStateToProps = (state, ownProps) => {
 	const locationName = ownProps.match.params.name;
 
-	const {
-		entities: { locations },
-	} = state;
-
-	const myLocation = locations[locationName];
+	const locations = getLocations(state);
 	const activityLoader = getActivityLoader(state);
+	const myLocation = locations[locationName];
 	const locationActivities = getActivitiesByLocation(state)[locationName];
 
 	return {

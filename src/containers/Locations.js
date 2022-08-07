@@ -16,8 +16,8 @@ const Locations = ({ locations }) => (
 					<CardBlock
 						headerLink={prefixRoute(`/location/${location.name.toLowerCase()}`)}
 						header={{
-							title: location.name,
-							subheader: location.subTitle,
+							title: location.label || location.name,
+							subheader: location.feature,
 							avatar: <Avatar src={location.icon} />,
 						}}
 					>

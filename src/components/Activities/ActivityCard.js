@@ -66,7 +66,7 @@ class ActivityCard extends React.Component {
 
 		return (
 			<>
-				<LocationOnIcon /> {location.name}&nbsp;&nbsp;
+				<LocationOnIcon /> {location.label || location.name}&nbsp;&nbsp;
 			</>
 		);
 	};
