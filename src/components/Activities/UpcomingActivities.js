@@ -1,4 +1,4 @@
-import { getUpcomingActivitiesByLocation } from "../../redux/selectors";
+import {getDayById, getUpcomingActivitiesByLocation} from "../../redux/selectors";
 import { connect } from "react-redux";
 import Period from "./Single/Period";
 import React from "react";
@@ -25,6 +25,7 @@ const UpcomingActivities = ({ upcomingListItems = [], title = "Upcoming" }) => {
 
 const mapStateToProps = (state, { location, amount = 3 }) => {
 	const upcomingActivitiesByLocation = getUpcomingActivitiesByLocation(state);
+	const dayById = getDayById(state);
 	let upcomingActivities =
 		upcomingActivitiesByLocation && upcomingActivitiesByLocation[location];
 
@@ -36,8 +37,10 @@ const mapStateToProps = (state, { location, amount = 3 }) => {
 		}
 
 		let upcomingActivity;
+		let day;
 
 		for (upcomingActivity of upcomingActivities) {
+
 			upcomingListItems.push({
 				key: upcomingActivity.id,
 				link: prefixRoute(`/activity/${upcomingActivity.id}`),
@@ -45,7 +48,7 @@ const mapStateToProps = (state, { location, amount = 3 }) => {
 				text: {
 					primary: upcomingActivity.title,
 					secondary: (
-						<Period showDay={true} activity={upcomingActivity} />
+						<Period showDay={true} day={dayById(upcomingActivity.day)} activity={upcomingActivity} />
 					),
 					primaryTypographyProps: { noWrap: true },
 				},

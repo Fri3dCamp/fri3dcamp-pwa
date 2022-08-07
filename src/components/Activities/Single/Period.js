@@ -1,7 +1,7 @@
 import moment from "moment";
 import { capitalize } from "lodash";
 
-export default ({ activity, showDay = true }) => {
+export default ({ activity, day, showDay = true }) => {
 	if (!activity) {
 		return null;
 	}
@@ -13,7 +13,8 @@ export default ({ activity, showDay = true }) => {
 	let returnValue = "";
 
 	if (showDay) {
-		returnValue += capitalize(activity.day.substr(0, 2)) + " ";
+		const dayName = day && day.label || activity.day;
+		returnValue += capitalize(dayName.substr(0, 2)) + " ";
 	}
 
 	returnValue +=

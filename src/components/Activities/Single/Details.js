@@ -5,7 +5,7 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import DetailList from "../../UI/DetailList";
 import { capitalize } from "lodash";
 
-let detailsByActivity = (activity, location) => [
+let detailsByActivity = (activity, location, day) => [
 	/*{
         key: 'location',
         link: `${process.env.PUBLIC_URL}/map`,
@@ -15,17 +15,17 @@ let detailsByActivity = (activity, location) => [
       {key: 'div1', isDivider: true},*/
 	{
 		key: "day",
-		text: { primary: "Dag", secondary: capitalize(activity.day) },
+		text: { primary: "Dag", secondary: capitalize( day.label || activity.day) },
 		avatar: <TodayIcon />,
 	},
 	{ key: "div2", isDivider: true },
 	{
 		key: "period",
-		text: { primary: "Periode", secondary: <Period activity={activity} /> },
+		text: { primary: "Periode", secondary: <Period activity={activity} day={day} /> },
 		avatar: <AccessTimeIcon />,
 	},
 ];
 
-export default ({ activity, location }) => (
-	<DetailList>{detailsByActivity(activity, location)}</DetailList>
+export default ({ activity, location, day }) => (
+	<DetailList>{detailsByActivity(activity, location, day)}</DetailList>
 );
