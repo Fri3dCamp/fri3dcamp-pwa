@@ -20,7 +20,6 @@ const Settings = ({
 	replyToNotifications,
 	hidePastActivities,
 	changeActivityFilter,
-	trackingConsent,
 	changeConsent,
 }) => (
 	<Page backLink={true} pageTitle={"Instellingen"}>
@@ -91,7 +90,6 @@ const Settings = ({
 export const mapStateToProps = (state) => {
 	const {
 		notifications: { reply = false },
-		general: { trackingConsent },
 		activityFilter: {
 			filter: { hidePastActivities },
 		},
@@ -100,7 +98,6 @@ export const mapStateToProps = (state) => {
 	return {
 		reply,
 		hidePastActivities,
-		trackingConsent,
 	};
 };
 
