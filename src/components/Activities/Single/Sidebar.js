@@ -51,9 +51,8 @@ const Sidebar = ({activity, location, day, persons}) => {
 					)}
 				</CardBlock>
 			</Grid>
-			{persons.length > 0 ? persons.map(person => (<Grid item xs={12} sm={6} md={12}>
+			{persons.length > 0 ? persons.map(person => (<Grid key={person.code} item xs={12} sm={6} md={12}>
 				<CardBlock
-					key={person.code}
 					header={{
 					title: person.publicName,
 					titleTypographyProps: {
@@ -88,7 +87,7 @@ const Sidebar = ({activity, location, day, persons}) => {
 
 const mapStateToProps = (state, { activity }) => {
 	const location = getLocationByName(state)(activity.location);
-	const persons = activity.persons.map(person => getPersonById(state)(person));
+	const persons = activity && activity.persons.map(person => getPersonById(state)(person)) || [];
 
 	return {
 		day: getDayById(state)(activity.day),

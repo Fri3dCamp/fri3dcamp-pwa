@@ -196,7 +196,7 @@ const ActivityCardContent = ({
 const mapStateToProps = (state, { activity }) => {
 	const isFavorite = state.favoriteActivities.includes(activity.id);
 	const pastActivities = getPastActivities(state);
-	const persons = activity.persons.map(person => getPersonById(state)(person));
+	const persons = activity && activity.persons.map(person => getPersonById(state)(person)) || [];
 
 	const isPast = pastActivities.indexOf(activity.id) !== -1;
 
