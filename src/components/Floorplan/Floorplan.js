@@ -188,7 +188,7 @@ const IconMap = {
     'kapel' : <KapelIcon />,
     'knutselbaar' : <KnutselbaarIcon />,
     'ijskasten' : <KoelkastIcon />,
-    'main stage' : <PodiumIcon />,
+    'buitenpodium' : <PodiumIcon />,
     'villages' : <VillagesIcon />,
     'hoofdgebouw' : <HoofdgebouwIcon />,
     'overdekte buitenworkshop' : <ShelterIcon />,
