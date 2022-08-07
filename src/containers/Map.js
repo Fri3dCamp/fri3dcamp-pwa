@@ -4,7 +4,7 @@ import Floorplan from "../components/Floorplan/Floorplan";
 
 class Map extends React.Component {
 	componentDidMount() {
-		document.title = "Vloerplan - Fri3d Camp";
+		document.title = "Grondplan - Fri3d Camp";
 	}
 
 	render() {
