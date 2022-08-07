@@ -105,18 +105,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+* Staging: https://staging.app.fri3d.be/wp-admin/
+* Production: https://app.fri3d.be/wp-admin/
 
-#### Staging
-`npm run build:staging && npm run build-php && npm run release-plugin`  -> zipke kunde uploaden als new plugin in de wp admin, en dan update da .
+`bash build.sh`. Het script vraagt om welke omgeving, en zal dan een zip maken.
 
-Upload here: https://staging.app.fri3d.be/wp-admin/plugin-install.php
-
-
-#### Production
-`npm run build:production && npm run build-php && npm run release-plugin`  -> zipke kunde uploaden als new plugin in de wp admin, en dan update da .
-
-Upload here: https://app.fri3d.be/wp-admin/plugin-install.php
+In WordPress vervolgens de bestaande plugin deactiveren. Dan de gemaakte zip uploaden op `/wp-admin/plugin-install.php` om zo de nieuwe versie te releasen.
 
 ### `npm run build` fails to minify
 
