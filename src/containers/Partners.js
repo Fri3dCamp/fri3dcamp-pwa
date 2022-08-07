@@ -5,10 +5,13 @@ import CardBlock from "../components/UI/CardBlock";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import partners from "../config/partners.json";
 
+const partnersplus8 = partners.filter(o => o.label != "8 bit")
+const partners8 = partners.filter(o => o.label == "8 bit")
+
 const Partners = () => (
 	<Page backLink={true} pageTitle={"Partners"}>
 		<Grid container spacing={24}>
-			{partners.map((partnerGroup, groupIndex) => (
+			{partnersplus8.map((partnerGroup, groupIndex) => (
 				<Grid item xs={12} key={groupIndex}>
 					<CardBlock
 						raw={true}
@@ -55,6 +58,7 @@ const Partners = () => (
 												component={"div"}
 											>
 												{nlDesc || enDesc || ""}
+
 											</Typography>
 											<CardActions>
 												<Button
@@ -70,6 +74,48 @@ const Partners = () => (
 												</Button>
 											</CardActions>
 										</CardBlock>
+									</Grid>
+								)
+							)}
+						</Grid>
+					</CardBlock>
+				</Grid>
+			))}
+		</Grid>
+        <Grid container spacing={24}>
+			{partners8.map((partnerGroup, groupIndex) => (
+				<Grid item xs={12} key={groupIndex}>
+					<CardBlock
+						raw={true}
+						header={{
+							title: partnerGroup.label,
+							titleTypographyProps: { variant: "h3" },
+							style: { paddingBottom: 0 },
+						}}
+					>
+						<Grid container spacing={24}>
+							{partnerGroup.partners.map(
+								(
+									{
+										alt: title,
+										url,
+										img,
+									},
+									partnerIndex
+								) => (
+									<Grid
+										item
+										xs={12}
+										sm={6}
+										md={4}
+										key={partnerIndex}
+									>
+                                        <a href={url} style={{
+                                            display: "block",
+                                        }}><img style={{
+                                        maxWidth : "100%",
+                                        height: "100px",
+                                        }} src={`https://fri3d.be/img/partners/${img}`} alt={title} /></a>
 									</Grid>
 								)
 							)}
