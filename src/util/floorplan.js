@@ -9,6 +9,7 @@ export const getMapFeatures = () =>
 
 				return {
 					name: rawFeature.properties.name,
+					desc: rawFeature.properties.description,
 					key: rawFeature.properties.name.toLowerCase() + index,
 					type: rawFeature.properties.type,
 					icon: rawFeature.properties.name.toLowerCase() || "default",

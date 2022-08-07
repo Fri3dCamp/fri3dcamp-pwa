@@ -24,26 +24,6 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
-        },
-        "name": "Buitenaltaar",
-        "description": "Een altaar met een klein openlucht auditorium. Hier kunnen Microsoft licenties geofferd worden.",
-        "_umap_options": {
-          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.665842,
-          50.798268
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
           "iconUrl": "/uploads/pictogram/bus-24_1.png"
         },
         "name": "Campervans/Caravans",
@@ -87,7 +67,7 @@
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
         "name": "Camping Herfstmale",
-        "description": "",
+        "description": "Er is overal elektriciteit voorzien, maar je moet wel naar elkaar doorverbinden. Biedt je buren dus een plekje op je stekkerblok aan.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         }
@@ -106,8 +86,8 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
-        "name": "Camping Tamme Kastanje",
-        "description": "Villages Hackerspaces",
+        "name": "Villages hackerspaces",
+        "description": "Ga eens langs bij de villages, je vindt er ongetwijfeld mensen die je honderduit kunnen vertellen over hun projecten.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         }
@@ -127,6 +107,7 @@
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
         "name": "Camping Totem",
+        "description": "Er is overal elektriciteit voorzien, maar je moet wel naar elkaar doorverbinden. Biedt je buren dus een plekje op je stekkerblok aan.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         }
@@ -183,7 +164,8 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/bar-24_1.png"
         },
-        "name": "Day bar",
+        "name": "Bar",
+        "description" : "Aan de bar vind je drank en kleine snacks, ook gratis vers fruit. Barkaarten koop je aan de infodesk.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/bar-24_1.png"
         }
@@ -203,6 +185,7 @@
           "iconUrl": "/uploads/pictogram/hospital-24-white.png"
         },
         "name": "EHBO",
+        "description" : "Er is een EHBO post op het hoofdterrein, bemand door vrijwilligers van het Rode Kruis. In noodgevallen kan je overdag terecht aan de infodesk, en 's nachts aan het hoofdgebouw, waar een telefoon beschikbaar is. ",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/hospital-24-white.png"
         }
@@ -222,6 +205,7 @@
           "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
         },
         "name": "Catering",
+        "description": "Elke dag tussen 18 en 20u kan je een warme maaltijd krijgen. Brood voor de volgende dag kan je tot 17u aan de infodesk bestellen.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
         }
@@ -241,7 +225,6 @@
           "iconUrl": "/uploads/pictogram/religious-christian-24_1.png"
         },
         "name": "Kapel",
-        "description": "Jezus mag even opzij zodat de pastafarianen hier het FSM kunnen komen vereren.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/religious-christian-24_1.png"
         }
@@ -261,6 +244,7 @@
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
         "name": "Grote camping (Woudloper, Hiker en St-Joris)",
+        "description": "Er is overal elektriciteit voorzien, maar je moet wel naar elkaar doorverbinden. Biedt je buren dus een plekje op je stekkerblok aan.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         }
@@ -280,7 +264,6 @@
           "color": "Purple"
         },
         "name": "Hardware Hacking Area",
-        "description": "Dus bus van Tom",
         "_umap_options": {
           "color": "Purple"
         }
@@ -300,7 +283,7 @@
         "_storage_options": {
           "color": "Purple"
         },
-        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "description": "Er zijn koelkasten op twee centrale plekken bij de  kampeerterreinen. Je kan er bederfbare spullen koud bewaren.",
         "_umap_options": {
           "color": "Purple"
         },
@@ -321,7 +304,7 @@
         "_storage_options": {
           "color": "Purple"
         },
-        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "description": "Er zijn koelkasten op twee centrale plekken bij de  kampeerterreinen. Je kan er bederfbare spullen koud bewaren.",
         "_umap_options": {
           "color": "Purple"
         },
@@ -342,7 +325,7 @@
           "iconUrl": "/uploads/pictogram/bank-24_1.png"
         },
         "name": "Infodesk",
-        "description": "Het centrale brein van Fri3d Camp. Bij de infodesk kan je je ticket inwisselen voor je armband en goodie bag, je kan hier met al je vragen terecht, de EHBO post en NOC (Network Operations Center) zijn hier ook gevestigd. De infodesk blijft doorlopend open.",
+        "description": "De infodesk is het centrale punt waar je terecht kan met alle vragen. Op het terrein kom je af en toe mensen in een witte labojas met een Fri3d logo tegen. Dit zijn orga-leden, en bij hen kan je ook terecht met al je vragen!",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/bank-24_1.png"
         }
@@ -401,7 +384,6 @@
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
         "name": "Knutselbaar",
-        "description": "",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         }
@@ -421,6 +403,7 @@
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
         "name": "Buitenpodium",
+        "description": "Vrijdag om 10u openen we officiëel Fri3d Camp aan het buitenpodium. Zondag om 15u sluiten we Fri3d Camp af en gaan we samen nog een uur aan de slag om het terrein op te ruimen.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         }
@@ -428,8 +411,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.663977,
-          50.800345
+          4.66466,
+          50.80064
         ]
       }
     },
@@ -554,7 +537,7 @@
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/commercial-24_1.png"
         },
-        "description": "Plaats voor villages die een eigen content track meebrengen.",
+        "description": "Ga eens langs bij de villages, je vindt er ongetwijfeld mensen die je honderduit kunnen vertellen over hun projecten.",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/commercial-24_1.png"
         },
@@ -575,7 +558,6 @@
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
         "name": "Hoofdgebouw",
-        "description": "In de 6 zalen van het hoofdgebouw worden heel wat workshops gegeven. Op het binnenplein is er de mogelijkheid een fab lab truck in te richten (binnenplein ligt wel niet horizontaal).",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         }

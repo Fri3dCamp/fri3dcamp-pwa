@@ -172,7 +172,7 @@ const IconMap = {
 	'sanitair grauwe els' : <SanitairIcon />,
 	'sanitair tamme kastanje' : <SanitairIcon />,
 	'catering' : <CateringIcon />,
-	'day bar' : <BarIcon />,
+	'bar' : <BarIcon />,
 	'parking' : <ParkingIcon />,
 	'overflow parking' : <ParkingIcon />,
 	'kampvuur' : <KampvuurIcon />,
@@ -180,7 +180,7 @@ const IconMap = {
 	'campervans/caravans (overflow)' : <CamperIcon />,
     'camping herfstmale' : <CampingIcon />,
     'grote camping (woudloper, hiker en st-joris)' : <CampingIcon />,
-    'camping tamme kastanje' : <CampingIcon />,
+    'villages hackerspaces' : <VillagesIcon />,
     'camping totem' : <CampingIcon />,
     'hardware hacking area' : <HardwareHackingIcon />,
     'chill-out zone' : <ChilloutIcon />,
@@ -283,6 +283,8 @@ class Floorplan extends React.Component {
 			longitude: feature.coordinates.longitude,
 			latitude: feature.coordinates.latitude,
 			title: feature.name,
+			desc: feature.desc,
+            // desc: "foemp",
 		};
 
 		const fName = feature.name.toLowerCase();
@@ -448,18 +450,25 @@ class Floorplan extends React.Component {
 		);
 	};
 
-	renderRegularPopup = ({ title }) => {
+	renderRegularPopup = ({ title, desc }) => {
 		const { classes } = this.props;
 
 		return (
-			<Typography
-				variant="h4"
-				color="secondary"
-				className={classes.popUpHeader}
-				noWrap={true}
-			>
-				{title}
-			</Typography>
+            <>
+                <Typography
+                    variant="h4"
+                    color="secondary"
+                    className={classes.popUpHeader}
+                    noWrap={true}
+                >
+                    {title}
+                </Typography>
+                <Typography
+                    variant="body1"
+                >
+                    {desc}
+                </Typography>
+            </>
 		);
 	};
 
