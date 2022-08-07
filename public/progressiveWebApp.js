@@ -70,7 +70,7 @@ self.addEventListener("notificationclick", function (e) {
 
 workbox.routing.registerRoute(
 	new RegExp(
-		"^(https://staging\.app\.fri3d\.be|https://prod\.app\.fri3d\.be|http://localhost:8888)/(wp-json|wp-admin/admin-ajax\.php)"
+		"^(https://staging\.app\.fri3d\.be|https://app\.fri3d\.be|http://localhost:8888)/(wp-json|wp-admin/admin-ajax\.php)"
 	),
 	new workbox.strategies.StaleWhileRevalidate({
 		plugins: [
