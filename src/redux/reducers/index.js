@@ -32,7 +32,6 @@ const initialState = {
 	snackbarNotifications: [],
 	general: {
 		currentDate: getCurrentDate(),
-		trackingConsent: true,
 		firstLaunch: true,
 		installDate: new Date(),
 		auth: null,
@@ -168,8 +167,6 @@ const general = (state = initialState.general, action) => {
 			return { ...state, firstLaunch: false };
 		case ActionTypes.GENERAL_TICKTIME:
 			return { ...state, currentDate: action.date };
-		case ActionTypes.GENERAL_SETCONSENT:
-			return { ...state, trackingConsent: !!action.consent };
 		case ActionTypes.GENERAL_SETPASSWORD:
 			return {
 				...state,
