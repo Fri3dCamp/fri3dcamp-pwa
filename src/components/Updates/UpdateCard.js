@@ -31,7 +31,9 @@ const UpdateCard = ({ update, classes }) => (
 				subheader={moment(update.date).format("LLL")}
 			/>
 			<CardContent>
-				<Typography variant="body1">{update.excerpt}</Typography>
+				<Typography variant="body1" dangerouslySetInnerHTML={
+					{ __html: update.excerpt }
+				}/>
 			</CardContent>
 		</CardActionArea>
 	</Card>
