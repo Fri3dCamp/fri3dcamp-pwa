@@ -10,6 +10,7 @@ import { getActivitiesByLocation, getActivityLoader, getLocations } from "../red
 import SidebarPage from "../components/UI/SidebarPage";
 import UpcomingActivities from "../components/Activities/UpcomingActivities";
 import {prefixRoute} from "../routing";
+import { Grid } from "@material-ui/core";
 
 const styles = (theme) => ({
 	root: {
@@ -38,10 +39,13 @@ class Location extends React.Component {
 
 		return (
 			<Page backLink={true} pageTitle={`Locatie: ${myLocation.label || myLocation.name}`}>
-				<SidebarPage
-					sidebar={<LocationSidebar location={myLocation} />}
-				>
-					{activityLoader.isFetching &&
+
+                <Grid container spacing={24}>
+                    <Grid item xs={12} md={4} lg={3}>
+                       <LocationSidebar location={myLocation} />
+                    </Grid>
+                    <Grid item xs={12} md={8} lg={9}>
+                        {activityLoader.isFetching &&
 					activityLoader.initialFetch ? (
 						<LoadingIndicator />
 					) : (
@@ -50,7 +54,9 @@ class Location extends React.Component {
 							sizes={{ md: 6, lg: 4 }}
 						/>
 					)}
-				</SidebarPage>
+                    </Grid>
+	            </Grid>
+
 			</Page>
 		);
 	}
@@ -65,7 +71,7 @@ const LocationSidebar = ({ location }) => (
 			avatar: <Avatar src={location.icon} />,
 		}}
 	>
-		<UpcomingActivities location={location.name.toLowerCase()} />
+	<UpcomingActivities location={location.name.toLowerCase()} />
 	</CardBlock>
 );
 
