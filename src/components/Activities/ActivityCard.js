@@ -16,8 +16,8 @@ import {
 	trackWindowScroll,
 } from "react-lazy-load-image-component";
 import Period from "./Single/Period";
-import { connect } from "react-redux";
-import { getLocationByName, getPastActivities } from "../../redux/selectors";
+import {connect} from "react-redux";
+import {getLocationByName, getPastActivities, getPersonById} from "../../redux/selectors";
 import LikeButton from "../UI/LikeButton";
 import { toggleFavorite } from "../../redux/actions";
 import {prefixRoute} from "../../routing";
@@ -104,7 +104,7 @@ class ActivityCard extends React.Component {
 	);
 
 	render() {
-		const { classes, activity, scrollPosition, isPast, ...others } =
+		const {classes, activity, scrollPosition, isPast, persons, ...others} =
 			this.props;
 
 		let imageUrl = undefined;
@@ -112,8 +112,14 @@ class ActivityCard extends React.Component {
 		if (activity && activity.logo && activity.logo !== "") {
 			imageUrl = `https://pretalx.fri3d.be/${activity.logo}`;
 		} else {
-            imageUrl = defaultImage;
-        }
+			imageUrl = defaultImage;
+		}
+
+		let cardContent = activity.excerpt;
+
+		if (Array.isArray(persons) && persons.length > 0) {
+			cardContent += `<br><br><em>${persons.map(person => person.publicName).join(", ")}</em>`;
+		}
 
 		const activityCardContent = (
 			<ActivityCardContent
@@ -121,8 +127,8 @@ class ActivityCard extends React.Component {
 				activity={activity}
 				image={imageUrl}
 				title={activity.title}
-				subHeader={<this.SubHeader activity={activity} />}
-				content={activity.excerpt}
+				subHeader={<this.SubHeader activity={activity}/>}
+				content={cardContent}
 				{...others}
 			/>
 		);
@@ -190,6 +196,7 @@ const ActivityCardContent = ({
 const mapStateToProps = (state, { activity }) => {
 	const isFavorite = state.favoriteActivities.includes(activity.id);
 	const pastActivities = getPastActivities(state);
+	const persons = activity && activity.persons.map(person => getPersonById(state)(person)) || [];
 
 	const isPast = pastActivities.indexOf(activity.id) !== -1;
 
@@ -197,6 +204,7 @@ const mapStateToProps = (state, { activity }) => {
 		location: getLocationByName(state)(activity.location),
 		isFavorite,
 		isPast,
+		persons,
 	};
 };
 

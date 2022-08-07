@@ -12,7 +12,7 @@ import CardBlock from "../components/UI/CardBlock";
 import FeatureList from "../components/Activities/Single/FeatureList";
 import Sidebar from "../components/Activities/Single/Sidebar";
 import LikeButton from "../components/UI/LikeButton";
-import { getActivityLoader } from "../redux/selectors";
+import {getActivityLoader, getPersonById} from "../redux/selectors";
 import ShareOptions from "../components/Activities/Single/ShareOptions";
 import defaultImage from "../img/default_image.png";
 
@@ -54,7 +54,7 @@ class Activity extends React.Component {
 	}
 
 	renderActivity = () => {
-		const { activity, toggleFavorite, isFavorite } = this.props;
+		const { activity, toggleFavorite, isFavorite, persons } = this.props;
 
 		if (!activity) {
 			return <LoadingIndicator />;
@@ -68,6 +68,8 @@ class Activity extends React.Component {
             imageUrl = defaultImage;
         }
 
+		let cardContent = `<p><em>${activity.excerpt}</em></p><p>${activity.content}</p>`;
+
 		return (
 			<Grid container spacing={24} style={{ position: "relative" }}>
 				<ShareOptions activity={activity} />
@@ -77,6 +79,7 @@ class Activity extends React.Component {
 						mediaProps={{ style: { paddingTop: "56.25%", backgroundSize: "cover" } }}
 						header={{
 							title: activity.title,
+							subheader: Array.isArray(persons) && persons.length > 0 ? persons.map(person => person.publicName).join(", ") : undefined,
 							titleTypographyProps: { variant: "h2" },
 						}}
 						raw={true}
@@ -85,7 +88,7 @@ class Activity extends React.Component {
 							active={isFavorite}
 							onClick={() => toggleFavorite(activity.id)}
 						/>
-						<DetailPane content={activity.content} />
+						<DetailPane content={cardContent} />
 						<FeatureList activity={activity} />
 					</CardBlock>
 				</Grid>
@@ -110,11 +113,13 @@ const mapStateToProps = (state, ownProps) => {
 	const activityLoader = getActivityLoader(state);
 	const activity = activities[activityId];
 	const needsPreloading = !activity && activityLoader.isFetching;
+	const persons = activity && activity.persons.map(person => getPersonById(state)(person)) || [];
 
 	return {
 		activity,
 		needsPreloading,
 		isFavorite,
+		persons,
 	};
 };
 

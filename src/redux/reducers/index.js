@@ -23,6 +23,7 @@ const initialState = {
 			return obj;
 		}, {}),*/
 		locations: {},
+		persons: {},
 	},
 	notifications: {
 		reply: null,

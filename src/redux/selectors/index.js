@@ -7,6 +7,7 @@ const getActivityFilter = (state) => state.activityFilter.filter;
 
 const getCurrentDate = (state) => state.general.currentDate;
 const getLocations = (state) => state.entities.locations;
+const getPersons = (state) => state.entities.persons;
 const getDays = (state) => state.entities.days;
 const getFavoriteActivityIds = (state) => state.favoriteActivities;
 
@@ -164,6 +165,11 @@ export const getLocationByName = createSelector(
 	(locations) => (location) => {
 		return locations[location];
 	}
+);
+
+export const getPersonById = createSelector(
+	[getPersons],
+	(persons) => (person) => persons[person]
 );
 
 export const getActivitiesByLocation = createSelector(
