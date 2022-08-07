@@ -191,7 +191,7 @@ const IconMap = {
     'buitenpodium' : <PodiumIcon />,
     'villages' : <VillagesIcon />,
     'hoofdgebouw' : <HoofdgebouwIcon />,
-    'overdekte buitenworkshop' : <ShelterIcon />,
+    'shelter' : <ShelterIcon />,
     'inkom' : <GateIcon />,
 	bar: <BarIcon />,
 	wc: <SanitairIcon />,
