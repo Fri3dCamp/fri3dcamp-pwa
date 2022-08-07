@@ -16,7 +16,7 @@ const ServiceWorkerHandler = ({ onNewContent }) => {
 			<Button
 				color="secondary"
 				onClick={() => {
-					window.location.reload();
+					window.location.reload(true);
 				}}
 			>
 				{"Herladen"}

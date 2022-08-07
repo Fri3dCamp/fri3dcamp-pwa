@@ -24,7 +24,7 @@ const Error = () => (
 					variant="text"
 					color="primary"
 					component="a"
-					onClick={() => window.location.reload()}
+					onClick={() => window.location.reload(true)}
 				>
 					Refresh de app
 				</Button>
