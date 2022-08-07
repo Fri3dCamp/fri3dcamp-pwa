@@ -1,3 +1,8 @@
+/**
+ * NOTE: THIS FILE IS NOT IN USE AS FAR AS I KNOW.
+ *
+ * @todo remove if this is the case to prevent confusion.
+ */
 module.exports = (options) => {
 	options.skipWaiting = true;
 	options.clientsClaim = true;
