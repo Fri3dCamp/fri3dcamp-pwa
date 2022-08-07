@@ -1,9 +1,9 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
+  "features": [{
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
@@ -23,26 +23,7 @@
     {
       "type": "Feature",
       "properties": {
-        "_storage_options": {
-          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
-        },
-        "name": "Buitenaltaar",
-        "description": "Een altaar met een klein openlucht auditorium. Hier kunnen Microsoft licenties geofferd worden.",
-        "_umap_options": {
-          "iconUrl": "/uploads/pictogram/theatre-24-white.png"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          4.665842,
-          50.798268
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/bus-24_1.png"
         },
@@ -63,6 +44,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/bus-24_1.png"
         },
@@ -83,6 +65,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
@@ -103,6 +86,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
@@ -123,6 +107,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
@@ -142,6 +127,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_umap_options": {
           "iconUrl": "/uploads/pictogram/roadblock-24_1.png",
           "color": "DarkCyan"
@@ -160,6 +146,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "color": "Purple"
         },
@@ -172,14 +159,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            4.66423,
-            50.80035
+          4.66423,
+          50.80035
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/bar-24_1.png"
         },
@@ -199,6 +187,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/hospital-24-white.png"
         },
@@ -218,6 +207,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/restaurant-24_1.png"
         },
@@ -237,6 +227,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/religious-christian-24_1.png"
         },
@@ -257,6 +248,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/campsite-24-white.png"
         },
@@ -276,6 +268,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "color": "Purple"
         },
@@ -288,36 +281,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            4.663763,
-            50.8004
+          4.663763,
+          50.8004
         ]
       }
     },
-    
+
     {
       "type": "Feature",
       "properties": {
-        "_storage_options": {
-          "color": "Purple"
-        },
-        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
-        "_umap_options": {
-          "color": "Purple"
-        },
-        "name": "Ijskasten"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": 
-          [
-            4.661862,
-            50.800045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
+        "type": "facility",
         "_storage_options": {
           "color": "Purple"
         },
@@ -330,14 +303,36 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-            4.663059,
-            50.798955
+          4.661862,
+          50.800045
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
+        "_storage_options": {
+          "color": "Purple"
+        },
+        "description": "Kleine tent met 2 grote ijskasten, infoscherm, ...",
+        "_umap_options": {
+          "color": "Purple"
+        },
+        "name": "Ijskasten"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.663059,
+          50.798955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/bank-24_1.png"
         },
@@ -358,6 +353,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/roadblock-24_1.png"
         },
@@ -378,6 +374,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/fire-station-24_1.png"
         },
@@ -397,6 +394,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
@@ -417,6 +415,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
@@ -436,6 +435,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },
@@ -455,6 +455,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/parking-24_1.png"
         },
@@ -475,6 +476,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/parking-24_1.png"
         },
@@ -494,6 +496,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/parking-24_1.png"
         },
@@ -513,6 +516,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/toilets-24-white.png"
         },
@@ -532,6 +536,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/toilets-24-white.png"
         },
@@ -551,6 +556,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "facility",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/commercial-24_1.png"
         },
@@ -571,6 +577,7 @@
     {
       "type": "Feature",
       "properties": {
+        "type": "venue",
         "_storage_options": {
           "iconUrl": "/uploads/pictogram/theatre-24-white.png"
         },

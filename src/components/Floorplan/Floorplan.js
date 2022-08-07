@@ -517,13 +517,11 @@ class Floorplan extends React.Component {
 
 const mapStateToProps = (state) => {
 	const filteredFeatures = getFilteredFeatures(state);
-	const locationsByFeature = getLocationsByFeature(state);
-	const activities = getActivities(state);
+	// const locationsByFeature = getLocationsByFeature(state);
+	// const activities = getActivities(state);
 
 	return {
-		features: filteredFeatures,
-		locationsByFeature,
-		activities,
+		features: filteredFeatures
 	};
 };
 

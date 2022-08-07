@@ -29,18 +29,13 @@ const availableFilters = [
 		icon: (active) => (
 			<PlaceIcon color={active ? "secondary" : "inherit"} />
 		),
-		name: "Locaties",
-		value: "location",
-	},
-	{
-		icon: (active) => <FlagIcon color={active ? "secondary" : "inherit"} />,
-		name: "Activiteiten",
-		value: "activity",
+		name: "Workshops en talks",
+		value: "venue",
 	},
 	{
 		icon: (active) => <InfoIcon color={active ? "secondary" : "inherit"} />,
-		name: "Algemeen",
-		value: "general",
+		name: "Faciliteiten",
+		value: "facility",
 	},
 ];
 

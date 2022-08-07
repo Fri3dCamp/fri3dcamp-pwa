@@ -215,21 +215,26 @@ export const getMapFeaturesByType = createSelector(
 		const byType = mapFeatures.reduce(
 			(carry, mapFeature) => {
 				let featureType = "general";
-				if (mapFeature.type === "location") {
-					const name = (mapFeature.name || "").toLowerCase();
-					if (locationNames.indexOf(name) !== -1) {
-						featureType = "location";
-					} else {
-						featureType = "activity";
-					}
-				}
+				// if (mapFeature.type === "location") {
+				// 	const name = (mapFeature.name || "").toLowerCase();
+				// 	if (locationNames.indexOf(name) !== -1) {
+				// 		featureType = "location";
+				// 	} else {
+				// 		featureType = "activity";
+				// 	}
+				// }
+
+                if (mapFeature.type) {
+                    const name = (mapFeature.name || "").toLowerCase();
+                    featureType = mapFeature.type;
+                }
 
 				carry[featureType].push(mapFeature);
 				return carry;
 			},
 			{
-				location: [],
-				activity: [],
+				venue: [],
+				facility: [],
 				general: [],
 			}
 		);
