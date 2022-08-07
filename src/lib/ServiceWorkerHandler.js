@@ -80,8 +80,12 @@ const ServiceWorkerHandler = ({ onNewContent }) => {
 	};
 
 	serviceWorker.register({
-		onUpdate: () => {
+		onUpdate: (registration) => {
 			enqueueSnackbar("Update beschikbaar", { action });
+
+			if(registration && registration.waiting) {
+				registration.waiting.postMessage({ type: "SKIP_WAITING" });
+			}
 		},
 		onSuccess: () => {
 			enqueueSnackbar("App is nu offline beschikbaar!");
