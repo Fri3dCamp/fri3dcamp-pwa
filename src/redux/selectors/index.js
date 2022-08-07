@@ -1,4 +1,4 @@
-import { createSelector } from "reselect";
+import {createSelector} from "reselect";
 //import locations from '../../config/locations';
 
 export const getActivities = (state) => state.entities.activities || [];
@@ -257,10 +257,15 @@ export const getFilteredFeatures = createSelector(
 export const getLocationsByFeature = createSelector(
 	[getLocations, getFilteredFeatures],
 	(locations, features) => {
-		const locationsByFeature = features.reduce((carry, feature) => {
+		const featureToLocationNameMap = {
+			"main stage": "mainone",
+		};
+
+		return features.reduce((carry, feature) => {
 			const fName = feature.name || "";
 			const query = fName.toLowerCase();
-			const location = locations[query];
+			const locationSlug = featureToLocationNameMap.hasOwnProperty(query) ? featureToLocationNameMap[query] : query;
+			const location = locations[locationSlug];
 
 			if (location) {
 				carry[query] = location;
@@ -268,7 +273,5 @@ export const getLocationsByFeature = createSelector(
 
 			return carry;
 		}, {});
-
-		return locationsByFeature;
 	}
 );
