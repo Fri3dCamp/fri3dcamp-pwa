@@ -22,7 +22,7 @@ const getEvent = (activity) => {
 		description: activity.excerpt,
 		duration,
 		endDatetime: endDatetime.format("YYYYMMDDTHHmmss") + "Z",
-		location: "Fort 4, Mortsel",
+		location: "De Kluis, Sint-Joris-Weert",
 		startDatetime: startDatetime.format("YYYYMMDDTHHmmss") + "Z",
 		title: activity.title,
 	};
