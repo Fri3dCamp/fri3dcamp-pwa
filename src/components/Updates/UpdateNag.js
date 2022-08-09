@@ -26,6 +26,8 @@ const updateNag = ({ reply, replyToNotifications, ...props }) => {
 					Mogen we je op de hoogte houden van nieuwe updates? Denk
 					hierbij aan kinderen met verloren gelopen ouders,
 					last-minute plaatsen voor workshops, enzovoort.
+
+					Opgelet: push-notificaties zijn mogelijk niet beschikbaar op iOS.
 				</Typography>
 			</CardContent>
 			<CardActions>

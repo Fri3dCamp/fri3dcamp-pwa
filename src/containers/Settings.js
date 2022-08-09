@@ -52,6 +52,8 @@ const Settings = ({
 							hoogte van belangrijke nieuwtjes voor- en tijdens
 							het kamp. Je krijgt van ons een handige melding
 							op je toestel toegestuurd.
+
+							Opgelet: push-notificaties zijn mogelijk niet beschikbaar op iOS.
 						</FormHelperText>
 					</FormControl>
 				</CardBlock>
