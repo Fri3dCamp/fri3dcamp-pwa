@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 import moment from "moment";
 import { DetailPane } from "../components/UI/DetailPane";
 import { connect } from "react-redux";
-import { markAsRead } from "../redux/actions";
+import {loadUpdates, markAsRead} from "../redux/actions";
 import PropTypes from "prop-types";
 import LoadingIndicator from "../components/UI/LoadingIndicator";
 import Page from "../components/UI/Page";
@@ -21,12 +21,35 @@ class Update extends React.Component {
 		markAsRead: PropTypes.func.isRequired,
 	};
 
+	state = {
+		attemptedUpdateIds: [],
+	};
+
 	markAsRead() {
 		const { update, markAsRead } = this.props;
 
 		if (update && !update.isRead) {
 			markAsRead(update.id);
 		}
+	}
+
+	attemptToFetchUpdate() {
+		const { update, updateId, loadUpdates } = this.props;
+		const { attemptedUpdateIds } = this.state;
+
+		if (updateId && !update && !attemptedUpdateIds.includes(updateId) ) {
+			this.setState({
+				attemptedUpdateIds: [...attemptedUpdateIds, updateId],
+			});
+
+			loadUpdates();
+		}
+	}
+
+	constructor(props) {
+		super(props);
+
+		this.attemptToFetchUpdate();
 	}
 
 	componentDidMount() {
@@ -97,10 +120,11 @@ const mapStateToProps = (state, ownProps) => {
 
 	return {
 		update,
+		updateId,
 		needsPreloading,
 	};
 };
 
 export default withRouter(
-	connect(mapStateToProps, { markAsRead })(withStyles(styles)(Update))
+	connect(mapStateToProps, { markAsRead, loadUpdates })(withStyles(styles)(Update))
 );

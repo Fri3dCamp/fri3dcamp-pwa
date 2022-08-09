@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Header from "../UI/Header";
 import UpdateNag from "./UpdateNag";
-import { enqueueSnackbar, queueUpdate } from "../../redux/actions";
+import { enqueueSnackbar, queueUpdate, loadUpdates } from "../../redux/actions";
 import CardBlock from "../UI/CardBlock";
 import FormLabel from "@material-ui/core/FormLabel";
 import FormGroup from "@material-ui/core/FormGroup";
@@ -59,6 +59,7 @@ const UpdateSidebar = ({
 	queueUpdate,
 	enqueueSnackbar,
 	sendingUpdate,
+	loadUpdates,
 }) => {
 	return (
 		<>
@@ -82,6 +83,21 @@ const UpdateSidebar = ({
 					>
 						Discord
 					</Button>
+				</Grid>
+				<Grid item xs={12}>
+					<FormControl component="fieldset">
+						<FormGroup>
+							<Button
+								variant="outlined"
+								color="default"
+								onClick={() => {
+									loadUpdates();
+								}}
+							>
+								Controleer op updates
+							</Button>
+						</FormGroup>
+					</FormControl>
 				</Grid>
 				{isAuthenticated && (
 					<SendUpdateForm
@@ -135,6 +151,6 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, { queueUpdate, enqueueSnackbar })(
+export default connect(mapStateToProps, { queueUpdate, enqueueSnackbar, loadUpdates })(
 	UpdateSidebar
 );

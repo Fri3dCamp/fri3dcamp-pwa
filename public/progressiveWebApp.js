@@ -68,15 +68,26 @@ self.addEventListener("notificationclick", function (e) {
 	}
 });
 
+// Updates
 workbox.routing.registerRoute(
 	new RegExp(
 		"^(https://staging\.app\.fri3d\.be|https://app\.fri3d\.be|http://localhost:8888)/(wp-json|wp-admin/admin-ajax\.php)"
+	),
+	new workbox.strategies.NetworkFirst({
+		cacheableResponse: [ 0, 200 ],
+	})
+);
+
+// Schedule
+workbox.routing.registerRoute(
+	new RegExp(
+		"^(https://pretalx\.fri3d\.be)/fri3dcamp2022/schedule"
 	),
 	new workbox.strategies.StaleWhileRevalidate({
 		plugins: [
 			new workbox.broadcastUpdate.Plugin({
 				channelName: "api-updates",
-				headersToCheck: ["content-length"],
+				headersToCheck: ["Content-Length"],
 			}),
 		],
 	})

@@ -22,7 +22,7 @@ final class PushNotifications {
 	private const KEY_ACTION       = 'get_key';
 	public const SUB_POST_TYPE     = 'push_subs';
 
-	public const DEFAULT_ICON = 'http://localhost:8888/app/img/fri3dcamp_white.png';
+	public const DEFAULT_ICON = 'https://app.fri3d.be/app/img/icons/android-icon-192x192.png';
 
 	/**
 	 * Push encryption keys.
@@ -51,6 +51,7 @@ final class PushNotifications {
 			'allowed_http_origins',
 			function ( $origins ) {
 				$origins[] = 'https://app.fri3d.be';
+				$origins[] = 'https://staging.app.fri3d.be';
 				$origins[] = 'http://localhost:8888';
 				$origins[] = 'http://localhost:3000';
 
