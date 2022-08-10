@@ -3,7 +3,7 @@ import { camelizeKeys } from "humps";
 import * as Schema from "./schema";
 
 const API_ROOT = process.env.REACT_APP_API_LOCATION;
-const PRETALX_TOKEN = process.env.API_TOKEN;
+const PRETALX_TOKEN = process.env.REACT_APP_API_TOKEN;
 
 const isPretalxApi = (endpoint) => {
 	return endpoint.indexOf('https://pretalx.fri3d.be/api') === 0;
