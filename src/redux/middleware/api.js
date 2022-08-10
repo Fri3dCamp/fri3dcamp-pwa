@@ -3,6 +3,11 @@ import { camelizeKeys } from "humps";
 import * as Schema from "./schema";
 
 const API_ROOT = process.env.REACT_APP_API_LOCATION;
+const PRETALX_TOKEN = process.env.API_TOKEN;
+
+const isPretalxApi = (endpoint) => {
+	return endpoint.indexOf('https://pretalx.fri3d.be/api') === 0;
+}
 
 const getNextPageUrl = (response) => {
 	const link = response.headers.get("link");
@@ -24,15 +29,25 @@ const callApi = async (endpoint, schema) => {
 			? API_ROOT + "/" + endpoint
 			: endpoint;
 
-	let response = await fetch(fullUrl);
+	const isPretalx = isPretalxApi(fullUrl);
+	const fetchOptions = {};
+
+	if(isPretalx) {
+		fetchOptions.headers = {
+			'Authorization': `Token ${PRETALX_TOKEN}`,
+			'Content-Type': 'application/json',
+		};
+	}
+
+	let response = await fetch(fullUrl, fetchOptions);
 	let jsonResponse = await response.json();
 
 	if (!response.ok) {
 		throw new Error(jsonResponse);
 	}
 
-	const camelizedJson = camelizeKeys(jsonResponse);
-	const nextPageUrl = getNextPageUrl(response);
+	const camelizedJson = camelizeKeys(isPretalx ? jsonResponse.results : jsonResponse);
+	const nextPageUrl = isPretalx ? jsonResponse.next : getNextPageUrl(response);
 
 	return { ...normalize(camelizedJson, schema), nextPageUrl: nextPageUrl };
 };
@@ -43,6 +58,16 @@ export const Schemas = {
 	SCHEDULE: Schema.schedule,
 	UPDATE: Schema.update,
 	UPDATE_ARRAY: [Schema.update],
+	TALK: Schema.talk,
+	TALK_ARRAY: [Schema.talk],
+	SPEAKER: Schema.speaker,
+	SPEAKER_ARRAY: [Schema.speaker],
+	ROOM: Schema.room,
+	ROOM_ARRAY: [Schema.room],
+	QUESTION: Schema.question,
+	QUESTION_ARRAY: [Schema.question],
+	TAG: Schema.tag,
+	TAG_ARRAY: [Schema.tag],
 };
 
 // Action key that carries API call info interpreted by this Redux middleware.

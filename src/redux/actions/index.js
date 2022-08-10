@@ -24,6 +24,11 @@ const backgroundSync = () => (dispatch) => {
 	//setTimeout(() => dispatch(backgroundSync()), 5*1000);
 
 	dispatch(loadSchedule());
+	dispatch(loadRooms());
+	dispatch(loadTags());
+	dispatch(loadQuestions());
+	dispatch(loadSpeakers());
+	dispatch(loadTalks());
 	// dispatch(loadActivities());
 	dispatch(loadUpdates());
 	dispatch(ensureSubscription());
@@ -457,4 +462,228 @@ export const changeFloorPlanFilter = (filters) => (dispatch, getState) => {
 	}
 
 	return dispatch(setFloorPlanFilter(filters));
+};
+
+
+// Pretalx API Stuff :)
+
+// TALKS
+export const TALKS_REQUEST = "TALKS_REQUEST";
+export const TALKS_SUCCESS = "TALKS_SUCCESS";
+export const TALKS_FAILURE = "TALKS_FAILURE";
+
+const fetchTalks = (nextPageUrl) => ({
+	[CALL_API]: {
+		types: [TALKS_REQUEST, TALKS_SUCCESS, TALKS_FAILURE],
+		endpoint: nextPageUrl,
+		schema: Schemas.TALK_ARRAY,
+	},
+});
+
+export const loadTalks = (nextPage) => (dispatch, getState) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/api/events/fri3dcamp2022/talks/";
+
+	let {
+		nextPageUrl = defaultEndpoint,
+		pageCount = 0,
+		lastFetched = null,
+		isFetching = false,
+	} = getState().entityloader.talks || {};
+
+	if (pageCount > 0 && !nextPage) {
+		return null;
+	}
+
+	if (isFetching) {
+		return null;
+	}
+
+	nextPageUrl = nextPageUrl || defaultEndpoint;
+
+	if (lastFetched) {
+		const timePassed = new Date() - lastFetched;
+
+		if (timePassed < 10000) {
+			return null;
+		}
+	}
+
+	return dispatch(fetchTalks(nextPageUrl));
+};
+
+// SPEAKERS
+export const SPEAKERS_REQUEST = "SPEAKERS_REQUEST";
+export const SPEAKERS_SUCCESS = "SPEAKERS_SUCCESS";
+export const SPEAKERS_FAILURE = "SPEAKERS_FAILURE";
+
+const fetchSpeakers = (nextPageUrl) => ({
+	[CALL_API]: {
+		types: [SPEAKERS_REQUEST, SPEAKERS_SUCCESS, SPEAKERS_FAILURE],
+		endpoint: nextPageUrl,
+		schema: Schemas.SPEAKER_ARRAY,
+	},
+});
+
+export const loadSpeakers = (nextPage) => (dispatch, getState) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/api/events/fri3dcamp2022/speakers/";
+
+	let {
+		nextPageUrl = defaultEndpoint,
+		pageCount = 0,
+		lastFetched = null,
+		isFetching = false,
+	} = getState().entityloader.speakers || {};
+
+	if (pageCount > 0 && !nextPage) {
+		return null;
+	}
+
+	if (isFetching) {
+		return null;
+	}
+
+	nextPageUrl = nextPageUrl || defaultEndpoint;
+
+	if (lastFetched) {
+		const timePassed = new Date() - lastFetched;
+
+		if (timePassed < 10000) {
+			return null;
+		}
+	}
+
+	return dispatch(fetchSpeakers(nextPageUrl));
+};
+
+// ROOMS
+export const ROOMS_REQUEST = "ROOMS_REQUEST";
+export const ROOMS_SUCCESS = "ROOMS_SUCCESS";
+export const ROOMS_FAILURE = "ROOMS_FAILURE";
+
+const fetchRooms = (nextPageUrl) => ({
+	[CALL_API]: {
+		types: [ROOMS_REQUEST, ROOMS_SUCCESS, ROOMS_FAILURE],
+		endpoint: nextPageUrl,
+		schema: Schemas.ROOM_ARRAY,
+	},
+});
+
+export const loadRooms = (nextPage) => (dispatch, getState) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/api/events/fri3dcamp2022/rooms/";
+
+	let {
+		nextPageUrl = defaultEndpoint,
+		pageCount = 0,
+		lastFetched = null,
+		isFetching = false,
+	} = getState().entityloader.rooms || {};
+
+	if (pageCount > 0 && !nextPage) {
+		return null;
+	}
+
+	if (isFetching) {
+		return null;
+	}
+
+	nextPageUrl = nextPageUrl || defaultEndpoint;
+
+	if (lastFetched) {
+		const timePassed = new Date() - lastFetched;
+
+		if (timePassed < 10000) {
+			return null;
+		}
+	}
+
+	return dispatch(fetchRooms(nextPageUrl));
+};
+
+// QUESTIONS
+export const QUESTIONS_REQUEST = "QUESTIONS_REQUEST";
+export const QUESTIONS_SUCCESS = "QUESTIONS_SUCCESS";
+export const QUESTIONS_FAILURE = "QUESTIONS_FAILURE";
+
+const fetchQuestions = (nextPageUrl) => ({
+	[CALL_API]: {
+		types: [QUESTIONS_REQUEST, QUESTIONS_SUCCESS, QUESTIONS_FAILURE],
+		endpoint: nextPageUrl,
+		schema: Schemas.QUESTION_ARRAY,
+	},
+});
+
+export const loadQuestions = (nextPage) => (dispatch, getState) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/api/events/fri3dcamp2022/questions/";
+
+	let {
+		nextPageUrl = defaultEndpoint,
+		pageCount = 0,
+		lastFetched = null,
+		isFetching = false,
+	} = getState().entityloader.questions || {};
+
+	if (pageCount > 0 && !nextPage) {
+		return null;
+	}
+
+	if (isFetching) {
+		return null;
+	}
+
+	nextPageUrl = nextPageUrl || defaultEndpoint;
+
+	if (lastFetched) {
+		const timePassed = new Date() - lastFetched;
+
+		if (timePassed < 10000) {
+			return null;
+		}
+	}
+
+	return dispatch(fetchQuestions(nextPageUrl));
+};
+
+
+// TAGS
+export const TAGS_REQUEST = "TAGS_REQUEST";
+export const TAGS_SUCCESS = "TAGS_SUCCESS";
+export const TAGS_FAILURE = "TAGS_FAILURE";
+
+const fetchTags = (nextPageUrl) => ({
+	[CALL_API]: {
+		types: [TAGS_REQUEST, TAGS_SUCCESS, TAGS_FAILURE],
+		endpoint: nextPageUrl,
+		schema: Schemas.TALK_ARRAY,
+	},
+});
+
+export const loadTags = (nextPage) => (dispatch, getState) => {
+	const defaultEndpoint = "https://pretalx.fri3d.be/api/events/fri3dcamp2022/tags/";
+
+	let {
+		nextPageUrl = defaultEndpoint,
+		pageCount = 0,
+		lastFetched = null,
+		isFetching = false,
+	} = getState().entityloader.tags || {};
+
+	if (pageCount > 0 && !nextPage) {
+		return null;
+	}
+
+	if (isFetching) {
+		return null;
+	}
+
+	nextPageUrl = nextPageUrl || defaultEndpoint;
+
+	if (lastFetched) {
+		const timePassed = new Date() - lastFetched;
+
+		if (timePassed < 10000) {
+			return null;
+		}
+	}
+
+	return dispatch(fetchTags(nextPageUrl));
 };

@@ -93,6 +93,21 @@ workbox.routing.registerRoute(
 	})
 );
 
+// Pretalx API
+workbox.routing.registerRoute(
+	new RegExp(
+		"^https://pretalx\.fri3d\.be/api/"
+	),
+	new workbox.strategies.StaleWhileRevalidate({
+		plugins: [
+			new workbox.broadcastUpdate.Plugin({
+				channelName: "api-updates",
+				headersToCheck: ["Content-Length"],
+			}),
+		],
+	})
+);
+
 workbox.routing.registerRoute(
 	new RegExp("^https://api\.mapbox\.com/"),
 	new workbox.strategies.CacheFirst({

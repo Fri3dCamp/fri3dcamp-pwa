@@ -9,6 +9,7 @@ import { connectRouter } from "connected-react-router";
 import { getMapFeatures } from "../../util/floorplan";
 import loadEntity from "./entitityloader";
 import loadSchedule from "./schedule-loader";
+import loadPretalxEntity from "./pretalx-loader";
 
 const initialState = {
 	schedule: {},
@@ -24,6 +25,11 @@ const initialState = {
 		}, {}),*/
 		locations: {},
 		persons: {},
+		rooms: {},
+		talks: {},
+		speakers: {},
+		questions: {},
+		tags: {},
 	},
 	notifications: {
 		reply: null,
@@ -144,6 +150,41 @@ const entityloader = combineReducers({
 			ActionTypes.ACTIVITIES_SUCCESS,
 			ActionTypes.ACTIVITIES_FAILURE,
 		],
+	}),
+	talks: loadPretalxEntity({
+		types: [
+			ActionTypes.TALKS_REQUEST,
+			ActionTypes.TALKS_SUCCESS,
+			ActionTypes.TALKS_FAILURE,
+		]
+	}),
+	speakers: loadPretalxEntity({
+		types: [
+			ActionTypes.SPEAKERS_REQUEST,
+			ActionTypes.SPEAKERS_SUCCESS,
+			ActionTypes.SPEAKERS_FAILURE,
+		]
+	}),
+	rooms: loadPretalxEntity({
+		types: [
+			ActionTypes.ROOMS_REQUEST,
+			ActionTypes.ROOMS_SUCCESS,
+			ActionTypes.ROOMS_FAILURE,
+		]
+	}),
+	questions: loadPretalxEntity({
+		types: [
+			ActionTypes.QUESTIONS_REQUEST,
+			ActionTypes.QUESTIONS_SUCCESS,
+			ActionTypes.QUESTIONS_FAILURE,
+		]
+	}),
+	tags: loadPretalxEntity({
+		types: [
+			ActionTypes.TAGS_REQUEST,
+			ActionTypes.TAGS_SUCCESS,
+			ActionTypes.TAGS_FAILURE,
+		]
 	}),
 });
 
