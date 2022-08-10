@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+  nginx:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./nginx/default.conf.template:/etc/nginx/templates/default.conf.template
+    environment:
+      NGINX_HOST: $DOMAIN_NAME
+      PRETALX_TOKEN: $AUTH_TOKEN
+    networks:
+      - default
+      - gateway
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.$APP_NAME.entrypoints=http"
+      - "traefik.http.routers.$APP_NAME.rule=Host(`$DOMAIN_NAME`)"
+      - "traefik.http.routers.$APP_NAME.middlewares=https-redirect@file"
+      - "traefik.http.routers.$APP_NAME-secure.entrypoints=https"
+      - "traefik.http.routers.$APP_NAME-secure.rule=Host(`$DOMAIN_NAME`)"
+      - "traefik.http.routers.$APP_NAME-secure.tls=true"
+      - "traefik.http.routers.$APP_NAME-secure.tls.certresolver=http"
+      - "traefik.docker.network=gateway"
+
+networks:
+  gateway:
+    external: true

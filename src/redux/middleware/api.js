@@ -3,7 +3,6 @@ import { camelizeKeys } from "humps";
 import * as Schema from "./schema";
 
 const API_ROOT = process.env.REACT_APP_API_LOCATION;
-const PRETALX_TOKEN = process.env.REACT_APP_API_TOKEN;
 
 const isPretalxApi = (endpoint) => {
 	return endpoint.indexOf('https://pretalx.fri3d.be/api') === 0;
@@ -32,12 +31,14 @@ const callApi = async (endpoint, schema) => {
 	const isPretalx = isPretalxApi(fullUrl);
 	const fetchOptions = {};
 
-	if(isPretalx) {
+/*	if(isPretalx) {
 		fetchOptions.headers = {
 			'Authorization': `Token ${PRETALX_TOKEN}`,
 			'Content-Type': 'application/json',
 		};
-	}
+
+		fetchOptions.credentials = 'omit';
+	}*/
 
 	let response = await fetch(fullUrl, fetchOptions);
 	let jsonResponse = await response.json();

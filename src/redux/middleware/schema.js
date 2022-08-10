@@ -2,6 +2,7 @@ import { schema } from "normalizr";
 import { unEscape } from "../../util/content";
 import moment from "moment/moment";
 import { getEventDates } from "../../config/dates";
+import { camelize } from "humps";
 
 const getPeriod = (day, start, end) => {
 	let startTime, endTime, dayDate;
@@ -625,8 +626,8 @@ export const talk = new schema.Entity(
 				code,
 				id: code,
 				slot,
-				room: slot.room,
-				location: slot.room.toLowerCase(),
+				room: normalizeTranslation(slot.room),
+				location: camelize(normalizeTranslation(slot.room)).toLowerCase(),
 				type: normalizeTranslation(submissionType),
 				content: description,
 				excerpt: abstract,
