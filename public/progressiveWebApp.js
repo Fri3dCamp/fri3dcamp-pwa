@@ -96,7 +96,7 @@ workbox.routing.registerRoute(
 // Pretalx API
 workbox.routing.registerRoute(
 	new RegExp(
-		"^https://pretalx\.fri3d\.be/api/"
+		"^https://proxy\.app\.fri3d\.be/api/"
 	),
 	new workbox.strategies.StaleWhileRevalidate({
 		plugins: [
