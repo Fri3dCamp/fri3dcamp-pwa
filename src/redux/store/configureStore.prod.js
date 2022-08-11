@@ -1,6 +1,7 @@
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import api from "../middleware/api";
+import paginator from "../middleware/paginator";
 import rootReducer from "../reducers";
 import { load, save } from "redux-localstorage-simple";
 import { routerMiddleware } from "connected-react-router";
@@ -24,6 +25,7 @@ const configureStore = (preloadedState) =>
 			routerMiddleware(history),
 			thunk,
 			api,
+			paginator,
 			save({ states })
 		)
 	);

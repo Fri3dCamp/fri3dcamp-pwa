@@ -312,7 +312,11 @@ const normalizeTranslation = ( object ) => {
 		return object;
 	}
 
-	const { en, nl } = object;
+	if(!object) {
+		return '';
+	}
+
+	const { en = undefined, nl = undefined } = object;
 	return nl || en || 'N/A';
 }
 
@@ -534,8 +538,9 @@ export const answer = new schema.Entity(
 );
 
 const getDay = ( slot ) => {
-	return '2022-08-11';
+	return moment(slot.start).format('YYYY-MM-DD');
 }
+
 const getPeriodFromSlot = ({ start, end } ) => {
 	return { start: moment(start).toDate(), end: moment(end).toDate() };
 }
@@ -616,15 +621,20 @@ export const talk = new schema.Entity(
 			const {
 				code,
 				slot = { start: null, end: null, room: 'NO_ROOM' },
+				title,
 				submissionType,
 				description,
 				abstract,
 				image,
+				tags,
+				speakers,
+				answers,
 			} = obj;
 
 			return {
 				code,
 				id: code,
+				title,
 				slot,
 				room: normalizeTranslation(slot.room),
 				location: camelize(normalizeTranslation(slot.room)).toLowerCase(),
@@ -637,6 +647,10 @@ export const talk = new schema.Entity(
 				night: false,
 				logo: image,
 				period: getPeriodFromSlot(slot),
+				images: false,
+				tags,
+				answers,
+				speakers,
 			};
 		},
 	}

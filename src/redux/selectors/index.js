@@ -3,7 +3,14 @@ import locationMap from '../../config/locations';
 import { decamelize } from "humps";
 import defaultIcon from '../../img/icons/default.svg';
 
-export const getActivities = (state) => state.entities.activities || [];
+export const getActivities = (state) => {
+	if(!state.talks) {
+		return {};
+	}
+
+	return state.talks;
+};
+
 const getActivityFilter = (state) => state.activityFilter.filter;
 //const getCategories = state => state.entities.categories;
 
@@ -13,7 +20,7 @@ const getDays = (state) => state.entities.days;
 const getFavoriteActivityIds = (state) => state.favoriteActivities;
 
 export const getActivityLoader = (state) =>
-	state.entityloader.schedules || {
+	state.entityloader.talks || {
 		initialFetch: true,
 		isFetching: true,
 		ids: [],
@@ -136,7 +143,6 @@ export const getFilteredActivities = createSelector(
 			});
 		}
 
-		console.log(filter, conditions, activities);
 		return activities.filter(function (activity) {
 			const propConditionsMet = Object.keys(this.props).every(
 				(property) => activity[property] === this.props[property]
@@ -154,7 +160,6 @@ export const getFilteredActivities = createSelector(
 export const getActivitiesByDays = createSelector(
 	[getFilteredActivities, getDayList],
 	(activities, days) => {
-		console.log('ACTIVITIES BY DAYS', days, activities);
 
 		return days.map((day) => ({
 			...day,

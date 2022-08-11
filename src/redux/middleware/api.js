@@ -5,7 +5,11 @@ import * as Schema from "./schema";
 const API_ROOT = process.env.REACT_APP_API_LOCATION;
 
 const isPretalxApi = (endpoint) => {
-	return endpoint.indexOf('https://pretalx.fri3d.be/api') === 0;
+	return endpoint.indexOf('https://proxy.app.fri3d.be/api') === 0;
+}
+
+const normalizeApiUrl = (url) => {
+	return url && typeof(url) === "string" ? url.replace('https://pretalx.fri3d.be/api', 'https://proxy.app.fri3d.be/api') : url;
 }
 
 const getNextPageUrl = (response) => {
@@ -26,19 +30,10 @@ const callApi = async (endpoint, schema) => {
 	const fullUrl =
 		endpoint.indexOf('http') !== 0
 			? API_ROOT + "/" + endpoint
-			: endpoint;
+			: normalizeApiUrl(endpoint);
 
 	const isPretalx = isPretalxApi(fullUrl);
 	const fetchOptions = {};
-
-/*	if(isPretalx) {
-		fetchOptions.headers = {
-			'Authorization': `Token ${PRETALX_TOKEN}`,
-			'Content-Type': 'application/json',
-		};
-
-		fetchOptions.credentials = 'omit';
-	}*/
 
 	let response = await fetch(fullUrl, fetchOptions);
 	let jsonResponse = await response.json();
@@ -47,10 +42,10 @@ const callApi = async (endpoint, schema) => {
 		throw new Error(jsonResponse);
 	}
 
-	const camelizedJson = camelizeKeys(isPretalx ? jsonResponse.results : jsonResponse);
-	const nextPageUrl = isPretalx ? jsonResponse.next : getNextPageUrl(response);
+	const camelizedJson = isPretalx ? camelizeKeys(jsonResponse.results) : camelizeKeys(jsonResponse);
+	const nextPageUrl = isPretalx ? normalizeApiUrl(jsonResponse.next) : getNextPageUrl(response);
 
-	return { ...normalize(camelizedJson, schema), nextPageUrl: nextPageUrl };
+	return { ...normalize(camelizedJson, schema), nextPageUrl };
 };
 
 export const Schemas = {

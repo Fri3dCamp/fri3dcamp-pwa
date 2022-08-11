@@ -107,7 +107,6 @@ class Root extends React.Component {
 									<Route
 										path={prefixRoute(`/`)}
 										component={({ location }) => {
-											console.log(location);
 											return (<Redirect
 												to={prefixRoute('/activity')}
 											/>)}}

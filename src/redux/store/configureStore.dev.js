@@ -3,6 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 import api from "../middleware/api";
+import paginator from "../middleware/paginator";
 import rootReducer from "../reducers";
 import { createBrowserHistory } from "history";
 import { routerMiddleware } from "connected-react-router";
@@ -26,6 +27,7 @@ const configureStore = (preloadedState) => {
 				routerMiddleware(history),
 				thunk,
 				api,
+				paginator,
 				createLogger(),
 				// save({ states })
 			)

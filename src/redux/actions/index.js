@@ -135,7 +135,7 @@ export const loadActivities = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -238,7 +238,7 @@ const fetchUpdates = (nextPageUrl) => ({
 });
 
 export const loadUpdates = (nextPage) => (dispatch, getState) => {
-	const defaultEndpoint = "wp/v2/update/?per_page=100&_embed";
+	const defaultEndpoint = "wp/v2/update/?per_page=2&_embed";
 
 	let {
 		nextPageUrl = defaultEndpoint,
@@ -257,7 +257,7 @@ export const loadUpdates = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -500,7 +500,7 @@ export const loadTalks = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -544,7 +544,7 @@ export const loadSpeakers = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -588,7 +588,7 @@ export const loadRooms = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -632,7 +632,7 @@ export const loadQuestions = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {
@@ -677,7 +677,7 @@ export const loadTags = (nextPage) => (dispatch, getState) => {
 
 	nextPageUrl = nextPageUrl || defaultEndpoint;
 
-	if (lastFetched) {
+	if (lastFetched && !nextPage) {
 		const timePassed = new Date() - lastFetched;
 
 		if (timePassed < 10000) {

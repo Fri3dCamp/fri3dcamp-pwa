@@ -395,7 +395,7 @@ class Floorplan extends React.Component {
                     </>
                 );
             }
-            
+
         } else {
             return (
 			<>
@@ -418,7 +418,7 @@ class Floorplan extends React.Component {
 			</>
 		);
         }
-		
+
 	};
 
 	renderActivityPopup = ({ activity }) => {
@@ -511,7 +511,6 @@ class Floorplan extends React.Component {
 		}
 
 		if (feature.icon && IconMap.hasOwnProperty(feature.icon)) {
-			console.log(`gotcha ${feature.icon}`);
 			let theIcon = IconMap[feature.icon];
 			icon = <Avatar className={classes.avatar}>{theIcon}</Avatar>;
 		}

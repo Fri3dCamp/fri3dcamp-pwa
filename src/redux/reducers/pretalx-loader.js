@@ -49,7 +49,7 @@ const loadPretalxEntity = ({ types }) => {
 					...state,
 					isFetching: false,
 					initialFetch: false,
-					ids: union(state.ids, action.response.results),
+					ids: union(state.ids, action.response.result),
 					nextPageUrl: action.response.nextPageUrl || undefined,
 					lastFetched: new Date(),
 					pageCount: action.response.nextPageUrl
